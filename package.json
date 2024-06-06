@@ -7,10 +7,12 @@
     "watch:remote": "bitburner-filesync",
     "watch:init": "node build/init.js",
     "watch:all": "concurrently npm:watch:transpile npm:watch:local npm:watch:remote",
-    "watch": "npm run watch:init && npm run watch:all"
+    "watch": "npm run watch:init && npm run watch:all",
+    "test": "jest"
   },
   "author": "hydroflame, Hoekstraa, based on work by SlyCedix",
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
@@ -21,6 +23,7 @@
     "eslint": "^8.22.0",
     "fast-glob": "^3.2.12",
     "sync-directory": "^5.1.7",
+    "ts-jest": "^29.1.4",
     "typescript": "^4.7.4"
   }
 }
