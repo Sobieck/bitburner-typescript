@@ -1,0 +1,22 @@
+{
+    "victimHostname": "foodnstuff",
+    "attackRecords": [
+        {
+            "attackingHostname": "foodnstuff",
+            "treadCount": 9,
+            "isRunning": true,
+            "commandSent": true,
+            "pid": 794,
+            "timeStarted": "2024-06-08T14:11:45.393Z"
+        },
+        {
+            "attackingHostname": "n00dles",
+            "treadCount": 2,
+            "isRunning": true,
+            "commandSent": true,
+            "pid": 795,
+            "timeStarted": "2024-06-08T14:11:45.393Z"
+        }
+    ],
+    "action": "scripts/hacking/weaken.js"
+}

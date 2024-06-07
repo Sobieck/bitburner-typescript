@@ -12,8 +12,14 @@ export async function main(ns: NS): Promise<void> {
         scannerControl.next(connectedServers, server)
     }
 
-    ns.rm("/data/environment.txt")
-    ns.write("/data/environment.txt", JSON.stringify(scannerControl.environmentMap))
+    const home = ns.getServer() as ServerWithPathAndConnections 
+    home.path = []
+    home.connections = []
+
+    scannerControl.environmentMap.push(home)
+
+    ns.rm("data/environment.txt")
+    ns.write("data/environment.txt", JSON.stringify(scannerControl.environmentMap))
 }
 
 export interface ServerWithPathAndConnections extends Server {
@@ -44,7 +50,7 @@ export class ScannerControl {
                     const pathForHost = serverWithPathAndConnections.path.concat([hostname])
                     this.pathForServers.set(hostname, pathForHost)
 
-                    if(!this.serversToScanQueue.find(x => x === hostname)){
+                    if (!this.serversToScanQueue.find(x => x === hostname)) {
                         this.serversToScanQueue.push(hostname)
                     }
                 }
