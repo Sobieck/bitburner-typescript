@@ -9,6 +9,7 @@ export async function main(ns: NS): Promise<void> {
 
   // hacking
   scriptsToRun.push("scripts/hacking/moveHackScriptsToServers.js")
+  scriptsToRun.push("scripts/hacking/basicHackingOrchistrator.js")
 
 
   // add cost
