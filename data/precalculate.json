@@ -1,0 +1,141 @@
+{
+    "remoteServerCosts": [
+        {
+            "ram": 32,
+            "cost": 1760000
+        },
+        {
+            "ram": 64,
+            "cost": 3520000
+        },
+        {
+            "ram": 128,
+            "cost": 7040000
+        },
+        {
+            "ram": 256,
+            "cost": 14080000
+        },
+        {
+            "ram": 512,
+            "cost": 28160000
+        },
+        {
+            "ram": 1024,
+            "cost": 56320000
+        },
+        {
+            "ram": 2048,
+            "cost": 112640000
+        },
+        {
+            "ram": 4096,
+            "cost": 225280000
+        },
+        {
+            "ram": 8192,
+            "cost": 450560000
+        },
+        {
+            "ram": 16384,
+            "cost": 901120000
+        },
+        {
+            "ram": 32768,
+            "cost": 1802240000
+        },
+        {
+            "ram": 65536,
+            "cost": 3604480000
+        },
+        {
+            "ram": 131072,
+            "cost": 7208960000
+        },
+        {
+            "ram": 262144,
+            "cost": 14417920000
+        },
+        {
+            "ram": 524288,
+            "cost": 28835840000
+        },
+        {
+            "ram": 1048576,
+            "cost": 57671680000
+        }
+    ],
+    "player": {
+        "hp": {
+            "current": 10,
+            "max": 10
+        },
+        "skills": {
+            "hacking": 188,
+            "strength": 1,
+            "defense": 1,
+            "dexterity": 1,
+            "agility": 1,
+            "charisma": 36,
+            "intelligence": 0
+        },
+        "exp": {
+            "hacking": 185777.53200009812,
+            "strength": 0,
+            "defense": 0,
+            "dexterity": 0,
+            "agility": 0,
+            "charisma": 1075.7519999996725,
+            "intelligence": 0
+        },
+        "mults": {
+            "hacking_chance": 1,
+            "hacking_speed": 1,
+            "hacking_money": 1,
+            "hacking_grow": 1,
+            "hacking": 1,
+            "hacking_exp": 1,
+            "strength": 1,
+            "strength_exp": 1,
+            "defense": 1,
+            "defense_exp": 1,
+            "dexterity": 1,
+            "dexterity_exp": 1,
+            "agility": 1,
+            "agility_exp": 1,
+            "charisma": 1,
+            "charisma_exp": 1,
+            "hacknet_node_money": 1,
+            "hacknet_node_purchase_cost": 1,
+            "hacknet_node_ram_cost": 1,
+            "hacknet_node_core_cost": 1,
+            "hacknet_node_level_cost": 1,
+            "company_rep": 1,
+            "faction_rep": 1,
+            "work_money": 1,
+            "crime_success": 1,
+            "crime_money": 1,
+            "bladeburner_max_stamina": 1,
+            "bladeburner_stamina_gain": 1,
+            "bladeburner_analysis": 1,
+            "bladeburner_success_chance": 1
+        },
+        "city": "Chongqing",
+        "numPeopleKilled": 0,
+        "money": 246013.95793982316,
+        "location": "Alpha Enterprises",
+        "totalPlaytime": 354294600,
+        "jobs": {
+            "Alpha Enterprises": "Software Consultant"
+        },
+        "factions": [
+            "Tian Di Hui",
+            "CyberSec"
+        ],
+        "entropy": 0,
+        "karma": 0,
+        "playtimeSinceLastAug": 354294600,
+        "playtimeSinceLastBitnode": 354294600,
+        "bitNodeN": 1
+    }
+}

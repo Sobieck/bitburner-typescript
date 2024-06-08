@@ -1,0 +1,29 @@
+{
+    "scriptsWithCost": [
+        {
+            "path": "scripts/scriptRegistry.js",
+            "ramCost": 2.7
+        },
+        {
+            "path": "scripts/scan.js",
+            "ramCost": 4.8
+        },
+        {
+            "path": "scripts/getRoot.js",
+            "ramCost": 2.5
+        },
+        {
+            "path": "scripts/precalculate.js",
+            "ramCost": 3.35
+        },
+        {
+            "path": "scripts/hacking/moveHackScriptsToServers.js",
+            "ramCost": 2.3
+        },
+        {
+            "path": "scripts/hacking/basicHackingOrchistrator.js",
+            "ramCost": 4.1
+        }
+    ],
+    "ramReservedOnHome": 7.4
+}
