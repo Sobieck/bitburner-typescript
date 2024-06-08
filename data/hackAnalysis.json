@@ -1,5 +1,197 @@
 [
     {
+        "hostname": "REMOTE-008",
+        "ip": "88.6.0.9",
+        "sshPortOpen": false,
+        "ftpPortOpen": false,
+        "smtpPortOpen": false,
+        "httpPortOpen": false,
+        "sqlPortOpen": false,
+        "hasAdminRights": true,
+        "cpuCores": 1,
+        "isConnectedTo": false,
+        "ramUsed": 2047.5,
+        "maxRam": 2048,
+        "organizationName": "",
+        "purchasedByPlayer": true,
+        "backdoorInstalled": false,
+        "baseDifficulty": 1,
+        "hackDifficulty": 1,
+        "minDifficulty": 1,
+        "moneyAvailable": 0,
+        "moneyMax": 0,
+        "numOpenPortsRequired": 5,
+        "openPortCount": 0,
+        "requiredHackingSkill": 1,
+        "serverGrowth": 1,
+        "path": [
+            "REMOTE-008"
+        ],
+        "connections": [
+            "home"
+        ]
+    },
+    {
+        "hostname": "REMOTE-007",
+        "ip": "68.8.2.1",
+        "sshPortOpen": false,
+        "ftpPortOpen": false,
+        "smtpPortOpen": false,
+        "httpPortOpen": false,
+        "sqlPortOpen": false,
+        "hasAdminRights": true,
+        "cpuCores": 1,
+        "isConnectedTo": false,
+        "ramUsed": 2047.5,
+        "maxRam": 2048,
+        "organizationName": "",
+        "purchasedByPlayer": true,
+        "backdoorInstalled": false,
+        "baseDifficulty": 1,
+        "hackDifficulty": 1,
+        "minDifficulty": 1,
+        "moneyAvailable": 0,
+        "moneyMax": 0,
+        "numOpenPortsRequired": 5,
+        "openPortCount": 0,
+        "requiredHackingSkill": 1,
+        "serverGrowth": 1,
+        "path": [
+            "REMOTE-007"
+        ],
+        "connections": [
+            "home"
+        ]
+    },
+    {
+        "hostname": "REMOTE-006",
+        "ip": "61.0.3.3",
+        "sshPortOpen": false,
+        "ftpPortOpen": false,
+        "smtpPortOpen": false,
+        "httpPortOpen": false,
+        "sqlPortOpen": false,
+        "hasAdminRights": true,
+        "cpuCores": 1,
+        "isConnectedTo": false,
+        "ramUsed": 2047.5,
+        "maxRam": 2048,
+        "organizationName": "",
+        "purchasedByPlayer": true,
+        "backdoorInstalled": false,
+        "baseDifficulty": 1,
+        "hackDifficulty": 1,
+        "minDifficulty": 1,
+        "moneyAvailable": 0,
+        "moneyMax": 0,
+        "numOpenPortsRequired": 5,
+        "openPortCount": 0,
+        "requiredHackingSkill": 1,
+        "serverGrowth": 1,
+        "path": [
+            "REMOTE-006"
+        ],
+        "connections": [
+            "home"
+        ]
+    },
+    {
+        "hostname": "REMOTE-005",
+        "ip": "9.5.5.8",
+        "sshPortOpen": false,
+        "ftpPortOpen": false,
+        "smtpPortOpen": false,
+        "httpPortOpen": false,
+        "sqlPortOpen": false,
+        "hasAdminRights": true,
+        "cpuCores": 1,
+        "isConnectedTo": false,
+        "ramUsed": 2047.5,
+        "maxRam": 2048,
+        "organizationName": "",
+        "purchasedByPlayer": true,
+        "backdoorInstalled": false,
+        "baseDifficulty": 1,
+        "hackDifficulty": 1,
+        "minDifficulty": 1,
+        "moneyAvailable": 0,
+        "moneyMax": 0,
+        "numOpenPortsRequired": 5,
+        "openPortCount": 0,
+        "requiredHackingSkill": 1,
+        "serverGrowth": 1,
+        "path": [
+            "REMOTE-005"
+        ],
+        "connections": [
+            "home"
+        ]
+    },
+    {
+        "hostname": "REMOTE-004",
+        "ip": "80.3.1.7",
+        "sshPortOpen": false,
+        "ftpPortOpen": false,
+        "smtpPortOpen": false,
+        "httpPortOpen": false,
+        "sqlPortOpen": false,
+        "hasAdminRights": true,
+        "cpuCores": 1,
+        "isConnectedTo": false,
+        "ramUsed": 2047.5,
+        "maxRam": 2048,
+        "organizationName": "",
+        "purchasedByPlayer": true,
+        "backdoorInstalled": false,
+        "baseDifficulty": 1,
+        "hackDifficulty": 1,
+        "minDifficulty": 1,
+        "moneyAvailable": 0,
+        "moneyMax": 0,
+        "numOpenPortsRequired": 5,
+        "openPortCount": 0,
+        "requiredHackingSkill": 1,
+        "serverGrowth": 1,
+        "path": [
+            "REMOTE-004"
+        ],
+        "connections": [
+            "home"
+        ]
+    },
+    {
+        "hostname": "REMOTE-003",
+        "ip": "26.4.5.0",
+        "sshPortOpen": false,
+        "ftpPortOpen": false,
+        "smtpPortOpen": false,
+        "httpPortOpen": false,
+        "sqlPortOpen": false,
+        "hasAdminRights": true,
+        "cpuCores": 1,
+        "isConnectedTo": false,
+        "ramUsed": 2047.5,
+        "maxRam": 2048,
+        "organizationName": "",
+        "purchasedByPlayer": true,
+        "backdoorInstalled": false,
+        "baseDifficulty": 1,
+        "hackDifficulty": 1,
+        "minDifficulty": 1,
+        "moneyAvailable": 0,
+        "moneyMax": 0,
+        "numOpenPortsRequired": 5,
+        "openPortCount": 0,
+        "requiredHackingSkill": 1,
+        "serverGrowth": 1,
+        "path": [
+            "REMOTE-003"
+        ],
+        "connections": [
+            "home"
+        ]
+    },
+    {
         "hostname": "REMOTE-002",
         "ip": "41.0.4.0",
         "sshPortOpen": false,
@@ -10,8 +202,8 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 30.6,
-        "maxRam": 32,
+        "ramUsed": 2047.5,
+        "maxRam": 2048,
         "organizationName": "",
         "purchasedByPlayer": true,
         "backdoorInstalled": false,
@@ -42,8 +234,8 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 255,
-        "maxRam": 256,
+        "ramUsed": 2047.5,
+        "maxRam": 2048,
         "organizationName": "",
         "purchasedByPlayer": true,
         "backdoorInstalled": false,
@@ -74,7 +266,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 30.6,
+        "ramUsed": 31.5,
         "maxRam": 32,
         "organizationName": "Iron Gym Network",
         "purchasedByPlayer": false,
@@ -94,7 +286,15 @@
         "connections": [
             "home",
             "CSEC"
-        ]
+        ],
+        "hackThreadsForAllMoney": 557.6853526220614,
+        "hackChance": 0.5443579766536965,
+        "numberOfGrowthThreadsNeededToMax": 16102.424973375086,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "CSEC",
@@ -107,7 +307,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 6.8,
+        "ramUsed": 7,
         "maxRam": 8,
         "organizationName": "CyberSec",
         "purchasedByPlayer": false,
@@ -134,15 +334,15 @@
     {
         "hostname": "omega-net",
         "ip": "22.6.2.9",
-        "sshPortOpen": false,
-        "ftpPortOpen": false,
+        "sshPortOpen": true,
+        "ftpPortOpen": true,
         "smtpPortOpen": false,
         "httpPortOpen": false,
         "sqlPortOpen": false,
-        "hasAdminRights": false,
+        "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 0,
+        "ramUsed": 31.5,
         "maxRam": 32,
         "organizationName": "Omega Software",
         "purchasedByPlayer": false,
@@ -153,7 +353,7 @@
         "moneyAvailable": 67510450,
         "moneyMax": 1687761250,
         "numOpenPortsRequired": 2,
-        "openPortCount": 0,
+        "openPortCount": 2,
         "requiredHackingSkill": 214,
         "serverGrowth": 33,
         "path": [
@@ -163,7 +363,15 @@
         ],
         "connections": [
             "CSEC"
-        ]
+        ],
+        "hackThreadsForAllMoney": 1920.2988792029885,
+        "hackChance": 0.3826514730405781,
+        "numberOfGrowthThreadsNeededToMax": 8783.628431561274,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "neo-net",
@@ -176,7 +384,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 30.6,
+        "ramUsed": 31.5,
         "maxRam": 32,
         "organizationName": "Neo Nightclub Network",
         "purchasedByPlayer": false,
@@ -198,7 +406,15 @@
         "connections": [
             "CSEC",
             "computek"
-        ]
+        ],
+        "hackThreadsForAllMoney": 395.3846153846154,
+        "hackChance": 0.6666203446359088,
+        "numberOfGrowthThreadsNeededToMax": 10736.022547765353,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "computek",
@@ -235,7 +451,13 @@
             "neo-net",
             "summit-uni",
             "catalyst"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11542.40257362338,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "catalyst",
@@ -271,7 +493,13 @@
         ],
         "connections": [
             "computek"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 19254.872989967836,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "summit-uni",
@@ -309,7 +537,13 @@
             "computek",
             "rho-construction",
             "alpha-ent"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11744.847598645618,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "alpha-ent",
@@ -346,7 +580,13 @@
         ],
         "connections": [
             "summit-uni"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 13621.415636005891,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "rho-construction",
@@ -384,7 +624,13 @@
         "connections": [
             "summit-uni",
             "galactic-cyber"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 15561.923068205444,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "galactic-cyber",
@@ -424,7 +670,13 @@
             "rho-construction",
             "omnia",
             "unitalife"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 7198.636142965229,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "unitalife",
@@ -466,7 +718,13 @@
             "defcomm",
             "solaris",
             "zeus-med"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10731.649332590378,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "zeus-med",
@@ -506,7 +764,13 @@
         ],
         "connections": [
             "unitalife"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 13452.029522937286,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "solaris",
@@ -547,7 +811,13 @@
         "connections": [
             "unitalife",
             "nova-med"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10034.949747860874,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "nova-med",
@@ -589,7 +859,13 @@
         "connections": [
             "solaris",
             "run4theh111z"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11006.766927764898,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "run4theh111z",
@@ -672,7 +948,13 @@
         "connections": [
             "unitalife",
             "infocomm"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 14010.305930886188,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "infocomm",
@@ -714,7 +996,13 @@
         "connections": [
             "defcomm",
             "microdyne"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11707.44137250435,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "microdyne",
@@ -758,7 +1046,13 @@
             "infocomm",
             "fulcrumtech",
             "stormtech"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 8347.021756670014,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "stormtech",
@@ -801,7 +1095,13 @@
         ],
         "connections": [
             "microdyne"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 12753.434677923196,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "fulcrumtech",
@@ -845,7 +1145,13 @@
         "connections": [
             "microdyne",
             "."
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11105.745303820317,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": ".",
@@ -929,7 +1235,13 @@
         "connections": [
             "galactic-cyber",
             "univ-energy"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 14819.601964364649,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "univ-energy",
@@ -970,7 +1282,13 @@
         "connections": [
             "omnia",
             "taiyang-digital"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11248.613539216542,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "taiyang-digital",
@@ -1012,7 +1330,13 @@
         "connections": [
             "univ-energy",
             "titan-labs"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 9926.878788162783,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "titan-labs",
@@ -1055,7 +1379,13 @@
         "connections": [
             "taiyang-digital",
             "vitalife"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11789.69926678943,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "vitalife",
@@ -1100,7 +1430,13 @@
             "titan-labs",
             "4sigma",
             "kuai-gong"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11419.443320228052,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "kuai-gong",
@@ -1144,7 +1480,13 @@
         ],
         "connections": [
             "vitalife"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10957.166163549187,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "4sigma",
@@ -1192,7 +1534,13 @@
             "blade",
             "nwo",
             "clarkinc"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 6552.38866029703,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "clarkinc",
@@ -1237,7 +1585,13 @@
         ],
         "connections": [
             "4sigma"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 14071.255756581148,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "nwo",
@@ -1283,7 +1637,13 @@
         "connections": [
             "4sigma",
             "The-Cave"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 12072.613157619393,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "The-Cave",
@@ -1375,7 +1735,13 @@
         "connections": [
             "4sigma",
             "fulcrumassets"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 18535.847512668817,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "fulcrumassets",
@@ -1421,7 +1787,13 @@
         ],
         "connections": [
             "blade"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 1062389.9578705064,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "b-and-a",
@@ -1467,7 +1839,13 @@
         "connections": [
             "4sigma",
             "megacorp"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10318.972939498113,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "megacorp",
@@ -1513,7 +1891,13 @@
         ],
         "connections": [
             "b-and-a"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10731.211695661681,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "harakiri-sushi",
@@ -1526,7 +1910,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 15.3,
+        "ramUsed": 15.75,
         "maxRam": 16,
         "organizationName": "HaraKiri Sushi Bar Network",
         "purchasedByPlayer": false,
@@ -1545,7 +1929,15 @@
         ],
         "connections": [
             "home"
-        ]
+        ],
+        "hackThreadsForAllMoney": 332.8656233135456,
+        "hackChance": 0.7744024458032239,
+        "numberOfGrowthThreadsNeededToMax": 4027.617036007577,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "hong-fang-tea",
@@ -1558,7 +1950,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 15.3,
+        "ramUsed": 15.75,
         "maxRam": 16,
         "organizationName": "HongFang Teahouse",
         "purchasedByPlayer": false,
@@ -1577,7 +1969,15 @@
         ],
         "connections": [
             "home"
-        ]
+        ],
+        "hackThreadsForAllMoney": 318.26625386996903,
+        "hackChance": 0.793301834352418,
+        "numberOfGrowthThreadsNeededToMax": 8055.234072015154,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "joesguns",
@@ -1590,7 +1990,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 15.3,
+        "ramUsed": 15.75,
         "maxRam": 16,
         "organizationName": "Joe's Guns",
         "purchasedByPlayer": false,
@@ -1610,7 +2010,15 @@
         "connections": [
             "home",
             "nectar-net"
-        ]
+        ],
+        "hackThreadsForAllMoney": 292.59962049335866,
+        "hackChance": 0.8311006114508059,
+        "numberOfGrowthThreadsNeededToMax": 8055.234072015154,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "nectar-net",
@@ -1623,7 +2031,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 15.3,
+        "ramUsed": 15.75,
         "maxRam": 16,
         "organizationName": "Nectar Nightclub Network",
         "purchasedByPlayer": false,
@@ -1643,7 +2051,15 @@
         ],
         "connections": [
             "joesguns"
-        ]
+        ],
+        "hackThreadsForAllMoney": 323.94957983193274,
+        "hackChance": 0.7644246803779878,
+        "numberOfGrowthThreadsNeededToMax": 8590.105009732959,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "sigma-cosmetics",
@@ -1656,7 +2072,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 15.3,
+        "ramUsed": 15.75,
         "maxRam": 16,
         "organizationName": "Sigma Cosmetics",
         "purchasedByPlayer": false,
@@ -1675,7 +2091,15 @@
         ],
         "connections": [
             "home"
-        ]
+        ],
+        "hackThreadsForAllMoney": 270.8827404479579,
+        "hackChance": 0.8899944413563091,
+        "numberOfGrowthThreadsNeededToMax": 10745.672426876677,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "foodnstuff",
@@ -1688,7 +2112,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 15.3,
+        "ramUsed": 15.75,
         "maxRam": 16,
         "organizationName": "FoodNStuff",
         "purchasedByPlayer": false,
@@ -1708,7 +2132,15 @@
         "connections": [
             "home",
             "max-hardware"
-        ]
+        ],
+        "hackThreadsForAllMoney": 257.05288863183597,
+        "hackChance": 0.9315840466926072,
+        "numberOfGrowthThreadsNeededToMax": 9188.027228969207,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "max-hardware",
@@ -1721,7 +2153,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 30.6,
+        "ramUsed": 31.5,
         "maxRam": 32,
         "organizationName": "Max Hardware Store",
         "purchasedByPlayer": false,
@@ -1742,7 +2174,15 @@
         "connections": [
             "foodnstuff",
             "phantasy"
-        ]
+        ],
+        "hackThreadsForAllMoney": 407.6668869795109,
+        "hackChance": 0.698804891606448,
+        "numberOfGrowthThreadsNeededToMax": 5370.156048010103,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "phantasy",
@@ -1755,7 +2195,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 30.6,
+        "ramUsed": 31.5,
         "maxRam": 32,
         "organizationName": "Phantasy Club",
         "purchasedByPlayer": false,
@@ -1776,7 +2216,15 @@
         ],
         "connections": [
             "max-hardware"
-        ]
+        ],
+        "hackThreadsForAllMoney": 487.97468354430373,
+        "hackChance": 0.6221234018899389,
+        "numberOfGrowthThreadsNeededToMax": 6135.789292666399,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "n00dles",
@@ -1789,7 +2237,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 3.4,
+        "ramUsed": 3.5,
         "maxRam": 4,
         "organizationName": "Noodle Bar",
         "purchasedByPlayer": false,
@@ -1809,7 +2257,15 @@
         "connections": [
             "home",
             "zer0"
-        ]
+        ],
+        "hackThreadsForAllMoney": 242.42424242424244,
+        "hackChance": 0.987798777098388,
+        "numberOfGrowthThreadsNeededToMax": 30.709576927272902,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "zer0",
@@ -1822,7 +2278,7 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 30.6,
+        "ramUsed": 31.5,
         "maxRam": 32,
         "organizationName": "ZER0 Nightclub",
         "purchasedByPlayer": false,
@@ -1843,7 +2299,15 @@
         "connections": [
             "n00dles",
             "silver-helix"
-        ]
+        ],
+        "hackThreadsForAllMoney": 449.3989071038252,
+        "hackChance": 0.6249305169538633,
+        "numberOfGrowthThreadsNeededToMax": 6710.0140923533445,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "silver-helix",
@@ -1856,15 +2320,15 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 62.9,
+        "ramUsed": 63,
         "maxRam": 64,
         "organizationName": "Silver Helix",
         "purchasedByPlayer": false,
         "backdoorInstalled": false,
         "baseDifficulty": 30,
-        "hackDifficulty": 13.713999999999984,
+        "hackDifficulty": 19.608000000000008,
         "minDifficulty": 10,
-        "moneyAvailable": 1014444614.6504903,
+        "moneyAvailable": 0,
         "moneyMax": 1125000000,
         "numOpenPortsRequired": 2,
         "openPortCount": 2,
@@ -1887,26 +2351,26 @@
     {
         "hostname": "avmnite-02h",
         "ip": "22.1.5.2",
-        "sshPortOpen": false,
-        "ftpPortOpen": false,
+        "sshPortOpen": true,
+        "ftpPortOpen": true,
         "smtpPortOpen": false,
         "httpPortOpen": false,
         "sqlPortOpen": false,
-        "hasAdminRights": false,
+        "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
-        "ramUsed": 0,
+        "ramUsed": 127.75,
         "maxRam": 128,
         "organizationName": "NiteSec",
         "purchasedByPlayer": false,
-        "backdoorInstalled": false,
+        "backdoorInstalled": true,
         "baseDifficulty": 1,
         "hackDifficulty": 1,
         "minDifficulty": 1,
         "moneyAvailable": 0,
         "moneyMax": 0,
         "numOpenPortsRequired": 2,
-        "openPortCount": 0,
+        "openPortCount": 2,
         "requiredHackingSkill": 210,
         "serverGrowth": 1,
         "path": [
@@ -1922,12 +2386,12 @@
     {
         "hostname": "crush-fitness",
         "ip": "42.5.3.9",
-        "sshPortOpen": false,
-        "ftpPortOpen": false,
+        "sshPortOpen": true,
+        "ftpPortOpen": true,
         "smtpPortOpen": false,
         "httpPortOpen": false,
         "sqlPortOpen": false,
-        "hasAdminRights": false,
+        "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": false,
         "ramUsed": 0,
@@ -1941,7 +2405,7 @@
         "moneyAvailable": 48642032,
         "moneyMax": 1216050800,
         "numOpenPortsRequired": 2,
-        "openPortCount": 0,
+        "openPortCount": 2,
         "requiredHackingSkill": 243,
         "serverGrowth": 32,
         "path": [
@@ -1953,7 +2417,15 @@
         "connections": [
             "silver-helix",
             "zb-institute"
-        ]
+        ],
+        "hackThreadsForAllMoney": 6740.983606557378,
+        "hackChance": 0.2804168982768204,
+        "numberOfGrowthThreadsNeededToMax": 13081.711887444446,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "zb-institute",
@@ -1991,7 +2463,13 @@
             "crush-fitness",
             "lexo-corp",
             "millenium-fitness"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 8560.038087346418,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "millenium-fitness",
@@ -2028,7 +2506,13 @@
         ],
         "connections": [
             "zb-institute"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 14135.575057791579,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "lexo-corp",
@@ -2067,7 +2551,13 @@
             "zb-institute",
             "aerocorp",
             "global-pharm"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10401.92083451214,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "global-pharm",
@@ -2106,7 +2596,13 @@
         "connections": [
             "lexo-corp",
             "deltaone"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 9405.26570721404,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "deltaone",
@@ -2146,7 +2642,13 @@
         "connections": [
             "global-pharm",
             "icarus"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 15626.606648733128,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "icarus",
@@ -2187,7 +2689,13 @@
         "connections": [
             "deltaone",
             "zb-def"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10980.982673755123,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "zb-def",
@@ -2229,7 +2737,13 @@
         "connections": [
             "icarus",
             "applied-energetics"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 9610.98649785452,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "applied-energetics",
@@ -2272,7 +2786,13 @@
         "connections": [
             "zb-def",
             "helios"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10580.731804229597,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "helios",
@@ -2316,7 +2836,13 @@
         "connections": [
             "applied-energetics",
             "omnitek"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 13265.195779563155,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "omnitek",
@@ -2361,7 +2887,13 @@
         "connections": [
             "helios",
             "powerhouse-fitness"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10279.50808939989,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "powerhouse-fitness",
@@ -2407,7 +2939,13 @@
         "connections": [
             "omnitek",
             "ecorp"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 13161.96276984751,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "ecorp",
@@ -2453,7 +2991,13 @@
         ],
         "connections": [
             "powerhouse-fitness"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 10731.211695661681,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "aerocorp",
@@ -2491,7 +3035,13 @@
         ],
         "connections": [
             "lexo-corp"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 15918.234935475788,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "johnson-ortho",
@@ -2526,7 +3076,13 @@
         ],
         "connections": [
             "silver-helix"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 15076.345453479802,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "netlink",
@@ -2563,7 +3119,13 @@
             "silver-helix",
             "rothman-uni",
             "I.I.I.I"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 12315.278001644283,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "I.I.I.I",
@@ -2636,7 +3198,13 @@
         "connections": [
             "netlink",
             "aevum-police"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 13714.49683656054,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "aevum-police",
@@ -2674,7 +3242,13 @@
         "connections": [
             "rothman-uni",
             "snap-fitness"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 18266.549369482174,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "snap-fitness",
@@ -2712,7 +3286,13 @@
         ],
         "connections": [
             "aevum-police"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 11317.76223142214,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "the-hub",
@@ -2748,7 +3328,13 @@
         "connections": [
             "silver-helix",
             "syscore"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 8721.141258296298,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "syscore",
@@ -2784,7 +3370,13 @@
         ],
         "connections": [
             "the-hub"
-        ]
+        ],
+        "numberOfGrowthThreadsNeededToMax": 9469.648461121364,
+        "weakenAmount00001": 0.05,
+        "weakenAmount00010": 0.5,
+        "weakenAmount00100": 5,
+        "weakenAmount01000": 50,
+        "weakenAmount10000": 500
     },
     {
         "hostname": "home",
@@ -2797,8 +3389,8 @@
         "hasAdminRights": true,
         "cpuCores": 1,
         "isConnectedTo": true,
-        "ramUsed": 63.5,
-        "maxRam": 128,
+        "ramUsed": 509.65,
+        "maxRam": 512,
         "organizationName": "Home PC",
         "purchasedByPlayer": true,
         "backdoorInstalled": false,

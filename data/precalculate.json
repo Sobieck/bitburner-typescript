@@ -71,7 +71,7 @@
             "max": 10
         },
         "skills": {
-            "hacking": 188,
+            "hacking": 257,
             "strength": 1,
             "defense": 1,
             "dexterity": 1,
@@ -80,7 +80,7 @@
             "intelligence": 0
         },
         "exp": {
-            "hacking": 185777.53200009812,
+            "hacking": 1600303.5320012255,
             "strength": 0,
             "defense": 0,
             "dexterity": 0,
@@ -120,22 +120,27 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "city": "Chongqing",
+        "city": "Sector-12",
         "numPeopleKilled": 0,
-        "money": 246013.95793982316,
+        "money": 1225619821.2609246,
         "location": "Alpha Enterprises",
-        "totalPlaytime": 354294600,
+        "totalPlaytime": 372792400,
         "jobs": {
             "Alpha Enterprises": "Software Consultant"
         },
         "factions": [
+            "NiteSec",
+            "Chongqing",
             "Tian Di Hui",
             "CyberSec"
         ],
         "entropy": 0,
         "karma": 0,
-        "playtimeSinceLastAug": 354294600,
-        "playtimeSinceLastBitnode": 354294600,
+        "playtimeSinceLastAug": 372792400,
+        "playtimeSinceLastBitnode": 372792400,
         "bitNodeN": 1
-    }
+    },
+    "weakenAmountPerThread01Core": 0.05,
+    "weakenAmountPerThread05Core": 0.0625,
+    "weakenAmountPerThread10Core": 0.078125
 }

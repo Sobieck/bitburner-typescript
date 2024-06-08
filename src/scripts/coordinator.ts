@@ -4,6 +4,8 @@ import { ScriptRegistry } from "/scripts/scriptRegistry"
 export async function main(ns: NS): Promise<void> {
   ns.run("scripts/scriptRegistry.js")
 
+// feed param to clean up data
+
   const totalTimeInMs = 2_000
 
   await ns.sleep(totalTimeInMs)

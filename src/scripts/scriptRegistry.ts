@@ -6,7 +6,10 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/scriptRegistry.js")
   scriptsToRun.push("scripts/scan.js")
   scriptsToRun.push("scripts/getRoot.js")
-  scriptsToRun.push("scripts/precalculate.js")
+
+  //precalculate
+  scriptsToRun.push("scripts/precalculate/precalculate.js")
+  scriptsToRun.push("scripts/precalculate/attackAnalysis.js")
 
   // hacking
   scriptsToRun.push("scripts/hacking/moveHackScriptsToServers.js")
