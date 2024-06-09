@@ -8,7 +8,7 @@ describe("BasicHackingOrchistratorController", () => {
         const ramReserveredOnHome = 5
         const pass01: BasicHackingOrchistratorController = new BasicHackingOrchistratorController(mockServers, ramReserveredOnHome)
 
-        const noCumulativeRecordsInputResult: BasicHackingOrchistratorController = JSON.parse(JSON.stringify(pass01))
+        const noCumulativeRecordsInputResult: BasicHackingOrchistratorController = makeCopyOfController(pass01)
 
         it("should select the most valuable hackable target ('mid') when no attack records are implemented", () => {
             expect(noCumulativeRecordsInputResult.cumulativeAttackRecords.victimHostname).toBe("mid")

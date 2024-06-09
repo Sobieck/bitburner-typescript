@@ -18,7 +18,7 @@
         },
         {
             "path": "scripts/precalculate/attackAnalysis.js",
-            "ramCost": 5.6
+            "ramCost": 5.75
         },
         {
             "path": "scripts/hacking/moveHackScriptsToServers.js",
@@ -29,5 +29,5 @@
             "ramCost": 4.1
         }
     ],
-    "ramReservedOnHome": 8.2
+    "ramReservedOnHome": 8.35
 }

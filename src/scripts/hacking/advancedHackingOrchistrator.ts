@@ -20,7 +20,7 @@ export async function main(ns: NS): Promise<void> {
   const ramReservedOnHome: number = JSON.parse(ns.read("data/scriptRegistry.txt")).ramReservedOnHome
 
 
-  const controller = new BasicHackingOrchistratorController(servers, ramReservedOnHome, cumulativeAttackRecords)
+  const controller = new AdvancedHackingOrchistratorController(servers, ramReservedOnHome, cumulativeAttackRecords)
 
   for (const actionRecord of controller.cumulativeAttackRecords.attackRecords) {
     if (!actionRecord.commandSent) {
@@ -74,7 +74,7 @@ export class CumulativeAttackRecords {
 
 }
 
-export class BasicHackingOrchistratorController {
+export class AdvancedHackingOrchistratorController {
   private weakenOrGrowCost = 1.75
   private hackCost = 1.7
 
