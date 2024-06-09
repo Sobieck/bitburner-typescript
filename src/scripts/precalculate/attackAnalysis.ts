@@ -2,25 +2,44 @@ import { NS, Server } from "@ns";
 
 export async function main(ns: NS): Promise<void> {
     const environmentPath = "data/environment.txt"
-
     const serversWithAnalysis = JSON.parse(ns.read(environmentPath)) as ServerWithAnalysis[]
 
+    const scriptRegistry = JSON.parse(ns.read("data/scriptRegistry.txt"))
+
+
+
+    const homeServer = serversWithAnalysis.find(x => x.hostname === "home")
+
     for (const server of serversWithAnalysis) {
-        if (server.moneyAvailable && server.moneyMax && server.hasAdminRights) {
-            const threadsForAllMoney = ns.hackAnalyzeThreads(server.hostname, server.moneyAvailable)
+        server.freeRam = server.maxRam - server.ramUsed 
+
+        if(server.hostname === "home"){
+            server.freeRam = server.maxRam - (scriptRegistry.ramReservedOnHome + server.ramUsed)
+        }
+
+        if (server.moneyMax && server.hasAdminRights) {
+            let moneyAvailable = server.moneyAvailable!
             
-            if (threadsForAllMoney > 0) {
-                server.hackThreadsForAllMoney = threadsForAllMoney
-                server.hackChance = ns.hackAnalyzeChance(server.hostname)
-                server.hackMs = ns.getHackTime(server.hostname)
+            if(moneyAvailable === 0){
+                moneyAvailable = 1
             }
 
-            const growthFactor = server.moneyMax / server.moneyAvailable
+            const threadsForAllMoney = ns.hackAnalyzeThreads(server.hostname, moneyAvailable)
 
-            server.numberOfGrowthThreadsNeededToMax = ns.growthAnalyze(server.hostname, growthFactor)
-            server.growthMs = ns.getGrowTime(server.hostname)
+            if (threadsForAllMoney > 0) {
+                server.hackThreadsForAllMoney = Math.ceil(threadsForAllMoney)
+                server.hackChance = ns.hackAnalyzeChance(server.hostname)
+                server.hackMs = Math.ceil(ns.getHackTime(server.hostname))
+            }
 
-            server.weakenMs = ns.getWeakenTime(server.hostname)
+            const growthFactor = server.moneyMax / moneyAvailable
+
+            server.numberOfGrowthThreadsNeededToMax = Math.ceil(ns.growthAnalyze(server.hostname, growthFactor))
+            server.numberOfGrowthThreadsNeededToMaxHomeComputer = Math.ceil(ns.growthAnalyze(server.hostname, growthFactor, homeServer?.cpuCores))
+           
+            server.growthMs = Math.ceil(ns.getGrowTime(server.hostname))
+
+            server.weakenMs = Math.ceil(ns.getWeakenTime(server.hostname))
         }
     }
 
@@ -35,6 +54,9 @@ interface ServerWithAnalysis extends Server {
 
     growthMs: number;
     numberOfGrowthThreadsNeededToMax: number; // needs testing
+    numberOfGrowthThreadsNeededToMaxHomeComputer: number;
 
     weakenMs: number;
+
+    freeRam: number;
 } 

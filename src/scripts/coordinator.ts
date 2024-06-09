@@ -8,16 +8,16 @@ export async function main(ns: NS): Promise<void> {
 
   const totalTimeInMs = 2_000
 
-  await ns.sleep(totalTimeInMs)
+  await ns.sleep(totalTimeInMs * 3)
 
   while(true){
     
     const scriptRegistry: ScriptRegistry = JSON.parse(ns.read("data/scriptRegistry.txt"))
     const numberOfMsPerAction = totalTimeInMs / scriptRegistry.scriptsWithCost.length
 
-    for (const script of scriptRegistry.scriptsWithCost) {
+    for (const script of scriptRegistry.scriptsToRun) {
 
-      ns.run(script.path)
+      ns.run(script)
       await ns.sleep(numberOfMsPerAction)
     
     } 

@@ -19,7 +19,9 @@ export async function main(ns: NS): Promise<void> {
   // add cost
   const scriptWithRamCost: ScriptWithCost[] = []
 
-  scriptsToRun.forEach(path => {
+  const allScripts = ns.ls("home", "/scripts")
+
+  allScripts.forEach(path => {
     scriptWithRamCost.push(
       new ScriptWithCost(path, ns.getScriptRam(path))
     )
@@ -28,7 +30,7 @@ export async function main(ns: NS): Promise<void> {
   const coordinatorRamCost = ns.getScriptRam("scripts/coordinator.js")
   const maxCost = Math.max(...scriptWithRamCost.map(x => x.ramCost))
 
-  const scriptRegistry = new ScriptRegistry(scriptWithRamCost, maxCost + coordinatorRamCost)
+  const scriptRegistry = new ScriptRegistry(scriptsToRun, scriptWithRamCost, maxCost + coordinatorRamCost)
 
   ns.rm("data/scriptRegistry.txt")
   ns.write("data/scriptRegistry.txt", JSON.stringify(scriptRegistry))
@@ -36,7 +38,7 @@ export async function main(ns: NS): Promise<void> {
 
 
 export class ScriptRegistry {
-  constructor(public scriptsWithCost: ScriptWithCost[], public ramReservedOnHome: number){}
+  constructor(public scriptsToRun: string[], public scriptsWithCost: ScriptWithCost[], public ramReservedOnHome: number){}
 }
 
 export class ScriptWithCost {

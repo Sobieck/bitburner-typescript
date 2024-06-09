@@ -1,5 +1,32 @@
-import { MockServer } from "../MockServer"
+import { Server } from "@ns"
 import { BasicHackingOrchistratorController, HackingAction } from "../../scripts/hacking/basicHackingOrchistrator"
+
+export class MockServer implements Server {
+    constructor(public hostname: string) { }
+    ip: string = "";
+    sshPortOpen: boolean = false;
+    ftpPortOpen: boolean = false;
+    smtpPortOpen: boolean = true;
+    httpPortOpen: boolean = false;
+    sqlPortOpen: boolean = false;
+    hasAdminRights: boolean = false;
+    cpuCores: number = 123;
+    isConnectedTo: boolean = true;
+    ramUsed: number = 12;
+    maxRam: number = 25;
+    organizationName: string = "asdf";
+    purchasedByPlayer: boolean = false;
+    backdoorInstalled?: boolean | undefined;
+    baseDifficulty?: number | undefined;
+    hackDifficulty?: number | undefined;
+    minDifficulty?: number | undefined;
+    moneyAvailable?: number | undefined;
+    moneyMax?: number | undefined;
+    numOpenPortsRequired?: number | undefined;
+    openPortCount?: number | undefined;
+    requiredHackingSkill?: number | undefined;
+    serverGrowth?: number | undefined; 
+}
 
 describe("BasicHackingOrchistratorController", () => {
     describe("when no cumulative record is present", () => {
@@ -224,8 +251,6 @@ describe("BasicHackingOrchistratorController", () => {
         pass05.cumulativeAttackRecords.attackRecords[0].isRunning = false
         pass05.cumulativeAttackRecords.attackRecords[1].isRunning = false
         pass05.cumulativeAttackRecords.attackRecords[2].isRunning = false
-
-        const pass05Copy = makeCopyOfController(pass05)
         
         const whenHackingIsDoneAndNoMoreSqueezeBecauseToStrongServers = createMockServers(10, 16, 3.76, true)
         const pass06 = new BasicHackingOrchistratorController(whenHackingIsDoneAndNoMoreSqueezeBecauseToStrongServers, ramReserveredOnHome, pass05.cumulativeAttackRecords)
@@ -278,6 +303,10 @@ function makeCopyOfController(controller: BasicHackingOrchistratorController) {
     return newController
 }
 
+
+
+
+
 function createMockServers(minDifficulty: number, hackDifficulty: number, moneyAvailable: number, mostHasAdmin = false) {
     const mockServers = []
 
@@ -322,3 +351,4 @@ function createMockServers(minDifficulty: number, hackDifficulty: number, moneyA
 
     return mockServers
 }
+ 
