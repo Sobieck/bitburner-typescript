@@ -73,7 +73,7 @@ interface ServerWithActionAndEndtime extends ServerWithAnalysis {
 export class AdvancedHackingOrchistratorController {
     private primaryAttack: AttackOnOneServer | undefined;
     private newVictim = false
-    private serversWithEndtimesAndActions : ServerWithActionAndEndtime[] = []
+    private serversWithEndtimesAndActions: ServerWithActionAndEndtime[] = []
 
     constructor(servers: ServerWithAnalysis[], precalculatedValues: Precalculations, now: Date, public allAttacks: AttackOnOneServer[] = []) {
         this.cleanAttackRecords()
@@ -82,7 +82,7 @@ export class AdvancedHackingOrchistratorController {
         this.setUpPrimaryAttack()
 
         const attackToWorkOn = this.getAttackToWorkOn()
-        
+
         if (attackToWorkOn) {
             this.setAttackTimes(attackToWorkOn)
 
@@ -164,8 +164,8 @@ export class AdvancedHackingOrchistratorController {
         if (idleInQueue.length > 0) {
             for (const potentialAttack of idleInQueue) {
                 const server = this.serversWithEndtimesAndActions.find(x => x.hostname === potentialAttack.victimHostname)!
-                
-                if(server.expectedEndTimeInMs < this.primaryAttack!.expectedEndTimeInMs){
+
+                if (server.expectedEndTimeInMs < this.primaryAttack!.expectedEndTimeInMs) {
                     return potentialAttack
                 }
             }
@@ -198,7 +198,7 @@ export class AdvancedHackingOrchistratorController {
 
         const serverBeingAttacked = servers.find(x => x.hostname === attackToWorkOn.victimHostname)!
         const ramCostPerThread = precalculatedValues.scriptRegistry.scriptsWithCost.find(x => x.path === attackToWorkOn.action)!.ramCost
-
+        //at AdvancedHackingOrchistratorController.setAttackRecords (home/scripts/hacking/advancedHackingOrchistrator.js:137:69)
         const sortedNonHomePwnedServers = servers
             .filter(x => x.hasAdminRights && x.hostname !== "home")
             .sort((a, b) => b.freeRam! - a.freeRam!)
@@ -297,7 +297,8 @@ export class AdvancedHackingOrchistratorController {
 
         if (this.primaryAttack) {
             targetServers = targetServers
-                .filter(x => x.expectedEndTimeInMs < this.primaryAttack!.expectedEndTimeInMs &&
+                .filter(x =>
+                    x.expectedEndTimeInMs < this.primaryAttack!.expectedEndTimeInMs &&
                     x.moneyMax! < this.primaryAttack!.maxMoney)
         }
 
@@ -332,18 +333,19 @@ export async function main(ns: NS): Promise<void> {
 
     const servers: ServerWithAnalysis[] = JSON.parse(ns.read("data/environment.txt"))
     const precalculations = JSON.parse(ns.read("data/precalculatedValues.txt")) as Precalculations
+    precalculations.scriptRegistry = JSON.parse(ns.read("data/scriptRegistry.txt")) as ScriptRegistry
 
     const controller = new AdvancedHackingOrchistratorController(servers, precalculations, new Date(Date.now()), serversUnderAttack)
 
     for (const attackOnOneServer of controller.allAttacks) {
-        for(const actionRecord of attackOnOneServer.attackRecords){
-            if (!actionRecord.commandSent) {
+        for (const actionRecord of attackOnOneServer.attackRecords) {
+            if (!actionRecord.commandSent && actionRecord.treadCount > 0) {
                 const pid = ns.exec(
                     attackOnOneServer.action,
                     actionRecord.attackingHostname,
                     actionRecord.treadCount,
                     attackOnOneServer.victimHostname)
-    
+
                 actionRecord.addPid(pid)
             }
         }
