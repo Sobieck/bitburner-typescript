@@ -71,21 +71,21 @@
             "max": 10
         },
         "skills": {
-            "hacking": 153,
+            "hacking": 1989,
             "strength": 1,
             "defense": 1,
             "dexterity": 1,
             "agility": 1,
-            "charisma": 1,
+            "charisma": 15,
             "intelligence": 0
         },
         "exp": {
-            "hacking": 804.5342844790822,
+            "hacking": 111814651.21882921,
             "strength": 0,
             "defense": 0,
             "dexterity": 0,
             "agility": 0,
-            "charisma": 0,
+            "charisma": 142.5398414833823,
             "intelligence": 0
         },
         "mults": {
@@ -99,18 +99,18 @@
             "strength_exp": 1.6882205974437996,
             "defense": 1.3345617371097234,
             "defense_exp": 1.6882205974437996,
-            "dexterity": 1.5347459976761817,
+            "dexterity": 1.6114832975599909,
             "dexterity_exp": 1.6882205974437996,
-            "agility": 1.3345617371097234,
+            "agility": 1.4012898239652096,
             "agility_exp": 1.6882205974437996,
-            "charisma": 1.601474084531668,
+            "charisma": 1.7616214929848348,
             "charisma_exp": 1.6882205974437996,
             "hacknet_node_money": 1.3345617371097234,
             "hacknet_node_purchase_cost": 0.7493096588890014,
             "hacknet_node_ram_cost": 0.7493096588890014,
             "hacknet_node_core_cost": 0.7493096588890014,
             "hacknet_node_level_cost": 0.7493096588890014,
-            "company_rep": 2.02586471693256,
+            "company_rep": 2.228451188625816,
             "faction_rep": 1.6882205974438,
             "work_money": 1.4680179108206959,
             "crime_success": 1.3345617371097234,
@@ -122,17 +122,22 @@
         },
         "city": "Sector-12",
         "numPeopleKilled": 0,
-        "money": 1151,
-        "location": "Travel Agency",
-        "totalPlaytime": 698841000,
-        "jobs": {},
-        "factions": [],
+        "money": 65535412674.05985,
+        "location": "Alpha Enterprises",
+        "totalPlaytime": 710574400,
+        "jobs": {
+            "ECorp": "IT Intern"
+        },
+        "factions": [
+            "Aevum",
+            "Sector-12"
+        ],
         "entropy": 0,
         "karma": 0,
-        "playtimeSinceLastAug": 1080800,
-        "playtimeSinceLastBitnode": 698841000,
+        "playtimeSinceLastAug": 7718000,
+        "playtimeSinceLastBitnode": 710574400,
         "bitNodeN": 1
     },
     "weakenAmountPerThread01Core": 0.05,
-    "weakenAmountPerThreadHomeComputer": 0.05625
+    "weakenAmountPerThreadHomeComputer": 0.059375000000000004
 }
