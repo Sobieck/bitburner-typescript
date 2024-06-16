@@ -11,9 +11,20 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/precalculate/precalculate.js")
   scriptsToRun.push("scripts/precalculate/attackAnalysis.js")
 
+  //augments 
+  scriptsToRun.push("scripts/augments/whereToGet.js")
+  scriptsToRun.push("scripts/augments/getPrereqs.js") 
+  scriptsToRun.push("scripts/augments/getRepAndBasePrice.js") 
+  scriptsToRun.push("scripts/augments/getStats.js")
+  scriptsToRun.push("scripts/augments/isOwned.js") 
+
   // hacking
   scriptsToRun.push("scripts/hacking/moveHackScriptsToServers.js")
   scriptsToRun.push("scripts/hacking/advancedHackingOrchistrator.js")
+
+  //characterShit 
+  scriptsToRun.push("scripts/character/default.js")
+  scriptsToRun.push("scripts/character/createPrograms.js")
 
 
   // add cost

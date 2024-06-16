@@ -6,8 +6,6 @@ export async function main(ns: NS): Promise<void> {
 
     const scriptRegistry = JSON.parse(ns.read("data/scriptRegistry.txt"))
 
-
-
     const homeServer = serversWithAnalysis.find(x => x.hostname === "home")
 
     for (const server of serversWithAnalysis) {
@@ -53,7 +51,7 @@ interface ServerWithAnalysis extends Server {
     hackChance: number;
 
     growthMs: number;
-    numberOfGrowthThreadsNeededToMax: number; // needs testing
+    numberOfGrowthThreadsNeededToMax: number; 
     numberOfGrowthThreadsNeededToMaxHomeComputer: number;
 
     weakenMs: number;

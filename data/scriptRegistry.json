@@ -6,9 +6,47 @@
         "scripts/precalculate/precalculate.js",
         "scripts/precalculate/attackAnalysis.js",
         "scripts/hacking/moveHackScriptsToServers.js",
-        "scripts/hacking/advancedHackingOrchistrator.js"
+        "scripts/hacking/advancedHackingOrchistrator.js",
+        "scripts/character/default.js",
+        "scripts/character/createPrograms.js"
     ],
     "scriptsWithCost": [
+        {
+            "path": "scripts/augments/getPrereqs.js",
+            "ramCost": 7.6
+        },
+        {
+            "path": "scripts/augments/getRepAndBasePrice.js",
+            "ramCost": 7.6
+        },
+        {
+            "path": "scripts/augments/getStats.js",
+            "ramCost": 7.6
+        },
+        {
+            "path": "scripts/augments/isOwned.js",
+            "ramCost": 7.6
+        },
+        {
+            "path": "scripts/augments/whereToGet.js",
+            "ramCost": 12.6
+        },
+        {
+            "path": "scripts/character/createPrograms.js",
+            "ramCost": 7.2
+        },
+        {
+            "path": "scripts/character/default.js",
+            "ramCost": 4.1
+        },
+        {
+            "path": "scripts/character/playerController.js",
+            "ramCost": 7.1
+        },
+        {
+            "path": "scripts/character/whatToDo.js",
+            "ramCost": 4.1
+        },
         {
             "path": "scripts/coordinator.js",
             "ramCost": 2.6
@@ -43,11 +81,15 @@
         },
         {
             "path": "scripts/investments/buyServers.js",
-            "ramCost": 3.85
+            "ramCost": 6.1
         },
         {
             "path": "scripts/precalculate/attackAnalysis.js",
             "ramCost": 5.75
+        },
+        {
+            "path": "scripts/precalculate/formulasAnalysis.js",
+            "ramCost": 3.7
         },
         {
             "path": "scripts/precalculate/precalculate.js",
@@ -66,6 +108,5 @@
             "ramCost": 2.8
         }
     ],
-    "ramReservedOnHome": 8.35
+    "ramReservedOnHome": 15.2
 }
-

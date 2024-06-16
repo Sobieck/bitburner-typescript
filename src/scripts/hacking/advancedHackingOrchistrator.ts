@@ -198,7 +198,7 @@ export class AdvancedHackingOrchistratorController {
 
         const serverBeingAttacked = servers.find(x => x.hostname === attackToWorkOn.victimHostname)!
         const ramCostPerThread = precalculatedValues.scriptRegistry.scriptsWithCost.find(x => x.path === attackToWorkOn.action)!.ramCost
-        //at AdvancedHackingOrchistratorController.setAttackRecords (home/scripts/hacking/advancedHackingOrchistrator.js:137:69)
+
         const sortedNonHomePwnedServers = servers
             .filter(x => x.hasAdminRights && x.hostname !== "home")
             .sort((a, b) => b.freeRam! - a.freeRam!)
