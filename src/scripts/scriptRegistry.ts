@@ -10,21 +10,25 @@ export async function main(ns: NS): Promise<void> {
   //precalculate
   scriptsToRun.push("scripts/precalculate/precalculate.js")
   scriptsToRun.push("scripts/precalculate/attackAnalysis.js")
-
-  //augments 
-  scriptsToRun.push("scripts/augments/whereToGet.js")
-  scriptsToRun.push("scripts/augments/getPrereqs.js") 
-  scriptsToRun.push("scripts/augments/getRepAndBasePrice.js") 
-  scriptsToRun.push("scripts/augments/getStats.js")
-  scriptsToRun.push("scripts/augments/isOwned.js") 
+    //augments 
+  scriptsToRun.push("scripts/precalculate/augments/whereToGet.js")
+  scriptsToRun.push("scripts/precalculate/augments/getPrereqs.js") 
+  scriptsToRun.push("scripts/precalculate/augments/getRepAndBasePrice.js") 
+  scriptsToRun.push("scripts/precalculate/augments/getStats.js")
+  scriptsToRun.push("scripts/precalculate/augments/isOwned.js") 
+  scriptsToRun.push("scripts/precalculate/augments/targetAugmentFilter.js")
+    // player 
+  scriptsToRun.push("scripts/precalculate/player/player.js")
 
   // hacking
   scriptsToRun.push("scripts/hacking/moveHackScriptsToServers.js")
   scriptsToRun.push("scripts/hacking/advancedHackingOrchistrator.js")
+  scriptsToRun.push("scripts/hacking/backdoor.js")
 
   //characterShit 
   scriptsToRun.push("scripts/character/default.js")
   scriptsToRun.push("scripts/character/createPrograms.js")
+  scriptsToRun.push("scripts/character/joinFaction.js")
 
 
   // add cost

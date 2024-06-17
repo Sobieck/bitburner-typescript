@@ -9,19 +9,18 @@ export async function main(ns: NS): Promise<void> {
         price: number;
         stats: Multipliers;
         prereqs: string[]
-        isOwned: boolean
     }
 
     const augmentsPath = "data/augments.txt"
 
+
     const allAugments: Augment[] = JSON.parse(ns.read(augmentsPath))
 
-    const allOwnedAugs = ns.singularity.getOwnedAugmentations()
-
     for (const augment of allAugments) {
-        augment.isOwned = allOwnedAugs.some(x => x === augment.name)
+        augment.stats = ns.singularity.getAugmentationStats(augment.name)
     }
 
     ns.rm(augmentsPath)
     ns.write(augmentsPath, JSON.stringify(allAugments))
 }
+ 

@@ -21,5 +21,5 @@ export async function main(ns: NS): Promise<void> {
     }
 
     ns.rm(augmentsPath)
-    ns.write(augmentsPath, JSON.stringify(allAugments))
+    ns.write(augmentsPath, JSON.stringify(allAugments)) 
 }

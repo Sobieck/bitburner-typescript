@@ -5,6 +5,11 @@
         "scripts/getRoot.js",
         "scripts/precalculate/precalculate.js",
         "scripts/precalculate/attackAnalysis.js",
+        "scripts/augments/whereToGet.js",
+        "scripts/augments/getPrereqs.js",
+        "scripts/augments/getRepAndBasePrice.js",
+        "scripts/augments/getStats.js",
+        "scripts/augments/isOwned.js",
         "scripts/hacking/moveHackScriptsToServers.js",
         "scripts/hacking/advancedHackingOrchistrator.js",
         "scripts/character/default.js",
@@ -29,7 +34,7 @@
         },
         {
             "path": "scripts/augments/whereToGet.js",
-            "ramCost": 12.6
+            "ramCost": 7.6
         },
         {
             "path": "scripts/character/createPrograms.js",
@@ -108,5 +113,5 @@
             "ramCost": 2.8
         }
     ],
-    "ramReservedOnHome": 15.2
+    "ramReservedOnHome": 10.2
 }

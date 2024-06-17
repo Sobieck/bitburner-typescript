@@ -29,7 +29,7 @@ export async function main(ns: NS): Promise<void> {
         "Fulcrum Secret Technologies",
         "The Covenant",
         "Daedalus",
-        "Illuminati"
+        "Illuminati" 
     ]
 
     for (const factionName of factionNames) {
@@ -59,7 +59,10 @@ export async function main(ns: NS): Promise<void> {
             sources: augmentNameWithSources[1]
         }
 
-        allAugments.push(augment)
+        if(augment.name !== "NeuroFlux Governor"){
+            allAugments.push(augment)
+        }
+
     }
 
     const augmentsPath = "data/augments.txt" 

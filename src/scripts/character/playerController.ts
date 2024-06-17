@@ -11,6 +11,7 @@ export class PlayerController {
     }
 }
 
+// priority: PROGRAMS, then augments
 
 //{"type":"CLASS","cyclesWorked":1865,"classType":"Algorithms","location":"Rothman University"}
 //{"type":"CREATE_PROGRAM","cyclesWorked":5,"programName":"BruteSSH.exe"}

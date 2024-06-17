@@ -1,0 +1,699 @@
+[
+    {
+        "totalWantedScore": 247.9999999999994,
+        "maxRepNeeded": 7500,
+        "factionName": "Tian Di Hui",
+        "augments": [
+            "Speech Enhancement",
+            "ADR-V1 Pheromone Gene",
+            "Social Negotiation Assistant (S.N.A)",
+            "Nuoptimal Nootropic Injector Implant",
+            "Speech Processor Implant"
+        ],
+        "maxPrice": 50000000,
+        "requirements": [
+            {
+                "type": "skills",
+                "skills": {
+                    "hacking": 50
+                }
+            },
+            {
+                "type": "money",
+                "money": 1000000
+            },
+            {
+                "type": "city",
+                "city": "New Tokyo"
+            }
+        ],
+        "currentRep": 36354.57664716966
+    },
+    {
+        "totalWantedScore": 241.79999999999995,
+        "maxRepNeeded": 18750,
+        "factionName": "CyberSec",
+        "augments": [
+            "Neurotrainer I",
+            "Synaptic Enhancement Implant",
+            "BitWire",
+            "Cranial Signal Processors - Gen II",
+            "Cranial Signal Processors - Gen I"
+        ],
+        "maxPrice": 125000000,
+        "requirements": [
+            {
+                "type": "backdoorInstalled",
+                "server": "CSEC"
+            }
+        ],
+        "currentRep": 67667.91530259066
+    },
+    {
+        "totalWantedScore": 106.36666666666673,
+        "maxRepNeeded": 112500,
+        "factionName": "NiteSec",
+        "augments": [
+            "Neurotrainer II",
+            "Artificial Synaptic Potentiation",
+            "BitWire",
+            "Neural-Retention Enhancement",
+            "Cranial Signal Processors - Gen II",
+            "Cranial Signal Processors - Gen I",
+            "Embedded Netburner Module",
+            "Cranial Signal Processors - Gen III",
+            "CRTX42-AA Gene Modification",
+            "DataJack"
+        ],
+        "maxPrice": 550000000,
+        "requirements": [
+            {
+                "type": "backdoorInstalled",
+                "server": "avmnite-02h"
+            }
+        ],
+        "currentRep": 13956.491369228783
+    },
+    {
+        "totalWantedScore": 249.57466666666645,
+        "maxRepNeeded": 100000,
+        "factionName": "Aevum",
+        "augments": [
+            "Neurotrainer I",
+            "Speech Processor Implant",
+            "Synaptic Enhancement Implant",
+            "Neuralstimulator",
+            "PCMatrix"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "Aevum"
+            },
+            {
+                "type": "money",
+                "money": 40000000
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 141.0666666666662,
+        "maxRepNeeded": 375000,
+        "factionName": "Bachman & Associates",
+        "augments": [
+            "Speech Enhancement",
+            "Nuoptimal Nootropic Injector Implant",
+            "ADR-V2 Pheromone Gene",
+            "Neuralstimulator",
+            "SmartJaw",
+            "Enhanced Social Interaction Implant",
+            "FocusWire"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "Bachman & Associates"
+            },
+            {
+                "type": "companyReputation",
+                "company": "Bachman & Associates",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 139.47428571428526,
+        "maxRepNeeded": 437500,
+        "factionName": "Clarke Incorporated",
+        "augments": [
+            "Speech Enhancement",
+            "Nuoptimal Nootropic Injector Implant",
+            "ADR-V2 Pheromone Gene",
+            "Neuralstimulator",
+            "Enhanced Social Interaction Implant",
+            "FocusWire",
+            "Neuronal Densification",
+            "nextSENS Gene Modification"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "Clarke Incorporated"
+            },
+            {
+                "type": "companyReputation",
+                "company": "Clarke Incorporated",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 84.35555555555533,
+        "maxRepNeeded": 112500,
+        "factionName": "Chongqing",
+        "augments": [
+            "Nuoptimal Nootropic Injector Implant",
+            "Speech Processor Implant",
+            "Neuregen Gene Modification",
+            "Neuralstimulator",
+            "DataJack"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "Chongqing"
+            },
+            {
+                "type": "money",
+                "money": 20000000
+            }
+        ],
+        "currentRep": 54780.24350153844
+    },
+    {
+        "totalWantedScore": 73.68888888888867,
+        "maxRepNeeded": 112500,
+        "factionName": "New Tokyo",
+        "augments": [
+            "Nuoptimal Nootropic Injector Implant",
+            "Speech Processor Implant",
+            "Neuralstimulator",
+            "DataJack"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "New Tokyo"
+            },
+            {
+                "type": "money",
+                "money": 20000000
+            }
+        ],
+        "currentRep": 294.3499999999999
+    },
+    {
+        "totalWantedScore": 71.46666666666644,
+        "maxRepNeeded": 50000,
+        "factionName": "Volhaven",
+        "augments": [
+            "Nuoptimal Nootropic Injector Implant",
+            "Speech Processor Implant",
+            "Neuralstimulator"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "Volhaven"
+            },
+            {
+                "type": "money",
+                "money": 50000000
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 46.52984126984115,
+        "maxRepNeeded": 175000,
+        "factionName": "The Black Hand",
+        "augments": [
+            "Artificial Synaptic Potentiation",
+            "Embedded Netburner Module",
+            "Cranial Signal Processors - Gen III",
+            "Neuralstimulator",
+            "Cranial Signal Processors - Gen IV",
+            "DataJack",
+            "The Black Hand",
+            "Enhanced Myelin Sheathing",
+            "Embedded Netburner Module Core Implant"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "backdoorInstalled",
+                "server": "I.I.I.I"
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 31.466666666666576,
+        "maxRepNeeded": 50000,
+        "factionName": "Sector-12",
+        "augments": [
+            "Speech Processor Implant",
+            "Neuralstimulator"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "Sector-12"
+            },
+            {
+                "type": "money",
+                "money": 15000000
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 31.466666666666576,
+        "maxRepNeeded": 50000,
+        "factionName": "Ishima",
+        "augments": [
+            "Speech Processor Implant",
+            "Neuralstimulator"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "Ishima"
+            },
+            {
+                "type": "money",
+                "money": 30000000
+            }
+        ],
+        "currentRep": 294.3499999999999
+    },
+    {
+        "totalWantedScore": 207.41333333333273,
+        "maxRepNeeded": 375000,
+        "factionName": "Four Sigma",
+        "augments": [
+            "Speech Enhancement",
+            "ADR-V1 Pheromone Gene",
+            "Nuoptimal Nootropic Injector Implant",
+            "Neurotrainer III",
+            "ADR-V2 Pheromone Gene",
+            "Neuralstimulator",
+            "Enhanced Social Interaction Implant",
+            "FocusWire",
+            "PC Direct-Neural Interface"
+        ],
+        "maxPrice": 3750000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "Four Sigma"
+            },
+            {
+                "type": "companyReputation",
+                "company": "Four Sigma",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 84.16333333333303,
+        "maxRepNeeded": 1000000,
+        "factionName": "KuaiGong International",
+        "augments": [
+            "Speech Enhancement",
+            "FocusWire",
+            "HyperSight Corneal Implant",
+            "Embedded Netburner Module Core V2 Upgrade"
+        ],
+        "maxPrice": 4500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "KuaiGong International"
+            },
+            {
+                "type": "companyReputation",
+                "company": "KuaiGong International",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 60.072178932179014,
+        "maxRepNeeded": 1000000,
+        "factionName": "BitRunners",
+        "augments": [
+            "Neurotrainer II",
+            "Embedded Netburner Module",
+            "Cranial Signal Processors - Gen V",
+            "Cranial Signal Processors - Gen III",
+            "Cranial Signal Processors - Gen IV",
+            "Neural Accelerator",
+            "DataJack",
+            "Enhanced Myelin Sheathing",
+            "Embedded Netburner Module Core Implant",
+            "Artificial Bio-neural Network Implant",
+            "Embedded Netburner Module Core V2 Upgrade",
+            "BitRunners Neurolink"
+        ],
+        "maxPrice": 4500000000,
+        "requirements": [
+            {
+                "type": "backdoorInstalled",
+                "server": "run4theh111z"
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 11.257619047619048,
+        "maxRepNeeded": 1000000,
+        "factionName": "Blade Industries",
+        "augments": [
+            "Embedded Netburner Module",
+            "Embedded Netburner Module Core Implant",
+            "PC Direct-Neural Interface Optimization Submodule",
+            "PC Direct-Neural Interface",
+            "HyperSight Corneal Implant",
+            "Embedded Netburner Module Core V2 Upgrade"
+        ],
+        "maxPrice": 4500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "Blade Industries"
+            },
+            {
+                "type": "companyReputation",
+                "company": "Blade Industries",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 5.563333333333331,
+        "maxRepNeeded": 1000000,
+        "factionName": "OmniTek Incorporated",
+        "augments": [
+            "Enhanced Social Interaction Implant",
+            "PC Direct-Neural Interface",
+            "OmniTek InfoLoad",
+            "Embedded Netburner Module Core V2 Upgrade"
+        ],
+        "maxPrice": 4500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "OmniTek Incorporated"
+            },
+            {
+                "type": "companyReputation",
+                "company": "OmniTek Incorporated",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 94.28523809523796,
+        "maxRepNeeded": 1750000,
+        "factionName": "NWO",
+        "augments": [
+            "ADR-V1 Pheromone Gene",
+            "Neurotrainer III",
+            "Power Recirculation Core",
+            "Embedded Netburner Module",
+            "Enhanced Social Interaction Implant",
+            "Embedded Netburner Module Core Implant",
+            "Xanipher",
+            "Embedded Netburner Module Core V2 Upgrade",
+            "Embedded Netburner Module Direct Memory Access Upgrade",
+            "Embedded Netburner Module Core V3 Upgrade",
+            "Embedded Netburner Module Analyze Engine"
+        ],
+        "maxPrice": 7500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "NWO"
+            },
+            {
+                "type": "companyReputation",
+                "company": "NWO",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 62.2852380952379,
+        "maxRepNeeded": 1750000,
+        "factionName": "MegaCorp",
+        "augments": [
+            "ADR-V1 Pheromone Gene",
+            "Embedded Netburner Module",
+            "Embedded Netburner Module Core Implant",
+            "Embedded Netburner Module Core V2 Upgrade",
+            "Embedded Netburner Module Direct Memory Access Upgrade",
+            "Embedded Netburner Module Core V3 Upgrade",
+            "Embedded Netburner Module Analyze Engine"
+        ],
+        "maxPrice": 7500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "MegaCorp"
+            },
+            {
+                "type": "companyReputation",
+                "company": "MegaCorp",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 14.609480519480536,
+        "maxRepNeeded": 1750000,
+        "factionName": "Fulcrum Secret Technologies",
+        "augments": [
+            "Embedded Netburner Module",
+            "Enhanced Myelin Sheathing",
+            "Embedded Netburner Module Core Implant",
+            "PC Direct-Neural Interface Optimization Submodule",
+            "Artificial Bio-neural Network Implant",
+            "PC Direct-Neural Interface NeuroNet Injector",
+            "Embedded Netburner Module Core V2 Upgrade",
+            "Embedded Netburner Module Direct Memory Access Upgrade",
+            "Embedded Netburner Module Core V3 Upgrade",
+            "Embedded Netburner Module Analyze Engine"
+        ],
+        "maxPrice": 7500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "Fulcrum Technologies"
+            },
+            {
+                "type": "companyReputation",
+                "company": "Fulcrum Technologies",
+                "reputation": 400000
+            },
+            {
+                "type": "backdoorInstalled",
+                "server": "fulcrumassets"
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 12.998571428571436,
+        "maxRepNeeded": 1750000,
+        "factionName": "ECorp",
+        "augments": [
+            "Embedded Netburner Module",
+            "Embedded Netburner Module Core Implant",
+            "PC Direct-Neural Interface Optimization Submodule",
+            "ECorp HVMind Implant",
+            "PC Direct-Neural Interface",
+            "Embedded Netburner Module Core V2 Upgrade",
+            "Embedded Netburner Module Direct Memory Access Upgrade",
+            "Embedded Netburner Module Core V3 Upgrade",
+            "Embedded Netburner Module Analyze Engine"
+        ],
+        "maxPrice": 7500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "ECorp"
+            },
+            {
+                "type": "companyReputation",
+                "company": "ECorp",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 1.3942857142857128,
+        "maxRepNeeded": 1750000,
+        "factionName": "The Covenant",
+        "augments": [
+            "Embedded Netburner Module Direct Memory Access Upgrade",
+            "Embedded Netburner Module Core V3 Upgrade",
+            "Embedded Netburner Module Analyze Engine",
+            "SPTN-97 Gene Modification"
+        ],
+        "maxPrice": 7500000000,
+        "requirements": [
+            {
+                "type": "numAugmentations",
+                "numAugmentations": 20
+            },
+            {
+                "type": "money",
+                "money": 75000000000
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "hacking": 850
+                }
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "strength": 850
+                }
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "defense": 850
+                }
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "dexterity": 850
+                }
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "agility": 850
+                }
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 1.2742857142857125,
+        "maxRepNeeded": 1750000,
+        "factionName": "Daedalus",
+        "augments": [
+            "Embedded Netburner Module Direct Memory Access Upgrade",
+            "Embedded Netburner Module Core V3 Upgrade",
+            "Embedded Netburner Module Analyze Engine"
+        ],
+        "maxPrice": 7500000000,
+        "requirements": [
+            {
+                "type": "numAugmentations",
+                "numAugmentations": 30
+            },
+            {
+                "type": "money",
+                "money": 100000000000
+            },
+            {
+                "type": "someCondition",
+                "conditions": [
+                    {
+                        "type": "skills",
+                        "skills": {
+                            "hacking": 2500
+                        }
+                    },
+                    {
+                        "type": "skills",
+                        "skills": {
+                            "strength": 1500,
+                            "defense": 1500,
+                            "dexterity": 1500,
+                            "agility": 1500
+                        }
+                    }
+                ]
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 4.607619047619046,
+        "maxRepNeeded": 1875000,
+        "factionName": "Illuminati",
+        "augments": [
+            "QLink",
+            "Embedded Netburner Module Direct Memory Access Upgrade",
+            "Embedded Netburner Module Core V3 Upgrade",
+            "Embedded Netburner Module Analyze Engine"
+        ],
+        "maxPrice": 25000000000000,
+        "requirements": [
+            {
+                "type": "numAugmentations",
+                "numAugmentations": 30
+            },
+            {
+                "type": "money",
+                "money": 150000000000
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "hacking": 1500
+                }
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "strength": 1200
+                }
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "defense": 1200
+                }
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "dexterity": 1200
+                }
+            },
+            {
+                "type": "skills",
+                "skills": {
+                    "agility": 1200
+                }
+            }
+        ],
+        "currentRep": 0
+    }
+]
