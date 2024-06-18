@@ -6,10 +6,14 @@ interface ServerWithPathAndConnections extends Server {
 }
 
 export async function main(ns: NS): Promise<void> {
-    if(ns.isRunning("scripts/hacking/backdoor.js")){
+    const backdoorFlagFile = "data/backdooring.txt"
+
+    if(ns.fileExists(backdoorFlagFile, "home")){
         return;
     }
 
+    ns.write(backdoorFlagFile)
+    
     const environmentPath = "data/environment.txt"
     const servers = JSON.parse(ns.read(environmentPath)) as ServerWithPathAndConnections[]
 
@@ -26,8 +30,10 @@ export async function main(ns: NS): Promise<void> {
             ns.singularity.connect(nextServer)
         }
 
-        ns.singularity.installBackdoor()
+        await ns.singularity.installBackdoor()
         ns.singularity.connect("home")
     }
+
+    ns.rm(backdoorFlagFile)
 
 }

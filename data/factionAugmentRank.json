@@ -1,44 +1,11 @@
 [
     {
-        "totalWantedScore": 247.9999999999994,
-        "maxRepNeeded": 7500,
-        "factionName": "Tian Di Hui",
-        "augments": [
-            "Speech Enhancement",
-            "ADR-V1 Pheromone Gene",
-            "Social Negotiation Assistant (S.N.A)",
-            "Nuoptimal Nootropic Injector Implant",
-            "Speech Processor Implant"
-        ],
-        "maxPrice": 50000000,
-        "requirements": [
-            {
-                "type": "skills",
-                "skills": {
-                    "hacking": 50
-                }
-            },
-            {
-                "type": "money",
-                "money": 1000000
-            },
-            {
-                "type": "city",
-                "city": "New Tokyo"
-            }
-        ],
-        "currentRep": 36354.57664716966
-    },
-    {
-        "totalWantedScore": 241.79999999999995,
+        "totalWantedScore": 20.800000000000217,
         "maxRepNeeded": 18750,
         "factionName": "CyberSec",
         "augments": [
-            "Neurotrainer I",
-            "Synaptic Enhancement Implant",
             "BitWire",
-            "Cranial Signal Processors - Gen II",
-            "Cranial Signal Processors - Gen I"
+            "Cranial Signal Processors - Gen II"
         ],
         "maxPrice": 125000000,
         "requirements": [
@@ -47,10 +14,10 @@
                 "server": "CSEC"
             }
         ],
-        "currentRep": 67667.91530259066
+        "currentRep": 0
     },
     {
-        "totalWantedScore": 106.36666666666673,
+        "totalWantedScore": 100.36666666666684,
         "maxRepNeeded": 112500,
         "factionName": "NiteSec",
         "augments": [
@@ -59,7 +26,6 @@
             "BitWire",
             "Neural-Retention Enhancement",
             "Cranial Signal Processors - Gen II",
-            "Cranial Signal Processors - Gen I",
             "Embedded Netburner Module",
             "Cranial Signal Processors - Gen III",
             "CRTX42-AA Gene Modification",
@@ -70,156 +36,6 @@
             {
                 "type": "backdoorInstalled",
                 "server": "avmnite-02h"
-            }
-        ],
-        "currentRep": 13956.491369228783
-    },
-    {
-        "totalWantedScore": 249.57466666666645,
-        "maxRepNeeded": 100000,
-        "factionName": "Aevum",
-        "augments": [
-            "Neurotrainer I",
-            "Speech Processor Implant",
-            "Synaptic Enhancement Implant",
-            "Neuralstimulator",
-            "PCMatrix"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "city",
-                "city": "Aevum"
-            },
-            {
-                "type": "money",
-                "money": 40000000
-            }
-        ],
-        "currentRep": 0
-    },
-    {
-        "totalWantedScore": 141.0666666666662,
-        "maxRepNeeded": 375000,
-        "factionName": "Bachman & Associates",
-        "augments": [
-            "Speech Enhancement",
-            "Nuoptimal Nootropic Injector Implant",
-            "ADR-V2 Pheromone Gene",
-            "Neuralstimulator",
-            "SmartJaw",
-            "Enhanced Social Interaction Implant",
-            "FocusWire"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "employedBy",
-                "company": "Bachman & Associates"
-            },
-            {
-                "type": "companyReputation",
-                "company": "Bachman & Associates",
-                "reputation": 400000
-            }
-        ],
-        "currentRep": 0,
-        "currentJobRep": 0
-    },
-    {
-        "totalWantedScore": 139.47428571428526,
-        "maxRepNeeded": 437500,
-        "factionName": "Clarke Incorporated",
-        "augments": [
-            "Speech Enhancement",
-            "Nuoptimal Nootropic Injector Implant",
-            "ADR-V2 Pheromone Gene",
-            "Neuralstimulator",
-            "Enhanced Social Interaction Implant",
-            "FocusWire",
-            "Neuronal Densification",
-            "nextSENS Gene Modification"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "employedBy",
-                "company": "Clarke Incorporated"
-            },
-            {
-                "type": "companyReputation",
-                "company": "Clarke Incorporated",
-                "reputation": 400000
-            }
-        ],
-        "currentRep": 0,
-        "currentJobRep": 0
-    },
-    {
-        "totalWantedScore": 84.35555555555533,
-        "maxRepNeeded": 112500,
-        "factionName": "Chongqing",
-        "augments": [
-            "Nuoptimal Nootropic Injector Implant",
-            "Speech Processor Implant",
-            "Neuregen Gene Modification",
-            "Neuralstimulator",
-            "DataJack"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "city",
-                "city": "Chongqing"
-            },
-            {
-                "type": "money",
-                "money": 20000000
-            }
-        ],
-        "currentRep": 54780.24350153844
-    },
-    {
-        "totalWantedScore": 73.68888888888867,
-        "maxRepNeeded": 112500,
-        "factionName": "New Tokyo",
-        "augments": [
-            "Nuoptimal Nootropic Injector Implant",
-            "Speech Processor Implant",
-            "Neuralstimulator",
-            "DataJack"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "city",
-                "city": "New Tokyo"
-            },
-            {
-                "type": "money",
-                "money": 20000000
-            }
-        ],
-        "currentRep": 294.3499999999999
-    },
-    {
-        "totalWantedScore": 71.46666666666644,
-        "maxRepNeeded": 50000,
-        "factionName": "Volhaven",
-        "augments": [
-            "Nuoptimal Nootropic Injector Implant",
-            "Speech Processor Implant",
-            "Neuralstimulator"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "city",
-                "city": "Volhaven"
-            },
-            {
-                "type": "money",
-                "money": 50000000
             }
         ],
         "currentRep": 0
@@ -249,11 +65,127 @@
         "currentRep": 0
     },
     {
-        "totalWantedScore": 31.466666666666576,
+        "totalWantedScore": 21.066666666666638,
+        "maxRepNeeded": 375000,
+        "factionName": "Bachman & Associates",
+        "augments": [
+            "ADR-V2 Pheromone Gene",
+            "Neuralstimulator",
+            "SmartJaw",
+            "Enhanced Social Interaction Implant",
+            "FocusWire"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "Bachman & Associates"
+            },
+            {
+                "type": "companyReputation",
+                "company": "Bachman & Associates",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 19.47428571428569,
+        "maxRepNeeded": 437500,
+        "factionName": "Clarke Incorporated",
+        "augments": [
+            "ADR-V2 Pheromone Gene",
+            "Neuralstimulator",
+            "Enhanced Social Interaction Implant",
+            "FocusWire",
+            "Neuronal Densification",
+            "nextSENS Gene Modification"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "Clarke Incorporated"
+            },
+            {
+                "type": "companyReputation",
+                "company": "Clarke Incorporated",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 17.6888888888889,
+        "maxRepNeeded": 112500,
+        "factionName": "Chongqing",
+        "augments": [
+            "Neuregen Gene Modification",
+            "Neuralstimulator",
+            "DataJack"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "Chongqing"
+            },
+            {
+                "type": "money",
+                "money": 20000000
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 7.908000000000008,
+        "maxRepNeeded": 100000,
+        "factionName": "Aevum",
+        "augments": [
+            "Neuralstimulator",
+            "PCMatrix"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "Aevum"
+            },
+            {
+                "type": "money",
+                "money": 40000000
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 7.022222222222226,
+        "maxRepNeeded": 112500,
+        "factionName": "New Tokyo",
+        "augments": [
+            "Neuralstimulator",
+            "DataJack"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "New Tokyo"
+            },
+            {
+                "type": "money",
+                "money": 20000000
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 4.800000000000004,
         "maxRepNeeded": 50000,
         "factionName": "Sector-12",
         "augments": [
-            "Speech Processor Implant",
             "Neuralstimulator"
         ],
         "maxPrice": 3000000000,
@@ -270,11 +202,10 @@
         "currentRep": 0
     },
     {
-        "totalWantedScore": 31.466666666666576,
+        "totalWantedScore": 4.800000000000004,
         "maxRepNeeded": 50000,
         "factionName": "Ishima",
         "augments": [
-            "Speech Processor Implant",
             "Neuralstimulator"
         ],
         "maxPrice": 3000000000,
@@ -288,16 +219,33 @@
                 "money": 30000000
             }
         ],
-        "currentRep": 294.3499999999999
+        "currentRep": 0
     },
     {
-        "totalWantedScore": 207.41333333333273,
+        "totalWantedScore": 4.800000000000004,
+        "maxRepNeeded": 50000,
+        "factionName": "Volhaven",
+        "augments": [
+            "Neuralstimulator"
+        ],
+        "maxPrice": 3000000000,
+        "requirements": [
+            {
+                "type": "city",
+                "city": "Volhaven"
+            },
+            {
+                "type": "money",
+                "money": 50000000
+            }
+        ],
+        "currentRep": 0
+    },
+    {
+        "totalWantedScore": 34.079999999999984,
         "maxRepNeeded": 375000,
         "factionName": "Four Sigma",
         "augments": [
-            "Speech Enhancement",
-            "ADR-V1 Pheromone Gene",
-            "Nuoptimal Nootropic Injector Implant",
             "Neurotrainer III",
             "ADR-V2 Pheromone Gene",
             "Neuralstimulator",
@@ -314,31 +262,6 @@
             {
                 "type": "companyReputation",
                 "company": "Four Sigma",
-                "reputation": 400000
-            }
-        ],
-        "currentRep": 0,
-        "currentJobRep": 0
-    },
-    {
-        "totalWantedScore": 84.16333333333303,
-        "maxRepNeeded": 1000000,
-        "factionName": "KuaiGong International",
-        "augments": [
-            "Speech Enhancement",
-            "FocusWire",
-            "HyperSight Corneal Implant",
-            "Embedded Netburner Module Core V2 Upgrade"
-        ],
-        "maxPrice": 4500000000,
-        "requirements": [
-            {
-                "type": "employedBy",
-                "company": "KuaiGong International"
-            },
-            {
-                "type": "companyReputation",
-                "company": "KuaiGong International",
                 "reputation": 400000
             }
         ],
@@ -425,11 +348,34 @@
         "currentJobRep": 0
     },
     {
-        "totalWantedScore": 94.28523809523796,
+        "totalWantedScore": 4.163333333333316,
+        "maxRepNeeded": 1000000,
+        "factionName": "KuaiGong International",
+        "augments": [
+            "FocusWire",
+            "HyperSight Corneal Implant",
+            "Embedded Netburner Module Core V2 Upgrade"
+        ],
+        "maxPrice": 4500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "KuaiGong International"
+            },
+            {
+                "type": "companyReputation",
+                "company": "KuaiGong International",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 40.9519047619048,
         "maxRepNeeded": 1750000,
         "factionName": "NWO",
         "augments": [
-            "ADR-V1 Pheromone Gene",
             "Neurotrainer III",
             "Power Recirculation Core",
             "Embedded Netburner Module",
@@ -450,34 +396,6 @@
             {
                 "type": "companyReputation",
                 "company": "NWO",
-                "reputation": 400000
-            }
-        ],
-        "currentRep": 0,
-        "currentJobRep": 0
-    },
-    {
-        "totalWantedScore": 62.2852380952379,
-        "maxRepNeeded": 1750000,
-        "factionName": "MegaCorp",
-        "augments": [
-            "ADR-V1 Pheromone Gene",
-            "Embedded Netburner Module",
-            "Embedded Netburner Module Core Implant",
-            "Embedded Netburner Module Core V2 Upgrade",
-            "Embedded Netburner Module Direct Memory Access Upgrade",
-            "Embedded Netburner Module Core V3 Upgrade",
-            "Embedded Netburner Module Analyze Engine"
-        ],
-        "maxPrice": 7500000000,
-        "requirements": [
-            {
-                "type": "employedBy",
-                "company": "MegaCorp"
-            },
-            {
-                "type": "companyReputation",
-                "company": "MegaCorp",
                 "reputation": 400000
             }
         ],
@@ -542,6 +460,33 @@
             {
                 "type": "companyReputation",
                 "company": "ECorp",
+                "reputation": 400000
+            }
+        ],
+        "currentRep": 0,
+        "currentJobRep": 0
+    },
+    {
+        "totalWantedScore": 8.95190476190477,
+        "maxRepNeeded": 1750000,
+        "factionName": "MegaCorp",
+        "augments": [
+            "Embedded Netburner Module",
+            "Embedded Netburner Module Core Implant",
+            "Embedded Netburner Module Core V2 Upgrade",
+            "Embedded Netburner Module Direct Memory Access Upgrade",
+            "Embedded Netburner Module Core V3 Upgrade",
+            "Embedded Netburner Module Analyze Engine"
+        ],
+        "maxPrice": 7500000000,
+        "requirements": [
+            {
+                "type": "employedBy",
+                "company": "MegaCorp"
+            },
+            {
+                "type": "companyReputation",
+                "company": "MegaCorp",
                 "reputation": 400000
             }
         ],

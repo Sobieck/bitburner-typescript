@@ -10,14 +10,15 @@ export async function main(ns: NS): Promise<void> {
   //precalculate
   scriptsToRun.push("scripts/precalculate/precalculate.js")
   scriptsToRun.push("scripts/precalculate/attackAnalysis.js")
-    //augments 
+  //augments 
   scriptsToRun.push("scripts/precalculate/augments/whereToGet.js")
-  scriptsToRun.push("scripts/precalculate/augments/getPrereqs.js") 
-  scriptsToRun.push("scripts/precalculate/augments/getRepAndBasePrice.js") 
+  scriptsToRun.push("scripts/precalculate/augments/getPrereqs.js")
+  scriptsToRun.push("scripts/precalculate/augments/getRepAndBasePrice.js")
   scriptsToRun.push("scripts/precalculate/augments/getStats.js")
-  scriptsToRun.push("scripts/precalculate/augments/isOwned.js") 
+  scriptsToRun.push("scripts/precalculate/augments/isOwned.js")
   scriptsToRun.push("scripts/precalculate/augments/targetAugmentFilter.js")
-    // player 
+  scriptsToRun.push("scripts/precalculate/augments/getCompanyJobs.js")
+  // player 
   scriptsToRun.push("scripts/precalculate/player/player.js")
 
   // hacking
@@ -29,7 +30,8 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/character/default.js")
   scriptsToRun.push("scripts/character/createPrograms.js")
   scriptsToRun.push("scripts/character/joinFaction.js")
-
+  scriptsToRun.push("scripts/character/applyForJob.js") 
+  
 
   // add cost
   const scriptWithRamCost: ScriptWithCost[] = []
@@ -45,7 +47,9 @@ export async function main(ns: NS): Promise<void> {
   const coordinatorRamCost = ns.getScriptRam("scripts/coordinator.js")
   const maxCost = Math.max(...scriptWithRamCost.map(x => x.ramCost))
 
-  const scriptRegistry = new ScriptRegistry(scriptsToRun, scriptWithRamCost, maxCost + coordinatorRamCost)
+  const keyLog = scriptWithRamCost.find(x => x.ramCost === maxCost)!
+
+  const scriptRegistry = new ScriptRegistry(scriptsToRun, scriptWithRamCost, maxCost + coordinatorRamCost, keyLog)
 
   ns.rm("data/scriptRegistry.txt")
   ns.write("data/scriptRegistry.txt", JSON.stringify(scriptRegistry))
@@ -53,9 +57,9 @@ export async function main(ns: NS): Promise<void> {
 
 
 export class ScriptRegistry {
-  constructor(public scriptsToRun: string[], public scriptsWithCost: ScriptWithCost[], public ramReservedOnHome: number){}
+  constructor(public scriptsToRun: string[], public scriptsWithCost: ScriptWithCost[], public ramReservedOnHome: number, public mostRam: ScriptWithCost) { }
 }
 
 export class ScriptWithCost {
-  constructor(public path: string, public ramCost: number){}
+  constructor(public path: string, public ramCost: number) { }
 }

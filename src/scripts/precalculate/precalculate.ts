@@ -1,14 +1,15 @@
-import { NS, Player, Server } from "@ns";
+import { NS, Server } from "@ns";
 
 type ServerMemoryWithCost = {
     ram: number;
     cost: number;
-}
+} 
 
 type PrecalculatedValues = {
     remoteServerCosts: ServerMemoryWithCost[];
     weakenAmountPerThread01Core: number;
     weakenAmountPerThreadHomeComputer: number;
+    fileSystem: string[];
 }
 
 export async function main(ns: NS): Promise<void> {
@@ -19,7 +20,8 @@ export async function main(ns: NS): Promise<void> {
     const precalculatedValues: PrecalculatedValues = {
         remoteServerCosts: [],
         weakenAmountPerThread01Core: ns.weakenAnalyze(1, 1),
-        weakenAmountPerThreadHomeComputer: ns.weakenAnalyze(1, homeComputer.cpuCores)
+        weakenAmountPerThreadHomeComputer: ns.weakenAnalyze(1, homeComputer.cpuCores),
+        fileSystem: ns.ls("home")
     }
 
     let ramAmount = 32
@@ -33,11 +35,11 @@ export async function main(ns: NS): Promise<void> {
 
         precalculatedValues.remoteServerCosts.push(serverMemoryWithCost)
 
-        ramAmount *= 2 
+        ramAmount *= 2
     }
 
     const path = "data/precalculatedValues.txt"
-    
+
     ns.rm(path)
     ns.write(path, JSON.stringify(precalculatedValues))
 }
