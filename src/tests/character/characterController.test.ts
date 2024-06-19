@@ -1,8 +1,9 @@
 import { HP, Multipliers, PlayerRequirement, Skills, Task, CompanyPositionInfo } from "@ns"
-import { FactionPriority, CharacterController, PlayerWithWork, PrecalculatedValues, TravelAction, UniversityAction, CreateProgramAction, ChangeNothingAction, AugmentData, FactionWorkAction, CompanyWorkAction } from "../scripts/character/characterController";
+import { FactionPriority, CharacterController, PlayerWithWork, PrecalculatedValues, TravelAction, UniversityAction, CreateProgramAction, ChangeNothingAction, AugmentData, FactionWorkAction, CompanyWorkAction } from "../../scripts/character/characterController";
 
 class MockPrecalculations implements PrecalculatedValues {
     fileSystem: string[] = []
+    targetCityFaction: string | undefined;
 }
 
 enum JobName {
@@ -10,7 +11,7 @@ enum JobName {
     software1 = "Junior Software Engineer",
     IT0 = "IT Intern",
     IT1 = "IT Analyst",
-  }
+}
 
 enum CityName {
     Aevum = "Aevum",
@@ -30,7 +31,7 @@ enum FactionWorkType {
 enum CompanyName {
     BachmanAndAssociates = "Bachman & Associates",
     ECorp = "ECorp",
-  }
+}
 
 class MockFactionPriority implements FactionPriority {
     totalWantedScore: number = 0
@@ -350,7 +351,7 @@ describe("PlayerController", () => {
 
                 const controller = new CharacterController(player, factionPriorities, precalculatedValues)
                 const result = controller.actionRequired as FactionWorkAction
-    
+
                 expect(result.type).toBe("factionWork")
                 expect(result.factionName).toBe(cityName)
                 expect(result.factionWorkType).toBe("hacking")
@@ -362,7 +363,7 @@ describe("PlayerController", () => {
 
                 const controller = new CharacterController(player, factionPriorities, precalculatedValues)
                 const result = controller.actionRequired as TravelAction
-    
+
                 expect(result.type).toBe("travel")
                 expect(result.destination).toBe(CityName.Chongqing)
             })
@@ -372,7 +373,7 @@ describe("PlayerController", () => {
 
                 const controller = new CharacterController(player, factionPriorities, precalculatedValues)
                 const result = controller.actionRequired as TravelAction
-    
+
                 expect(result.type).toBe(defaultActionType)
             })
         })
@@ -432,7 +433,7 @@ describe("PlayerController", () => {
                 ]`)
 
                 targetCompany.positions = positions
-                
+
                 factionPriorities.push(targetCompany)
 
                 precalculatedValues.fileSystem.push("BruteSSH.exe")
@@ -485,7 +486,7 @@ describe("PlayerController", () => {
                 expect(result.type).toBe("changeNothing")
             })
 
-            it("should start hacking training if we have enough company rep", () =>{
+            it("should start hacking training if we have enough company rep", () => {
                 player.jobs.AeroCorp = JobName.IT0
                 player.jobs["Bachman & Associates"] = JobName.software0
                 player.skills.hacking = 200
@@ -500,7 +501,7 @@ describe("PlayerController", () => {
                 expect(result.courseName).toBe("Algorithms")
             })
 
-            it("should start travel to volhaven for hacking training if we have enough company rep", () =>{
+            it("should start travel to volhaven for hacking training if we have enough company rep", () => {
                 player.jobs.AeroCorp = JobName.IT0
                 player.jobs["Bachman & Associates"] = JobName.software0
                 player.skills.hacking = 200
@@ -532,7 +533,7 @@ describe("PlayerController", () => {
                 expect(result.noTravel).toBeTruthy()
             })
 
-            it("should start cha training if we have enough company rep", () =>{
+            it("should start cha training if we have enough company rep", () => {
                 player.jobs.AeroCorp = JobName.IT0
                 player.jobs["Bachman & Associates"] = JobName.software0
                 player.skills.hacking = 275
@@ -547,7 +548,7 @@ describe("PlayerController", () => {
                 expect(result.courseName).toBe("Leadership")
             })
 
-            it("should start travel to volhaven for cha training if we have enough company rep", () =>{
+            it("should start travel to volhaven for cha training if we have enough company rep", () => {
                 player.jobs.AeroCorp = JobName.IT0
                 player.jobs["Bachman & Associates"] = JobName.software0
                 player.skills.hacking = 275
@@ -579,7 +580,7 @@ describe("PlayerController", () => {
                 expect(result.noTravel).toBeTruthy()
             })
 
-            it("should do nothing if there is no job and no faction", () =>{
+            it("should do nothing if there is no job and no faction", () => {
                 const controller = new CharacterController(player, factionPriorities, precalculatedValues)
                 const result = controller.actionRequired as UniversityAction
 
@@ -606,14 +607,47 @@ describe("PlayerController", () => {
                 expect(result.factionName).toBe(CompanyName.BachmanAndAssociates)
                 expect(result.factionWorkType).toBe("hacking")
             })
+
+            it("should travel to Aevum when we give it that as a target", () => {
+                player.jobs.AeroCorp = JobName.IT0
+                player.jobs["Bachman & Associates"] = JobName.software0
+                player.money = 20_000_000
+
+                player.currentWork = {
+                    type: "COMPANY",
+                    companyName: CompanyName.BachmanAndAssociates,
+                    cyclesWorked: 0
+                }
+
+                precalculatedValues.targetCityFaction = CityName.Aevum
+
+                const controller = new CharacterController(player, factionPriorities, precalculatedValues)
+                const result = controller.actionRequired as TravelAction
+
+                expect(result.type).toBe("travel")
+                expect(result.destination).toBe("Aevum")
+            })
+
+            it("should travel to Aevum when we give it that as a target", () => {
+                player.jobs.AeroCorp = JobName.IT0
+                player.jobs["Bachman & Associates"] = JobName.software0
+                player.money = 20_000
+
+                player.currentWork = {
+                    type: "COMPANY",
+                    companyName: CompanyName.BachmanAndAssociates,
+                    cyclesWorked: 0
+                }
+
+                precalculatedValues.targetCityFaction = CityName.Aevum
+
+                const controller = new CharacterController(player, factionPriorities, precalculatedValues)
+                const result = controller.actionRequired as ChangeNothingAction
+
+                expect(result.type).toBe("changeNothing")
+            })
         })
     })
-
-    // city target is the first city on the list
-    // travel to city target if we've got 10m in the bank and we can according to the ContinueAction
-
-
-
     // special faction?
 
     // next, augment bs and all the logic with that

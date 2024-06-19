@@ -34,6 +34,7 @@ export interface FactionPriority {
 
 export type PrecalculatedValues = {
     fileSystem: string[];
+    targetCityFaction: string | undefined;
 }
 
 interface IActionFormula {
@@ -62,7 +63,6 @@ export class TravelAction implements IAction {
 
 
 /// best gym Powerhouse Gym in Sector-12
-// best University ZB Institute in Volhaven
 
 class FactionWorkFormula implements IActionFormula {
     private factionName: string;
@@ -126,7 +126,7 @@ class FactionWorkFormula implements IActionFormula {
                                 action = hackingFormula.act(player, precalculatedValues)
                             }
 
-                            if(player.skills.charisma < nextPosition.requiredSkills.charisma && action.type === "noAction"){
+                            if (player.skills.charisma < nextPosition.requiredSkills.charisma && action.type === "noAction") {
                                 const charismaFormula = new UniversityFormula(CityName.Volhaven, "ZB Institute", "Leadership")
                                 action = charismaFormula.act(player, precalculatedValues)
                             }
@@ -234,8 +234,6 @@ export class CharacterController {
 
     private actionFormulas: IActionFormula[] = []
 
-    // private secondaryActions: ActionFormula[] = []
-
     constructor(player: PlayerWithWork, factionPriorities: FactionPriority[], precalculatedValues: PrecalculatedValues) {
 
         this.actionFormulas.push(new CreateProgramFormula("BruteSSH.exe", 50))
@@ -256,6 +254,16 @@ export class CharacterController {
 
             if (this.actionRequired.type !== "noAction") {
                 break;
+            }
+        }
+
+        if (this.actionRequired.type === "changeNothing" &&
+            !(this.actionRequired as ChangeNothingAction).noTravel &&
+            precalculatedValues.targetCityFaction
+        ) {
+            if (!player.factions.includes(precalculatedValues.targetCityFaction) && 
+                player.money >= 20_000_000) {
+                this.actionRequired = new TravelAction(precalculatedValues.targetCityFaction as CityName)
             }
         }
     }
