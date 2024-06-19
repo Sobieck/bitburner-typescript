@@ -58,18 +58,26 @@ export async function main(ns: NS): Promise<void> {
     ns.rm(augmentsPath)
     ns.write(augmentsPath, JSON.stringify(sortedAugments))
 
-    type FactionInfo = {
+    type AugmentData = {
+        name: string;
+        price: number;
+        repReq: number;
+        nextFactionHas: boolean;
+    }
+
+    type FactionPriorities = {
         totalWantedScore: number;
         maxRepNeeded: number;
         factionName: string;
-        augments: string[];
+        augments: AugmentData[];
         maxPrice: number;
         requirements: PlayerRequirement[];
         currentRep: number;
         currentJobRep: number | undefined;
+        repNeededForAugsThatNextDoesntHave: number;
     }
 
-    const factionAugmentScore: Map<string, FactionInfo> = new Map()
+    const factionAugmentScore: Map<string, FactionPriorities> = new Map()
 
     const companies: CompanyName[] = []
 
@@ -95,7 +103,13 @@ export async function main(ns: NS): Promise<void> {
                 } 
 
                 current.totalWantedScore += augment.wantedScore
-                current.augments.push(augment.name)
+
+                current.augments.push({
+                    name: augment.name,
+                    repReq: augment.repReq,
+                    price: augment.price,
+                    nextFactionHas: false
+                })
 
                 factionAugmentScore.set(faction, current)
             } else {
@@ -106,7 +120,7 @@ export async function main(ns: NS): Promise<void> {
 
                     requirements.push({
                         type: "city",
-                        city: ns.enums.CityName.NewTokyo
+                        city: ns.enums.CityName.Chongqing
                     })
                 }
 
@@ -118,22 +132,46 @@ export async function main(ns: NS): Promise<void> {
                     currentJobRep = ns.singularity.getCompanyRep(companyName)
                 }
 
-
                 factionAugmentScore.set(faction, {
                     totalWantedScore: augment.wantedScore,
                     maxRepNeeded: augment.repReq,
                     factionName: faction,
-                    augments: [augment.name],
+                    augments: [{
+                        name: augment.name,
+                        price: augment.price,
+                        repReq: augment.repReq,
+                        nextFactionHas: false
+                    }],
                     maxPrice: augment.price,
                     requirements: requirements,
                     currentRep: ns.singularity.getFactionRep(faction),
-                    currentJobRep
+                    currentJobRep,
+                    repNeededForAugsThatNextDoesntHave: augment.repReq
                 })
             }
         }
     }
+//todo
+    // add all unwanted augments at the end before we get to the endgame factions that require other stats. Do the same ranking process but based on a secondary score
 
-    const bestFactionAugmentScores = Array.from(factionAugmentScore.values()).sort((a, b) => a.maxPrice - b.maxPrice || b.totalWantedScore - a.totalWantedScore)
+    let bestFactionAugmentScores = Array.from(factionAugmentScore.values()).sort((a, b) => a.maxPrice - b.maxPrice || b.totalWantedScore - a.totalWantedScore)
+
+    for (let i = 0; i < bestFactionAugmentScores.length - 1; i++) {
+        const higherRankedFaction = bestFactionAugmentScores[i];
+        const lowerRankedFaction = bestFactionAugmentScores[i + 1]
+
+        const lowerRankedFactionAugmentNames = lowerRankedFaction.augments.map(x => x.name)
+
+        for (const augment of higherRankedFaction.augments) {
+            if(lowerRankedFactionAugmentNames.includes(augment.name)){
+                augment.nextFactionHas = true
+            }
+        }
+     
+        higherRankedFaction.repNeededForAugsThatNextDoesntHave = Math.max(...higherRankedFaction.augments.filter(x => !x.nextFactionHas).map(x => x.repReq))   
+    }
+
+    bestFactionAugmentScores = bestFactionAugmentScores.filter(x => !x.augments.every(y => y.nextFactionHas))
 
     const factionAugmentScoreFile = "data/factionAugmentRank.txt"
 

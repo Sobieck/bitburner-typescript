@@ -1,59 +1,57 @@
 [
     {
-        "totalWantedScore": 20.800000000000217,
-        "maxRepNeeded": 18750,
-        "factionName": "CyberSec",
-        "augments": [
-            "BitWire",
-            "Cranial Signal Processors - Gen II"
-        ],
-        "maxPrice": 125000000,
-        "requirements": [
-            {
-                "type": "backdoorInstalled",
-                "server": "CSEC"
-            }
-        ],
-        "currentRep": 0
-    },
-    {
-        "totalWantedScore": 100.36666666666684,
-        "maxRepNeeded": 112500,
-        "factionName": "NiteSec",
-        "augments": [
-            "Neurotrainer II",
-            "Artificial Synaptic Potentiation",
-            "BitWire",
-            "Neural-Retention Enhancement",
-            "Cranial Signal Processors - Gen II",
-            "Embedded Netburner Module",
-            "Cranial Signal Processors - Gen III",
-            "CRTX42-AA Gene Modification",
-            "DataJack"
-        ],
-        "maxPrice": 550000000,
-        "requirements": [
-            {
-                "type": "backdoorInstalled",
-                "server": "avmnite-02h"
-            }
-        ],
-        "currentRep": 0
-    },
-    {
-        "totalWantedScore": 46.52984126984115,
+        "totalWantedScore": 27.32984126984128,
         "maxRepNeeded": 175000,
         "factionName": "The Black Hand",
         "augments": [
-            "Artificial Synaptic Potentiation",
-            "Embedded Netburner Module",
-            "Cranial Signal Processors - Gen III",
-            "Neuralstimulator",
-            "Cranial Signal Processors - Gen IV",
-            "DataJack",
-            "The Black Hand",
-            "Enhanced Myelin Sheathing",
-            "Embedded Netburner Module Core Implant"
+            {
+                "name": "Embedded Netburner Module",
+                "price": 250000000,
+                "repReq": 15000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Cranial Signal Processors - Gen III",
+                "repReq": 50000,
+                "price": 550000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Neuralstimulator",
+                "repReq": 50000,
+                "price": 3000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Cranial Signal Processors - Gen IV",
+                "repReq": 125000,
+                "price": 1100000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "DataJack",
+                "repReq": 112500,
+                "price": 450000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "The Black Hand",
+                "repReq": 100000,
+                "price": 550000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Enhanced Myelin Sheathing",
+                "repReq": 100000,
+                "price": 1375000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core Implant",
+                "repReq": 175000,
+                "price": 2500000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 3000000000,
         "requirements": [
@@ -62,18 +60,44 @@
                 "server": "I.I.I.I"
             }
         ],
-        "currentRep": 0
+        "currentRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 175000
     },
     {
         "totalWantedScore": 21.066666666666638,
         "maxRepNeeded": 375000,
         "factionName": "Bachman & Associates",
         "augments": [
-            "ADR-V2 Pheromone Gene",
-            "Neuralstimulator",
-            "SmartJaw",
-            "Enhanced Social Interaction Implant",
-            "FocusWire"
+            {
+                "name": "ADR-V2 Pheromone Gene",
+                "price": 550000000,
+                "repReq": 62500,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Neuralstimulator",
+                "repReq": 50000,
+                "price": 3000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "SmartJaw",
+                "repReq": 375000,
+                "price": 2750000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Enhanced Social Interaction Implant",
+                "repReq": 375000,
+                "price": 1375000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "FocusWire",
+                "repReq": 75000,
+                "price": 900000000,
+                "nextFactionHas": true
+            }
         ],
         "maxPrice": 3000000000,
         "requirements": [
@@ -88,19 +112,452 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 375000,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 85.8,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 208,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 429,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1300,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 625,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 2080,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 4290,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 6006,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 825,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 625,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 6864,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 975,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 67.60000000000001,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 171.6,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 343.2,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 1066,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 314.6,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 314.6,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 1066,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 119.60000000000001,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 260,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 230,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 520,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1716,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 450,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 5070,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 10140,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 975,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 130,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 275,
+                    "defense": 275,
+                    "dexterity": 275,
+                    "agility": 275,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 507,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 375,
+                    "defense": 375,
+                    "dexterity": 375,
+                    "agility": 375,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1716,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 475,
+                    "defense": 475,
+                    "dexterity": 475,
+                    "agility": 475,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 3432,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 725,
+                    "defense": 725,
+                    "dexterity": 725,
+                    "agility": 725,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
         "totalWantedScore": 19.47428571428569,
         "maxRepNeeded": 437500,
         "factionName": "Clarke Incorporated",
         "augments": [
-            "ADR-V2 Pheromone Gene",
-            "Neuralstimulator",
-            "Enhanced Social Interaction Implant",
-            "FocusWire",
-            "Neuronal Densification",
-            "nextSENS Gene Modification"
+            {
+                "name": "ADR-V2 Pheromone Gene",
+                "price": 550000000,
+                "repReq": 62500,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Neuralstimulator",
+                "repReq": 50000,
+                "price": 3000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Enhanced Social Interaction Implant",
+                "repReq": 375000,
+                "price": 1375000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "FocusWire",
+                "repReq": 75000,
+                "price": 900000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Neuronal Densification",
+                "repReq": 187500,
+                "price": 1375000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "nextSENS Gene Modification",
+                "repReq": 437500,
+                "price": 1925000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 3000000000,
         "requirements": [
@@ -115,16 +572,434 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 437500,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 74.25,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 180,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 371.25,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1125,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 625,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 1800,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 3712.5,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 5197.5,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 825,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 625,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 5940,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 975,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 58.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 148.5,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 297,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 922.5,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 272.25,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 272.25,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 922.5,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 103.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 225,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 230,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 450,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1485,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 450,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 4387.5,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 8775,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 975,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 112.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 275,
+                    "defense": 275,
+                    "dexterity": 275,
+                    "agility": 275,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 438.75,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 375,
+                    "defense": 375,
+                    "dexterity": 375,
+                    "agility": 375,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1485,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 475,
+                    "defense": 475,
+                    "dexterity": 475,
+                    "agility": 475,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 2970,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 725,
+                    "defense": 725,
+                    "dexterity": 725,
+                    "agility": 725,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
         "totalWantedScore": 17.6888888888889,
         "maxRepNeeded": 112500,
         "factionName": "Chongqing",
         "augments": [
-            "Neuregen Gene Modification",
-            "Neuralstimulator",
-            "DataJack"
+            {
+                "name": "Neuregen Gene Modification",
+                "price": 375000000,
+                "repReq": 37500,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Neuralstimulator",
+                "repReq": 50000,
+                "price": 3000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "DataJack",
+                "repReq": 112500,
+                "price": 450000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 3000000000,
         "requirements": [
@@ -137,15 +1012,26 @@
                 "money": 20000000
             }
         ],
-        "currentRep": 0
+        "currentRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 112500
     },
     {
         "totalWantedScore": 7.908000000000008,
         "maxRepNeeded": 100000,
         "factionName": "Aevum",
         "augments": [
-            "Neuralstimulator",
-            "PCMatrix"
+            {
+                "name": "Neuralstimulator",
+                "price": 3000000000,
+                "repReq": 50000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "PCMatrix",
+                "repReq": 100000,
+                "price": 2000000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 3000000000,
         "requirements": [
@@ -158,15 +1044,26 @@
                 "money": 40000000
             }
         ],
-        "currentRep": 0
+        "currentRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 100000
     },
     {
         "totalWantedScore": 7.022222222222226,
         "maxRepNeeded": 112500,
         "factionName": "New Tokyo",
         "augments": [
-            "Neuralstimulator",
-            "DataJack"
+            {
+                "name": "Neuralstimulator",
+                "price": 3000000000,
+                "repReq": 50000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "DataJack",
+                "repReq": 112500,
+                "price": 450000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 3000000000,
         "requirements": [
@@ -179,79 +1076,50 @@
                 "money": 20000000
             }
         ],
-        "currentRep": 0
-    },
-    {
-        "totalWantedScore": 4.800000000000004,
-        "maxRepNeeded": 50000,
-        "factionName": "Sector-12",
-        "augments": [
-            "Neuralstimulator"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "city",
-                "city": "Sector-12"
-            },
-            {
-                "type": "money",
-                "money": 15000000
-            }
-        ],
-        "currentRep": 0
-    },
-    {
-        "totalWantedScore": 4.800000000000004,
-        "maxRepNeeded": 50000,
-        "factionName": "Ishima",
-        "augments": [
-            "Neuralstimulator"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "city",
-                "city": "Ishima"
-            },
-            {
-                "type": "money",
-                "money": 30000000
-            }
-        ],
-        "currentRep": 0
-    },
-    {
-        "totalWantedScore": 4.800000000000004,
-        "maxRepNeeded": 50000,
-        "factionName": "Volhaven",
-        "augments": [
-            "Neuralstimulator"
-        ],
-        "maxPrice": 3000000000,
-        "requirements": [
-            {
-                "type": "city",
-                "city": "Volhaven"
-            },
-            {
-                "type": "money",
-                "money": 50000000
-            }
-        ],
-        "currentRep": 0
+        "currentRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 112500
     },
     {
         "totalWantedScore": 34.079999999999984,
         "maxRepNeeded": 375000,
         "factionName": "Four Sigma",
         "augments": [
-            "Neurotrainer III",
-            "ADR-V2 Pheromone Gene",
-            "Neuralstimulator",
-            "Enhanced Social Interaction Implant",
-            "FocusWire",
-            "PC Direct-Neural Interface"
+            {
+                "name": "Neurotrainer III",
+                "price": 130000000,
+                "repReq": 25000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "ADR-V2 Pheromone Gene",
+                "repReq": 62500,
+                "price": 550000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Neuralstimulator",
+                "repReq": 50000,
+                "price": 3000000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Enhanced Social Interaction Implant",
+                "repReq": 375000,
+                "price": 1375000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "FocusWire",
+                "repReq": 75000,
+                "price": 900000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "PC Direct-Neural Interface",
+                "repReq": 375000,
+                "price": 3750000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 3750000000,
         "requirements": [
@@ -266,25 +1134,482 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 375000,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 82.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 200,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 412.5,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1250,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 625,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 2000,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 4125,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 5775,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 825,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 625,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 6600,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 975,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 65,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 165,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 330,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 1025,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 302.5,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 302.5,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 1025,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 115,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 250,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 230,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 500,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1650,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 450,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 4875,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 9750,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 975,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 125,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 275,
+                    "defense": 275,
+                    "dexterity": 275,
+                    "agility": 275,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 487.5,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 375,
+                    "defense": 375,
+                    "dexterity": 375,
+                    "agility": 375,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1650,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 475,
+                    "defense": 475,
+                    "dexterity": 475,
+                    "agility": 475,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 3300,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 725,
+                    "defense": 725,
+                    "dexterity": 725,
+                    "agility": 725,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
-        "totalWantedScore": 60.072178932179014,
+        "totalWantedScore": 30.07217893217895,
         "maxRepNeeded": 1000000,
         "factionName": "BitRunners",
         "augments": [
-            "Neurotrainer II",
-            "Embedded Netburner Module",
-            "Cranial Signal Processors - Gen V",
-            "Cranial Signal Processors - Gen III",
-            "Cranial Signal Processors - Gen IV",
-            "Neural Accelerator",
-            "DataJack",
-            "Enhanced Myelin Sheathing",
-            "Embedded Netburner Module Core Implant",
-            "Artificial Bio-neural Network Implant",
-            "Embedded Netburner Module Core V2 Upgrade",
-            "BitRunners Neurolink"
+            {
+                "name": "Embedded Netburner Module",
+                "price": 250000000,
+                "repReq": 15000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Cranial Signal Processors - Gen V",
+                "repReq": 250000,
+                "price": 2250000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Cranial Signal Processors - Gen III",
+                "repReq": 50000,
+                "price": 550000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Cranial Signal Processors - Gen IV",
+                "repReq": 125000,
+                "price": 1100000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Neural Accelerator",
+                "repReq": 200000,
+                "price": 1750000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "DataJack",
+                "repReq": 112500,
+                "price": 450000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Enhanced Myelin Sheathing",
+                "repReq": 100000,
+                "price": 1375000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core Implant",
+                "repReq": 175000,
+                "price": 2500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Artificial Bio-neural Network Implant",
+                "repReq": 275000,
+                "price": 3000000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V2 Upgrade",
+                "repReq": 1000000,
+                "price": 4500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "BitRunners Neurolink",
+                "repReq": 875000,
+                "price": 4375000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 4500000000,
         "requirements": [
@@ -293,19 +1618,50 @@
                 "server": "run4theh111z"
             }
         ],
-        "currentRep": 0
+        "currentRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 875000
     },
     {
         "totalWantedScore": 11.257619047619048,
         "maxRepNeeded": 1000000,
         "factionName": "Blade Industries",
         "augments": [
-            "Embedded Netburner Module",
-            "Embedded Netburner Module Core Implant",
-            "PC Direct-Neural Interface Optimization Submodule",
-            "PC Direct-Neural Interface",
-            "HyperSight Corneal Implant",
-            "Embedded Netburner Module Core V2 Upgrade"
+            {
+                "name": "Embedded Netburner Module",
+                "price": 250000000,
+                "repReq": 15000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core Implant",
+                "repReq": 175000,
+                "price": 2500000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "PC Direct-Neural Interface Optimization Submodule",
+                "repReq": 500000,
+                "price": 4500000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "PC Direct-Neural Interface",
+                "repReq": 375000,
+                "price": 3750000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "HyperSight Corneal Implant",
+                "repReq": 150000,
+                "price": 2750000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V2 Upgrade",
+                "repReq": 1000000,
+                "price": 4500000000,
+                "nextFactionHas": true
+            }
         ],
         "maxPrice": 4500000000,
         "requirements": [
@@ -320,17 +1676,440 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 500000,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 90.75,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 220,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 453.75,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1375,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 625,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 2200,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 4537.5,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 6352.5,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 825,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 625,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 7260,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 975,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 71.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 181.5,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 363,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 1127.5,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 332.75,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 332.75,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 1127.5,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 126.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 275,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 230,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 550,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1815,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 450,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 5362.5,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 10725,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 975,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 137.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 275,
+                    "defense": 275,
+                    "dexterity": 275,
+                    "agility": 275,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 536.25,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 375,
+                    "defense": 375,
+                    "dexterity": 375,
+                    "agility": 375,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1815,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 475,
+                    "defense": 475,
+                    "dexterity": 475,
+                    "agility": 475,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 3630,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 725,
+                    "defense": 725,
+                    "dexterity": 725,
+                    "agility": 725,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
         "totalWantedScore": 5.563333333333331,
         "maxRepNeeded": 1000000,
         "factionName": "OmniTek Incorporated",
         "augments": [
-            "Enhanced Social Interaction Implant",
-            "PC Direct-Neural Interface",
-            "OmniTek InfoLoad",
-            "Embedded Netburner Module Core V2 Upgrade"
+            {
+                "name": "Enhanced Social Interaction Implant",
+                "price": 1375000000,
+                "repReq": 375000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "PC Direct-Neural Interface",
+                "repReq": 375000,
+                "price": 3750000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "OmniTek InfoLoad",
+                "repReq": 625000,
+                "price": 2875000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V2 Upgrade",
+                "repReq": 1000000,
+                "price": 4500000000,
+                "nextFactionHas": true
+            }
         ],
         "maxPrice": 4500000000,
         "requirements": [
@@ -345,16 +2124,434 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 625000,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 74.25,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 180,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 371.25,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1125,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 625,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 1800,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 3712.5,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 5197.5,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 825,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 625,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 5940,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 975,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 58.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 148.5,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 297,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 922.5,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 272.25,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 272.25,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 922.5,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 103.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 225,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 230,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 450,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1485,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 450,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 4387.5,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 8775,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 975,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 112.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 275,
+                    "defense": 275,
+                    "dexterity": 275,
+                    "agility": 275,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 438.75,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 375,
+                    "defense": 375,
+                    "dexterity": 375,
+                    "agility": 375,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1485,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 475,
+                    "defense": 475,
+                    "dexterity": 475,
+                    "agility": 475,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 2970,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 725,
+                    "defense": 725,
+                    "dexterity": 725,
+                    "agility": 725,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
         "totalWantedScore": 4.163333333333316,
         "maxRepNeeded": 1000000,
         "factionName": "KuaiGong International",
         "augments": [
-            "FocusWire",
-            "HyperSight Corneal Implant",
-            "Embedded Netburner Module Core V2 Upgrade"
+            {
+                "name": "FocusWire",
+                "price": 900000000,
+                "repReq": 75000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "HyperSight Corneal Implant",
+                "repReq": 150000,
+                "price": 2750000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V2 Upgrade",
+                "repReq": 1000000,
+                "price": 4500000000,
+                "nextFactionHas": true
+            }
         ],
         "maxPrice": 4500000000,
         "requirements": [
@@ -369,23 +2566,476 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 150000,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 72.60000000000001,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 176,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 363.00000000000006,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1100,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 625,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 1760.0000000000002,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 3630.0000000000005,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 725,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 5082,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 825,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 625,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 5808.000000000001,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 975,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 57.2,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 145.20000000000002,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 290.40000000000003,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 902.0000000000001,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 266.20000000000005,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 266.20000000000005,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 375,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 902.0000000000001,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 475,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 101.2,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 225,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 220.00000000000003,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 230,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 440.00000000000006,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1452.0000000000002,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 450,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 4290,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 725,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 8580,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 975,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 110.00000000000001,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 275,
+                    "defense": 275,
+                    "dexterity": 275,
+                    "agility": 275,
+                    "charisma": 225,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 429.00000000000006,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 375,
+                    "defense": 375,
+                    "dexterity": 375,
+                    "agility": 375,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1452.0000000000002,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 475,
+                    "defense": 475,
+                    "dexterity": 475,
+                    "agility": 475,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 2904.0000000000005,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 725,
+                    "defense": 725,
+                    "dexterity": 725,
+                    "agility": 725,
+                    "charisma": 375,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
         "totalWantedScore": 40.9519047619048,
         "maxRepNeeded": 1750000,
         "factionName": "NWO",
         "augments": [
-            "Neurotrainer III",
-            "Power Recirculation Core",
-            "Embedded Netburner Module",
-            "Enhanced Social Interaction Implant",
-            "Embedded Netburner Module Core Implant",
-            "Xanipher",
-            "Embedded Netburner Module Core V2 Upgrade",
-            "Embedded Netburner Module Direct Memory Access Upgrade",
-            "Embedded Netburner Module Core V3 Upgrade",
-            "Embedded Netburner Module Analyze Engine"
+            {
+                "name": "Neurotrainer III",
+                "price": 130000000,
+                "repReq": 25000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Power Recirculation Core",
+                "repReq": 25000,
+                "price": 180000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module",
+                "repReq": 15000,
+                "price": 250000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Enhanced Social Interaction Implant",
+                "repReq": 375000,
+                "price": 1375000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core Implant",
+                "repReq": 175000,
+                "price": 2500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Xanipher",
+                "repReq": 875000,
+                "price": 4250000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V2 Upgrade",
+                "repReq": 1000000,
+                "price": 4500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Direct Memory Access Upgrade",
+                "repReq": 1000000,
+                "price": 7000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Core V3 Upgrade",
+                "repReq": 1750000,
+                "price": 7500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Analyze Engine",
+                "repReq": 625000,
+                "price": 6000000000,
+                "nextFactionHas": true
+            }
         ],
         "maxPrice": 7500000000,
         "requirements": [
@@ -400,23 +3050,476 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 875000,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 90.75,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 220,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 453.75,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1375,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 650,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 400,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 2200,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 750,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 500,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 4537.5,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 750,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 500,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 6352.5,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 850,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 650,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 7260,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 1000,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 750,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 71.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 181.5,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 363,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 1127.5,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 332.75,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 332.75,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 1127.5,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 126.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 275,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 255,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 550,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 350,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1815,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 5362.5,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 750,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 10725,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 350,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 1000,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 137.5,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 300,
+                    "defense": 300,
+                    "dexterity": 300,
+                    "agility": 300,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 536.25,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 400,
+                    "defense": 400,
+                    "dexterity": 400,
+                    "agility": 400,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1815,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 500,
+                    "defense": 500,
+                    "dexterity": 500,
+                    "agility": 500,
+                    "charisma": 350,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 3630,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 750,
+                    "defense": 750,
+                    "dexterity": 750,
+                    "agility": 750,
+                    "charisma": 400,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
         "totalWantedScore": 14.609480519480536,
         "maxRepNeeded": 1750000,
         "factionName": "Fulcrum Secret Technologies",
         "augments": [
-            "Embedded Netburner Module",
-            "Enhanced Myelin Sheathing",
-            "Embedded Netburner Module Core Implant",
-            "PC Direct-Neural Interface Optimization Submodule",
-            "Artificial Bio-neural Network Implant",
-            "PC Direct-Neural Interface NeuroNet Injector",
-            "Embedded Netburner Module Core V2 Upgrade",
-            "Embedded Netburner Module Direct Memory Access Upgrade",
-            "Embedded Netburner Module Core V3 Upgrade",
-            "Embedded Netburner Module Analyze Engine"
+            {
+                "name": "Embedded Netburner Module",
+                "price": 250000000,
+                "repReq": 15000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Enhanced Myelin Sheathing",
+                "repReq": 100000,
+                "price": 1375000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core Implant",
+                "repReq": 175000,
+                "price": 2500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "PC Direct-Neural Interface Optimization Submodule",
+                "repReq": 500000,
+                "price": 4500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Artificial Bio-neural Network Implant",
+                "repReq": 275000,
+                "price": 3000000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "PC Direct-Neural Interface NeuroNet Injector",
+                "repReq": 1500000,
+                "price": 7500000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V2 Upgrade",
+                "repReq": 1000000,
+                "price": 4500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Direct Memory Access Upgrade",
+                "repReq": 1000000,
+                "price": 7000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Core V3 Upgrade",
+                "repReq": 1750000,
+                "price": 7500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Analyze Engine",
+                "repReq": 625000,
+                "price": 6000000000,
+                "nextFactionHas": true
+            }
         ],
         "maxPrice": 7500000000,
         "requirements": [
@@ -434,22 +3537,68 @@
                 "server": "fulcrumassets"
             }
         ],
-        "currentRep": 0
+        "currentRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 1500000
     },
     {
         "totalWantedScore": 12.998571428571436,
         "maxRepNeeded": 1750000,
         "factionName": "ECorp",
         "augments": [
-            "Embedded Netburner Module",
-            "Embedded Netburner Module Core Implant",
-            "PC Direct-Neural Interface Optimization Submodule",
-            "ECorp HVMind Implant",
-            "PC Direct-Neural Interface",
-            "Embedded Netburner Module Core V2 Upgrade",
-            "Embedded Netburner Module Direct Memory Access Upgrade",
-            "Embedded Netburner Module Core V3 Upgrade",
-            "Embedded Netburner Module Analyze Engine"
+            {
+                "name": "Embedded Netburner Module",
+                "price": 250000000,
+                "repReq": 15000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Core Implant",
+                "repReq": 175000,
+                "price": 2500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "PC Direct-Neural Interface Optimization Submodule",
+                "repReq": 500000,
+                "price": 4500000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "ECorp HVMind Implant",
+                "repReq": 1500000,
+                "price": 5500000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "PC Direct-Neural Interface",
+                "repReq": 375000,
+                "price": 3750000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V2 Upgrade",
+                "repReq": 1000000,
+                "price": 4500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Direct Memory Access Upgrade",
+                "repReq": 1000000,
+                "price": 7000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Core V3 Upgrade",
+                "repReq": 1750000,
+                "price": 7500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Analyze Engine",
+                "repReq": 625000,
+                "price": 6000000000,
+                "nextFactionHas": true
+            }
         ],
         "maxPrice": 7500000000,
         "requirements": [
@@ -464,19 +3613,452 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 1500000,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 99,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 240,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 495,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1500,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 650,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 400,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 2400,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 750,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 500,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 4950,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 750,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 500,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 6930,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 850,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 650,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 7920,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 1000,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 750,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 78,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 198,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 396,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 1230,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 363,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 363,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 1230,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 138,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 300,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 255,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 600,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 350,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1980,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 5850,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 750,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 11700,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 350,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 1000,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 150,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 300,
+                    "defense": 300,
+                    "dexterity": 300,
+                    "agility": 300,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 585,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 400,
+                    "defense": 400,
+                    "dexterity": 400,
+                    "agility": 400,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1980,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 500,
+                    "defense": 500,
+                    "dexterity": 500,
+                    "agility": 500,
+                    "charisma": 350,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 3960,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 750,
+                    "defense": 750,
+                    "dexterity": 750,
+                    "agility": 750,
+                    "charisma": 400,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
         "totalWantedScore": 8.95190476190477,
         "maxRepNeeded": 1750000,
         "factionName": "MegaCorp",
         "augments": [
-            "Embedded Netburner Module",
-            "Embedded Netburner Module Core Implant",
-            "Embedded Netburner Module Core V2 Upgrade",
-            "Embedded Netburner Module Direct Memory Access Upgrade",
-            "Embedded Netburner Module Core V3 Upgrade",
-            "Embedded Netburner Module Analyze Engine"
+            {
+                "name": "Embedded Netburner Module",
+                "price": 250000000,
+                "repReq": 15000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core Implant",
+                "repReq": 175000,
+                "price": 2500000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V2 Upgrade",
+                "repReq": 1000000,
+                "price": 4500000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Direct Memory Access Upgrade",
+                "repReq": 1000000,
+                "price": 7000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Core V3 Upgrade",
+                "repReq": 1750000,
+                "price": 7500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Analyze Engine",
+                "repReq": 625000,
+                "price": 6000000000,
+                "nextFactionHas": true
+            }
         ],
         "maxPrice": 7500000000,
         "requirements": [
@@ -491,17 +4073,440 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0
+        "currentJobRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 1000000,
+        "positions": [
+            {
+                "name": "Software Engineering Intern",
+                "field": "Software",
+                "nextPosition": "Junior Software Engineer",
+                "salary": 99,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Junior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Senior Software Engineer",
+                "salary": 240,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Senior Software Engineer",
+                "field": "Software",
+                "nextPosition": "Lead Software Developer",
+                "salary": 495,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Lead Software Developer",
+                "field": "Software",
+                "nextPosition": "Head of Software",
+                "salary": 1500,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 650,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 400,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Software",
+                "field": "Software",
+                "nextPosition": "Head of Engineering",
+                "salary": 2400,
+                "requiredReputation": 400000,
+                "requiredSkills": {
+                    "hacking": 750,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 500,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Engineering",
+                "field": "Software",
+                "nextPosition": "Vice President of Technology",
+                "salary": 4950,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 750,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 500,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Vice President of Technology",
+                "field": "Software",
+                "nextPosition": "Chief Technology Officer",
+                "salary": 6930,
+                "requiredReputation": 1600000,
+                "requiredSkills": {
+                    "hacking": 850,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 650,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Technology Officer",
+                "field": "Software",
+                "nextPosition": null,
+                "salary": 7920,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 1000,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 750,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Intern",
+                "field": "IT",
+                "nextPosition": "IT Analyst",
+                "salary": 78,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Analyst",
+                "field": "IT",
+                "nextPosition": "IT Manager",
+                "salary": 198,
+                "requiredReputation": 7000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 0,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "IT Manager",
+                "field": "IT",
+                "nextPosition": "Systems Administrator",
+                "salary": 396,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Systems Administrator",
+                "field": "IT",
+                "nextPosition": "Head of Engineering",
+                "salary": 1230,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Engineer",
+                "field": "Security Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 363,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Engineer",
+                "field": "Network Engineer",
+                "nextPosition": "Network Administrator",
+                "salary": 363,
+                "requiredReputation": 35000,
+                "requiredSkills": {
+                    "hacking": 400,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 275,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Network Administrator",
+                "field": "Network Engineer",
+                "nextPosition": "Head of Engineering",
+                "salary": 1230,
+                "requiredReputation": 175000,
+                "requiredSkills": {
+                    "hacking": 500,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 325,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Intern",
+                "field": "Business",
+                "nextPosition": "Business Analyst",
+                "salary": 138,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 250,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Analyst",
+                "field": "Business",
+                "nextPosition": "Business Manager",
+                "salary": 300,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 255,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Business Manager",
+                "field": "Business",
+                "nextPosition": "Operations Manager",
+                "salary": 600,
+                "requiredReputation": 40000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 350,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Operations Manager",
+                "field": "Business",
+                "nextPosition": "Chief Financial Officer",
+                "salary": 1980,
+                "requiredReputation": 200000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 475,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Financial Officer",
+                "field": "Business",
+                "nextPosition": "Chief Executive Officer",
+                "salary": 5850,
+                "requiredReputation": 800000,
+                "requiredSkills": {
+                    "hacking": 325,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 750,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Chief Executive Officer",
+                "field": "Business",
+                "nextPosition": null,
+                "salary": 11700,
+                "requiredReputation": 3200000,
+                "requiredSkills": {
+                    "hacking": 350,
+                    "strength": 0,
+                    "defense": 0,
+                    "dexterity": 0,
+                    "agility": 0,
+                    "charisma": 1000,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Guard",
+                "field": "Security",
+                "nextPosition": "Security Officer",
+                "salary": 150,
+                "requiredReputation": 0,
+                "requiredSkills": {
+                    "hacking": 0,
+                    "strength": 300,
+                    "defense": 300,
+                    "dexterity": 300,
+                    "agility": 300,
+                    "charisma": 250,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Officer",
+                "field": "Security",
+                "nextPosition": "Security Supervisor",
+                "salary": 585,
+                "requiredReputation": 8000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 400,
+                    "defense": 400,
+                    "dexterity": 400,
+                    "agility": 400,
+                    "charisma": 300,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Security Supervisor",
+                "field": "Security",
+                "nextPosition": "Head of Security",
+                "salary": 1980,
+                "requiredReputation": 36000,
+                "requiredSkills": {
+                    "hacking": 275,
+                    "strength": 500,
+                    "defense": 500,
+                    "dexterity": 500,
+                    "agility": 500,
+                    "charisma": 350,
+                    "intelligence": 0
+                }
+            },
+            {
+                "name": "Head of Security",
+                "field": "Security",
+                "nextPosition": null,
+                "salary": 3960,
+                "requiredReputation": 144000,
+                "requiredSkills": {
+                    "hacking": 300,
+                    "strength": 750,
+                    "defense": 750,
+                    "dexterity": 750,
+                    "agility": 750,
+                    "charisma": 400,
+                    "intelligence": 0
+                }
+            }
+        ]
     },
     {
         "totalWantedScore": 1.3942857142857128,
         "maxRepNeeded": 1750000,
         "factionName": "The Covenant",
         "augments": [
-            "Embedded Netburner Module Direct Memory Access Upgrade",
-            "Embedded Netburner Module Core V3 Upgrade",
-            "Embedded Netburner Module Analyze Engine",
-            "SPTN-97 Gene Modification"
+            {
+                "name": "Embedded Netburner Module Direct Memory Access Upgrade",
+                "price": 7000000000,
+                "repReq": 1000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Core V3 Upgrade",
+                "repReq": 1750000,
+                "price": 7500000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "Embedded Netburner Module Analyze Engine",
+                "repReq": 625000,
+                "price": 6000000000,
+                "nextFactionHas": true
+            },
+            {
+                "name": "SPTN-97 Gene Modification",
+                "repReq": 1250000,
+                "price": 4875000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 7500000000,
         "requirements": [
@@ -544,59 +4549,38 @@
                 }
             }
         ],
-        "currentRep": 0
-    },
-    {
-        "totalWantedScore": 1.2742857142857125,
-        "maxRepNeeded": 1750000,
-        "factionName": "Daedalus",
-        "augments": [
-            "Embedded Netburner Module Direct Memory Access Upgrade",
-            "Embedded Netburner Module Core V3 Upgrade",
-            "Embedded Netburner Module Analyze Engine"
-        ],
-        "maxPrice": 7500000000,
-        "requirements": [
-            {
-                "type": "numAugmentations",
-                "numAugmentations": 30
-            },
-            {
-                "type": "money",
-                "money": 100000000000
-            },
-            {
-                "type": "someCondition",
-                "conditions": [
-                    {
-                        "type": "skills",
-                        "skills": {
-                            "hacking": 2500
-                        }
-                    },
-                    {
-                        "type": "skills",
-                        "skills": {
-                            "strength": 1500,
-                            "defense": 1500,
-                            "dexterity": 1500,
-                            "agility": 1500
-                        }
-                    }
-                ]
-            }
-        ],
-        "currentRep": 0
+        "currentRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 1250000
     },
     {
         "totalWantedScore": 4.607619047619046,
         "maxRepNeeded": 1875000,
         "factionName": "Illuminati",
         "augments": [
-            "QLink",
-            "Embedded Netburner Module Direct Memory Access Upgrade",
-            "Embedded Netburner Module Core V3 Upgrade",
-            "Embedded Netburner Module Analyze Engine"
+            {
+                "name": "QLink",
+                "price": 25000000000000,
+                "repReq": 1875000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Direct Memory Access Upgrade",
+                "repReq": 1000000,
+                "price": 7000000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Core V3 Upgrade",
+                "repReq": 1750000,
+                "price": 7500000000,
+                "nextFactionHas": false
+            },
+            {
+                "name": "Embedded Netburner Module Analyze Engine",
+                "repReq": 625000,
+                "price": 6000000000,
+                "nextFactionHas": false
+            }
         ],
         "maxPrice": 25000000000000,
         "requirements": [
@@ -639,6 +4623,7 @@
                 }
             }
         ],
-        "currentRep": 0
+        "currentRep": 0,
+        "repNeededForAugsThatNextDoesntHave": 1875000
     }
 ]

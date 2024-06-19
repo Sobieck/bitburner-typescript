@@ -1,15 +1,11 @@
-import { NS, Player } from "@ns";
-
-type PrecalculatedValues = {
-    player: Player;
-}
+import { NS } from "@ns";
+import { CreateProgramAction } from "scripts/character/characterController";
 
 export async function main(ns: NS): Promise<void> {
-    // const precalculate = JSON.parse(ns.read("data/precalculatedValues.txt")) as PrecalculatedValues
-    // const work = ns.singularity.getCurrentWork();  
+    const actionFile = "data/action.txt"
+    const action = JSON.parse(ns.read(actionFile)) as CreateProgramAction
 
-    // const brute = "BruteSSH.exe"
-    // if (!ns.fileExists(brute) && precalculate.player.skills.hacking > 50 && work?.type !== "CREATE_PROGRAM") {
-    //     ns.singularity.createProgram(brute, true)
-    // }
+    if(action.type === "createProgram"){
+        ns.singularity.createProgram(action.programName, true)
+    }
 }

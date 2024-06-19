@@ -27,16 +27,21 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/hacking/backdoor.js")
 
   //characterShit 
-  scriptsToRun.push("scripts/character/default.js")
-  scriptsToRun.push("scripts/character/createPrograms.js")
+  // just happening stuff
   scriptsToRun.push("scripts/character/joinFaction.js")
-  scriptsToRun.push("scripts/character/applyForJob.js") 
-  
+  scriptsToRun.push("scripts/character/applyForJob.js")
+  // controller and controlled
+  scriptsToRun.push("scripts/character/characterController.js")
+  scriptsToRun.push("scripts/character/createProgram.js")
+  scriptsToRun.push("scripts/character/travel.js")
+  scriptsToRun.push("scripts/character/university.js")
+  scriptsToRun.push("scripts/character/workAtFaction.js")
+  scriptsToRun.push("scripts/character/workAtCompany.js")
 
   // add cost
   const scriptWithRamCost: ScriptWithCost[] = []
 
-  const allScripts = ns.ls("home", "/scripts")
+  const allScripts = ns.ls("home", "/scripts").filter(x => !x.endsWith(".txt"))
 
   allScripts.forEach(path => {
     scriptWithRamCost.push(

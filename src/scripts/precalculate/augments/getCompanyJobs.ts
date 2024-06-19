@@ -2,11 +2,17 @@ import { CompanyName, CompanyPositionInfo, Multipliers, NS, PlayerRequirement } 
 
 export async function main(ns: NS): Promise<void> {
 
-    type FactionInfo = {
+    type AugmentData = {
+        name: string;
+        price: number;
+        repReq: number;
+    }
+
+    type FactionPriority = {
         totalWantedScore: number;
         maxRepNeeded: number;
         factionName: string;
-        augments: string[];
+        augments: AugmentData[];
         maxPrice: number;
         requirements: PlayerRequirement[];
         currentRep: number;
@@ -15,7 +21,7 @@ export async function main(ns: NS): Promise<void> {
     }
 
     const factionAugmentScoreFile = "data/factionAugmentRank.txt"
-    const factionAugments: FactionInfo[] = JSON.parse(ns.read(factionAugmentScoreFile))
+    const factionAugments: FactionPriority[] = JSON.parse(ns.read(factionAugmentScoreFile))
 
     for (const [_, companyName] of Object.entries(ns.enums.CompanyName)) {
         const companyInQuestion = factionAugments.find(x => x.factionName === companyName)
