@@ -1,4 +1,4 @@
-import { NS } from "@ns";
+import { LocationName, NS, UniversityClassType } from "@ns";
 import { UniversityAction } from "scripts/character/characterController";
 
 export async function main(ns: NS): Promise<void> {

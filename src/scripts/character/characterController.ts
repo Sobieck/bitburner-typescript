@@ -122,12 +122,12 @@ class FactionWorkFormula implements IActionFormula {
                             let action = new NoAction()
 
                             if (player.skills.hacking < nextPosition.requiredSkills.hacking) {
-                                const hackingFormula = new UniversityFormula(CityName.Volhaven, "ZB Institute", "Algorithms")
+                                const hackingFormula = new UniversityFormula(CityName.Volhaven, "ZB Institute of Technology", "Algorithms")
                                 action = hackingFormula.act(player, precalculatedValues)
                             }
 
                             if (player.skills.charisma < nextPosition.requiredSkills.charisma && action.type === "noAction") {
-                                const charismaFormula = new UniversityFormula(CityName.Volhaven, "ZB Institute", "Leadership")
+                                const charismaFormula = new UniversityFormula(CityName.Volhaven, "ZB Institute of Technology", "Leadership")
                                 action = charismaFormula.act(player, precalculatedValues)
                             }
 

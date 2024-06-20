@@ -8,49 +8,73 @@
                 "name": "Embedded Netburner Module",
                 "price": 250000000,
                 "repReq": 15000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": true,
+                "wantedScore": 5.3333333333333375,
+                "wantedScorePriceWeighted": 32.00000000000003
             },
             {
                 "name": "Cranial Signal Processors - Gen III",
                 "repReq": 50000,
                 "price": 550000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": true,
+                "wantedScore": 5.199999999999996,
+                "wantedScorePriceWeighted": 47.27272727272723
             },
             {
                 "name": "Neuralstimulator",
                 "repReq": 50000,
                 "price": 3000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": true,
+                "wantedScore": 4.800000000000004,
+                "wantedScorePriceWeighted": 8.000000000000007
             },
             {
                 "name": "Cranial Signal Processors - Gen IV",
                 "repReq": 125000,
                 "price": 1100000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": true,
+                "wantedScore": 3.760000000000005,
+                "wantedScorePriceWeighted": 42.72727272727278
             },
             {
                 "name": "DataJack",
                 "repReq": 112500,
                 "price": 450000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": true,
+                "wantedScore": 2.222222222222222,
+                "wantedScorePriceWeighted": 55.55555555555555
             },
             {
                 "name": "The Black Hand",
                 "repReq": 100000,
                 "price": 550000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": true,
+                "wantedScore": 2.1999999999999886,
+                "wantedScorePriceWeighted": 39.999999999999794
             },
             {
                 "name": "Enhanced Myelin Sheathing",
                 "repReq": 100000,
                 "price": 1375000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": true,
+                "wantedScore": 2.1000000000000085,
+                "wantedScorePriceWeighted": 15.272727272727336
             },
             {
                 "name": "Embedded Netburner Module Core Implant",
                 "repReq": 175000,
                 "price": 2500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": true,
+                "wantedScore": 1.7142857142857182,
+                "wantedScorePriceWeighted": 12.000000000000028
             }
         ],
         "maxPrice": 3000000000,
@@ -60,7 +84,7 @@
                 "server": "I.I.I.I"
             }
         ],
-        "currentRep": 0,
+        "currentRep": 175177.46569540215,
         "repNeededForAugsThatNextDoesntHave": 175000
     },
     {
@@ -72,31 +96,46 @@
                 "name": "ADR-V2 Pheromone Gene",
                 "price": 550000000,
                 "repReq": 62500,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 6.399999999999977,
+                "wantedScorePriceWeighted": 72.72727272727246
             },
             {
                 "name": "Neuralstimulator",
                 "repReq": 50000,
                 "price": 3000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 4.800000000000004,
+                "wantedScorePriceWeighted": 8.000000000000007
             },
             {
                 "name": "SmartJaw",
                 "repReq": 375000,
                 "price": 2750000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 4,
+                "wantedScorePriceWeighted": 54.54545454545455
             },
             {
                 "name": "Enhanced Social Interaction Implant",
                 "repReq": 375000,
                 "price": 1375000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 3.199999999999998,
+                "wantedScorePriceWeighted": 87.27272727272722
             },
             {
                 "name": "FocusWire",
                 "repReq": 75000,
                 "price": 900000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 2.666666666666657,
+                "wantedScorePriceWeighted": 22.222222222222143
             }
         ],
         "maxPrice": 3000000000,
@@ -112,7 +151,7 @@
             }
         ],
         "currentRep": 0,
-        "currentJobRep": 0,
+        "currentJobRep": 16415.289923382163,
         "repNeededForAugsThatNextDoesntHave": 375000,
         "positions": [
             {
@@ -526,37 +565,55 @@
                 "name": "ADR-V2 Pheromone Gene",
                 "price": 550000000,
                 "repReq": 62500,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 6.399999999999977,
+                "wantedScorePriceWeighted": 72.72727272727246
             },
             {
                 "name": "Neuralstimulator",
                 "repReq": 50000,
                 "price": 3000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 4.800000000000004,
+                "wantedScorePriceWeighted": 8.000000000000007
             },
             {
                 "name": "Enhanced Social Interaction Implant",
                 "repReq": 375000,
                 "price": 1375000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 3.199999999999998,
+                "wantedScorePriceWeighted": 87.27272727272722
             },
             {
                 "name": "FocusWire",
                 "repReq": 75000,
                 "price": 900000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.666666666666657,
+                "wantedScorePriceWeighted": 22.222222222222143
             },
             {
                 "name": "Neuronal Densification",
                 "repReq": 187500,
                 "price": 1375000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.4933333333333394,
+                "wantedScorePriceWeighted": 20.363636363636445
             },
             {
                 "name": "nextSENS Gene Modification",
                 "repReq": 437500,
                 "price": 1925000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.914285714285715,
+                "wantedScorePriceWeighted": 20.7792207792208
             }
         ],
         "maxPrice": 3000000000,
@@ -986,19 +1043,28 @@
                 "name": "Neuregen Gene Modification",
                 "price": 375000000,
                 "repReq": 37500,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": true,
+                "wantedScore": 10.666666666666675,
+                "wantedScorePriceWeighted": 106.66666666666676
             },
             {
                 "name": "Neuralstimulator",
                 "repReq": 50000,
                 "price": 3000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": true,
+                "wantedScore": 4.800000000000004,
+                "wantedScorePriceWeighted": 8.000000000000007
             },
             {
                 "name": "DataJack",
                 "repReq": 112500,
                 "price": 450000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.222222222222222,
+                "wantedScorePriceWeighted": 55.55555555555555
             }
         ],
         "maxPrice": 3000000000,
@@ -1012,7 +1078,7 @@
                 "money": 20000000
             }
         ],
-        "currentRep": 0,
+        "currentRep": 73478.97018244347,
         "repNeededForAugsThatNextDoesntHave": 112500
     },
     {
@@ -1024,13 +1090,19 @@
                 "name": "Neuralstimulator",
                 "price": 3000000000,
                 "repReq": 50000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 4.800000000000004,
+                "wantedScorePriceWeighted": 8.000000000000007
             },
             {
                 "name": "PCMatrix",
                 "repReq": 100000,
                 "price": 2000000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 3.108000000000004,
+                "wantedScorePriceWeighted": 15.54000000000002
             }
         ],
         "maxPrice": 3000000000,
@@ -1056,13 +1128,19 @@
                 "name": "Neuralstimulator",
                 "price": 3000000000,
                 "repReq": 50000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 4.800000000000004,
+                "wantedScorePriceWeighted": 8.000000000000007
             },
             {
                 "name": "DataJack",
                 "repReq": 112500,
                 "price": 450000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.222222222222222,
+                "wantedScorePriceWeighted": 55.55555555555555
             }
         ],
         "maxPrice": 3000000000,
@@ -1088,37 +1166,55 @@
                 "name": "Neurotrainer III",
                 "price": 130000000,
                 "repReq": 25000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 16.000000000000014,
+                "wantedScorePriceWeighted": 307.69230769230796
             },
             {
                 "name": "ADR-V2 Pheromone Gene",
                 "repReq": 62500,
                 "price": 550000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 6.399999999999977,
+                "wantedScorePriceWeighted": 72.72727272727246
             },
             {
                 "name": "Neuralstimulator",
                 "repReq": 50000,
                 "price": 3000000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 4.800000000000004,
+                "wantedScorePriceWeighted": 8.000000000000007
             },
             {
                 "name": "Enhanced Social Interaction Implant",
                 "repReq": 375000,
                 "price": 1375000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 3.199999999999998,
+                "wantedScorePriceWeighted": 87.27272727272722
             },
             {
                 "name": "FocusWire",
                 "repReq": 75000,
                 "price": 900000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.666666666666657,
+                "wantedScorePriceWeighted": 22.222222222222143
             },
             {
                 "name": "PC Direct-Neural Interface",
                 "repReq": 375000,
                 "price": 3750000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.0133333333333354,
+                "wantedScorePriceWeighted": 10.133333333333354
             }
         ],
         "maxPrice": 3750000000,
@@ -1548,67 +1644,100 @@
                 "name": "Embedded Netburner Module",
                 "price": 250000000,
                 "repReq": 15000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 5.3333333333333375,
+                "wantedScorePriceWeighted": 32.00000000000003
             },
             {
                 "name": "Cranial Signal Processors - Gen V",
                 "repReq": 250000,
                 "price": 2250000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 5.200000000000003,
+                "wantedScorePriceWeighted": 57.777777777777814
             },
             {
                 "name": "Cranial Signal Processors - Gen III",
                 "repReq": 50000,
                 "price": 550000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 5.199999999999996,
+                "wantedScorePriceWeighted": 47.27272727272723
             },
             {
                 "name": "Cranial Signal Processors - Gen IV",
                 "repReq": 125000,
                 "price": 1100000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 3.760000000000005,
+                "wantedScorePriceWeighted": 42.72727272727278
             },
             {
                 "name": "Neural Accelerator",
                 "repReq": 200000,
                 "price": 1750000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.2499999999999964,
+                "wantedScorePriceWeighted": 25.714285714285673
             },
             {
                 "name": "DataJack",
                 "repReq": 112500,
                 "price": 450000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.222222222222222,
+                "wantedScorePriceWeighted": 55.55555555555555
             },
             {
                 "name": "Enhanced Myelin Sheathing",
                 "repReq": 100000,
                 "price": 1375000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.1000000000000085,
+                "wantedScorePriceWeighted": 15.272727272727336
             },
             {
                 "name": "Embedded Netburner Module Core Implant",
                 "repReq": 175000,
                 "price": 2500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 1.7142857142857182,
+                "wantedScorePriceWeighted": 12.000000000000028
             },
             {
                 "name": "Artificial Bio-neural Network Implant",
                 "repReq": 275000,
                 "price": 3000000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.0909090909090935,
+                "wantedScorePriceWeighted": 10.000000000000023
             },
             {
                 "name": "Embedded Netburner Module Core V2 Upgrade",
                 "repReq": 1000000,
                 "price": 4500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.629999999999999,
+                "wantedScorePriceWeighted": 13.999999999999977
             },
             {
                 "name": "BitRunners Neurolink",
                 "repReq": 875000,
                 "price": 4375000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.5714285714285714,
+                "wantedScorePriceWeighted": 11.428571428571429
             }
         ],
         "maxPrice": 4500000000,
@@ -1630,37 +1759,55 @@
                 "name": "Embedded Netburner Module",
                 "price": 250000000,
                 "repReq": 15000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 5.3333333333333375,
+                "wantedScorePriceWeighted": 32.00000000000003
             },
             {
                 "name": "Embedded Netburner Module Core Implant",
                 "repReq": 175000,
                 "price": 2500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.7142857142857182,
+                "wantedScorePriceWeighted": 12.000000000000028
             },
             {
                 "name": "PC Direct-Neural Interface Optimization Submodule",
                 "repReq": 500000,
                 "price": 4500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.6999999999999993,
+                "wantedScorePriceWeighted": 18.888888888888882
             },
             {
                 "name": "PC Direct-Neural Interface",
                 "repReq": 375000,
                 "price": 3750000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 1.0133333333333354,
+                "wantedScorePriceWeighted": 10.133333333333354
             },
             {
                 "name": "HyperSight Corneal Implant",
                 "repReq": 150000,
                 "price": 2750000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.86666666666666,
+                "wantedScorePriceWeighted": 4.727272727272691
             },
             {
                 "name": "Embedded Netburner Module Core V2 Upgrade",
                 "repReq": 1000000,
                 "price": 4500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.629999999999999,
+                "wantedScorePriceWeighted": 13.999999999999977
             }
         ],
         "maxPrice": 4500000000,
@@ -2090,25 +2237,37 @@
                 "name": "Enhanced Social Interaction Implant",
                 "price": 1375000000,
                 "repReq": 375000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 3.199999999999998,
+                "wantedScorePriceWeighted": 87.27272727272722
             },
             {
                 "name": "PC Direct-Neural Interface",
                 "repReq": 375000,
                 "price": 3750000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.0133333333333354,
+                "wantedScorePriceWeighted": 10.133333333333354
             },
             {
                 "name": "OmniTek InfoLoad",
                 "repReq": 625000,
                 "price": 2875000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.7199999999999989,
+                "wantedScorePriceWeighted": 15.652173913043454
             },
             {
                 "name": "Embedded Netburner Module Core V2 Upgrade",
                 "repReq": 1000000,
                 "price": 4500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.629999999999999,
+                "wantedScorePriceWeighted": 13.999999999999977
             }
         ],
         "maxPrice": 4500000000,
@@ -2538,19 +2697,28 @@
                 "name": "FocusWire",
                 "price": 900000000,
                 "repReq": 75000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.666666666666657,
+                "wantedScorePriceWeighted": 22.222222222222143
             },
             {
                 "name": "HyperSight Corneal Implant",
                 "repReq": 150000,
                 "price": 2750000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.86666666666666,
+                "wantedScorePriceWeighted": 4.727272727272691
             },
             {
                 "name": "Embedded Netburner Module Core V2 Upgrade",
                 "repReq": 1000000,
                 "price": 4500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.629999999999999,
+                "wantedScorePriceWeighted": 13.999999999999977
             }
         ],
         "maxPrice": 4500000000,
@@ -2980,61 +3148,91 @@
                 "name": "Neurotrainer III",
                 "price": 130000000,
                 "repReq": 25000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 16.000000000000014,
+                "wantedScorePriceWeighted": 307.69230769230796
             },
             {
                 "name": "Power Recirculation Core",
                 "repReq": 25000,
                 "price": 180000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 12.000000000000028,
+                "wantedScorePriceWeighted": 166.66666666666706
             },
             {
                 "name": "Embedded Netburner Module",
                 "repReq": 15000,
                 "price": 250000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 5.3333333333333375,
+                "wantedScorePriceWeighted": 32.00000000000003
             },
             {
                 "name": "Enhanced Social Interaction Implant",
                 "repReq": 375000,
                 "price": 1375000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 3.199999999999998,
+                "wantedScorePriceWeighted": 87.27272727272722
             },
             {
                 "name": "Embedded Netburner Module Core Implant",
                 "repReq": 175000,
                 "price": 2500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 1.7142857142857182,
+                "wantedScorePriceWeighted": 12.000000000000028
             },
             {
                 "name": "Xanipher",
                 "repReq": 875000,
                 "price": 4250000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.7999999999999993,
+                "wantedScorePriceWeighted": 16.4705882352941
             },
             {
                 "name": "Embedded Netburner Module Core V2 Upgrade",
                 "repReq": 1000000,
                 "price": 4500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.629999999999999,
+                "wantedScorePriceWeighted": 13.999999999999977
             },
             {
                 "name": "Embedded Netburner Module Direct Memory Access Upgrade",
                 "repReq": 1000000,
                 "price": 7000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5999999999999996,
+                "wantedScorePriceWeighted": 8.571428571428566
             },
             {
                 "name": "Embedded Netburner Module Core V3 Upgrade",
                 "repReq": 1750000,
                 "price": 7500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5142857142857135,
+                "wantedScorePriceWeighted": 11.999999999999982
             },
             {
                 "name": "Embedded Netburner Module Analyze Engine",
                 "repReq": 625000,
                 "price": 6000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.15999999999999942,
+                "wantedScorePriceWeighted": 1.6666666666666605
             }
         ],
         "maxPrice": 7500000000,
@@ -3464,61 +3662,91 @@
                 "name": "Embedded Netburner Module",
                 "price": 250000000,
                 "repReq": 15000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 5.3333333333333375,
+                "wantedScorePriceWeighted": 32.00000000000003
             },
             {
                 "name": "Enhanced Myelin Sheathing",
                 "repReq": 100000,
                 "price": 1375000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 2.1000000000000085,
+                "wantedScorePriceWeighted": 15.272727272727336
             },
             {
                 "name": "Embedded Netburner Module Core Implant",
                 "repReq": 175000,
                 "price": 2500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 1.7142857142857182,
+                "wantedScorePriceWeighted": 12.000000000000028
             },
             {
                 "name": "PC Direct-Neural Interface Optimization Submodule",
                 "repReq": 500000,
                 "price": 4500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 1.6999999999999993,
+                "wantedScorePriceWeighted": 18.888888888888882
             },
             {
                 "name": "Artificial Bio-neural Network Implant",
                 "repReq": 275000,
                 "price": 3000000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.0909090909090935,
+                "wantedScorePriceWeighted": 10.000000000000023
             },
             {
                 "name": "PC Direct-Neural Interface NeuroNet Injector",
                 "repReq": 1500000,
                 "price": 7500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.7666666666666657,
+                "wantedScorePriceWeighted": 15.333333333333314
             },
             {
                 "name": "Embedded Netburner Module Core V2 Upgrade",
                 "repReq": 1000000,
                 "price": 4500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.629999999999999,
+                "wantedScorePriceWeighted": 13.999999999999977
             },
             {
                 "name": "Embedded Netburner Module Direct Memory Access Upgrade",
                 "repReq": 1000000,
                 "price": 7000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5999999999999996,
+                "wantedScorePriceWeighted": 8.571428571428566
             },
             {
                 "name": "Embedded Netburner Module Core V3 Upgrade",
                 "repReq": 1750000,
                 "price": 7500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5142857142857135,
+                "wantedScorePriceWeighted": 11.999999999999982
             },
             {
                 "name": "Embedded Netburner Module Analyze Engine",
                 "repReq": 625000,
                 "price": 6000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.15999999999999942,
+                "wantedScorePriceWeighted": 1.6666666666666605
             }
         ],
         "maxPrice": 7500000000,
@@ -3549,55 +3777,82 @@
                 "name": "Embedded Netburner Module",
                 "price": 250000000,
                 "repReq": 15000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 5.3333333333333375,
+                "wantedScorePriceWeighted": 32.00000000000003
             },
             {
                 "name": "Embedded Netburner Module Core Implant",
                 "repReq": 175000,
                 "price": 2500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 1.7142857142857182,
+                "wantedScorePriceWeighted": 12.000000000000028
             },
             {
                 "name": "PC Direct-Neural Interface Optimization Submodule",
                 "repReq": 500000,
                 "price": 4500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.6999999999999993,
+                "wantedScorePriceWeighted": 18.888888888888882
             },
             {
                 "name": "ECorp HVMind Implant",
                 "repReq": 1500000,
                 "price": 5500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.3333333333333335,
+                "wantedScorePriceWeighted": 36.36363636363637
             },
             {
                 "name": "PC Direct-Neural Interface",
                 "repReq": 375000,
                 "price": 3750000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.0133333333333354,
+                "wantedScorePriceWeighted": 10.133333333333354
             },
             {
                 "name": "Embedded Netburner Module Core V2 Upgrade",
                 "repReq": 1000000,
                 "price": 4500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.629999999999999,
+                "wantedScorePriceWeighted": 13.999999999999977
             },
             {
                 "name": "Embedded Netburner Module Direct Memory Access Upgrade",
                 "repReq": 1000000,
                 "price": 7000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5999999999999996,
+                "wantedScorePriceWeighted": 8.571428571428566
             },
             {
                 "name": "Embedded Netburner Module Core V3 Upgrade",
                 "repReq": 1750000,
                 "price": 7500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5142857142857135,
+                "wantedScorePriceWeighted": 11.999999999999982
             },
             {
                 "name": "Embedded Netburner Module Analyze Engine",
                 "repReq": 625000,
                 "price": 6000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.15999999999999942,
+                "wantedScorePriceWeighted": 1.6666666666666605
             }
         ],
         "maxPrice": 7500000000,
@@ -4027,37 +4282,55 @@
                 "name": "Embedded Netburner Module",
                 "price": 250000000,
                 "repReq": 15000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 5.3333333333333375,
+                "wantedScorePriceWeighted": 32.00000000000003
             },
             {
                 "name": "Embedded Netburner Module Core Implant",
                 "repReq": 175000,
                 "price": 2500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 1.7142857142857182,
+                "wantedScorePriceWeighted": 12.000000000000028
             },
             {
                 "name": "Embedded Netburner Module Core V2 Upgrade",
                 "repReq": 1000000,
                 "price": 4500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.629999999999999,
+                "wantedScorePriceWeighted": 13.999999999999977
             },
             {
                 "name": "Embedded Netburner Module Direct Memory Access Upgrade",
                 "repReq": 1000000,
                 "price": 7000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5999999999999996,
+                "wantedScorePriceWeighted": 8.571428571428566
             },
             {
                 "name": "Embedded Netburner Module Core V3 Upgrade",
                 "repReq": 1750000,
                 "price": 7500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5142857142857135,
+                "wantedScorePriceWeighted": 11.999999999999982
             },
             {
                 "name": "Embedded Netburner Module Analyze Engine",
                 "repReq": 625000,
                 "price": 6000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.15999999999999942,
+                "wantedScorePriceWeighted": 1.6666666666666605
             }
         ],
         "maxPrice": 7500000000,
@@ -4487,25 +4760,37 @@
                 "name": "Embedded Netburner Module Direct Memory Access Upgrade",
                 "price": 7000000000,
                 "repReq": 1000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5999999999999996,
+                "wantedScorePriceWeighted": 8.571428571428566
             },
             {
                 "name": "Embedded Netburner Module Core V3 Upgrade",
                 "repReq": 1750000,
                 "price": 7500000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.5142857142857135,
+                "wantedScorePriceWeighted": 11.999999999999982
             },
             {
                 "name": "Embedded Netburner Module Analyze Engine",
                 "repReq": 625000,
                 "price": 6000000000,
-                "nextFactionHas": true
+                "nextFactionHas": true,
+                "canBuy": false,
+                "wantedScore": 0.15999999999999942,
+                "wantedScorePriceWeighted": 1.6666666666666605
             },
             {
                 "name": "SPTN-97 Gene Modification",
                 "repReq": 1250000,
                 "price": 4875000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.12000000000000029,
+                "wantedScorePriceWeighted": 3.076923076923084
             }
         ],
         "maxPrice": 7500000000,
@@ -4561,25 +4846,37 @@
                 "name": "QLink",
                 "price": 25000000000000,
                 "repReq": 1875000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 3.3333333333333335,
+                "wantedScorePriceWeighted": 0.024999999999999998
             },
             {
                 "name": "Embedded Netburner Module Direct Memory Access Upgrade",
                 "repReq": 1000000,
                 "price": 7000000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.5999999999999996,
+                "wantedScorePriceWeighted": 8.571428571428566
             },
             {
                 "name": "Embedded Netburner Module Core V3 Upgrade",
                 "repReq": 1750000,
                 "price": 7500000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.5142857142857135,
+                "wantedScorePriceWeighted": 11.999999999999982
             },
             {
                 "name": "Embedded Netburner Module Analyze Engine",
                 "repReq": 625000,
                 "price": 6000000000,
-                "nextFactionHas": false
+                "nextFactionHas": false,
+                "canBuy": false,
+                "wantedScore": 0.15999999999999942,
+                "wantedScorePriceWeighted": 1.6666666666666605
             }
         ],
         "maxPrice": 25000000000000,

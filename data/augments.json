@@ -40,9 +40,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 199.9999999999993
+        "wantedScore": 199.9999999999993,
+        "wantedScorePriceWeighted": 49.99999999999982
     },
     {
         "name": "Speech Enhancement",
@@ -88,9 +89,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 79.99999999999972
+        "wantedScore": 79.99999999999972,
+        "wantedScorePriceWeighted": 15.999999999999945
     },
     {
         "name": "ADR-V1 Pheromone Gene",
@@ -135,9 +137,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 53.333333333333144
+        "wantedScore": 53.333333333333144,
+        "wantedScorePriceWeighted": 11.428571428571388
     },
     {
         "name": "Social Negotiation Assistant (S.N.A)",
@@ -179,9 +182,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 48.000000000000114
+        "wantedScore": 48.000000000000114,
+        "wantedScorePriceWeighted": 10.000000000000023
     },
     {
         "name": "Nuoptimal Nootropic Injector Implant",
@@ -229,9 +233,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 39.99999999999986
+        "wantedScore": 39.99999999999986,
+        "wantedScorePriceWeighted": 9.999999999999964
     },
     {
         "name": "Neurotrainer II",
@@ -274,9 +279,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 30.00000000000007
+        "wantedScore": 30.00000000000007,
+        "wantedScorePriceWeighted": 6.666666666666683
     },
     {
         "name": "Speech Processor Implant",
@@ -324,9 +330,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 26.666666666666572
+        "wantedScore": 26.666666666666572,
+        "wantedScorePriceWeighted": 3.9999999999999862
     },
     {
         "name": "Artificial Synaptic Potentiation",
@@ -369,9 +376,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 19.199999999999875
+        "wantedScore": 19.199999999999875,
+        "wantedScorePriceWeighted": 1.4999999999999902
     },
     {
         "name": "Neurotrainer III",
@@ -416,7 +424,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 16.000000000000014
+        "wantedScore": 16.000000000000014,
+        "wantedScorePriceWeighted": 3.0769230769230798
     },
     {
         "name": "Synaptic Enhancement Implant",
@@ -459,9 +468,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 15.000000000000568
+        "wantedScore": 15.000000000000568,
+        "wantedScorePriceWeighted": 4.000000000000152
     },
     {
         "name": "BitWire",
@@ -504,9 +514,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 13.333333333333522
+        "wantedScore": 13.333333333333522,
+        "wantedScorePriceWeighted": 5.000000000000071
     },
     {
         "name": "Neural-Retention Enhancement",
@@ -548,9 +559,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 12.5
+        "wantedScore": 12.5,
+        "wantedScorePriceWeighted": 1
     },
     {
         "name": "Power Recirculation Core",
@@ -594,7 +606,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 12.000000000000028
+        "wantedScore": 12.000000000000028,
+        "wantedScorePriceWeighted": 1.6666666666666707
     },
     {
         "name": "Neuregen Gene Modification",
@@ -638,7 +651,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 10.666666666666675
+        "wantedScore": 10.666666666666675,
+        "wantedScorePriceWeighted": 1.0666666666666675
     },
     {
         "name": "Cranial Signal Processors - Gen II",
@@ -683,9 +697,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 7.466666666666697
+        "wantedScore": 7.466666666666697,
+        "wantedScorePriceWeighted": 1.1200000000000045
     },
     {
         "name": "ADR-V2 Pheromone Gene",
@@ -731,7 +746,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 6.399999999999977
+        "wantedScore": 6.399999999999977,
+        "wantedScorePriceWeighted": 0.7272727272727247
     },
     {
         "name": "Cranial Signal Processors - Gen I",
@@ -774,9 +790,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 5.999999999999872
+        "wantedScore": 5.999999999999872,
+        "wantedScorePriceWeighted": 0.8571428571428389
     },
     {
         "name": "Embedded Netburner Module",
@@ -827,7 +844,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 5.3333333333333375
+        "wantedScore": 5.3333333333333375,
+        "wantedScorePriceWeighted": 0.3200000000000003
     },
     {
         "name": "Cranial Signal Processors - Gen V",
@@ -876,7 +894,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 5.200000000000003
+        "wantedScore": 5.200000000000003,
+        "wantedScorePriceWeighted": 0.5777777777777782
     },
     {
         "name": "Cranial Signal Processors - Gen III",
@@ -925,7 +944,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 5.199999999999996
+        "wantedScore": 5.199999999999996,
+        "wantedScorePriceWeighted": 0.4727272727272723
     },
     {
         "name": "CRTX42-AA Gene Modification",
@@ -967,9 +987,10 @@
             "bladeburner_analysis": 1,
             "bladeburner_success_chance": 1
         },
-        "isOwned": false,
+        "isOwned": true,
         "isWanted": true,
-        "wantedScore": 5.1111111111111205
+        "wantedScore": 5.1111111111111205,
+        "wantedScorePriceWeighted": 1.0222222222222241
     },
     {
         "name": "Neuralstimulator",
@@ -1022,7 +1043,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 4.800000000000004
+        "wantedScore": 4.800000000000004,
+        "wantedScorePriceWeighted": 0.08000000000000007
     },
     {
         "name": "SmartJaw",
@@ -1066,7 +1088,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 4
+        "wantedScore": 4,
+        "wantedScorePriceWeighted": 0.5454545454545454
     },
     {
         "name": "Cranial Signal Processors - Gen IV",
@@ -1115,7 +1138,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 3.760000000000005
+        "wantedScore": 3.760000000000005,
+        "wantedScorePriceWeighted": 0.42727272727272786
     },
     {
         "name": "QLink",
@@ -1159,7 +1183,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 3.3333333333333335
+        "wantedScore": 3.3333333333333335,
+        "wantedScorePriceWeighted": 0.00025
     },
     {
         "name": "Enhanced Social Interaction Implant",
@@ -1207,7 +1232,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 3.199999999999998
+        "wantedScore": 3.199999999999998,
+        "wantedScorePriceWeighted": 0.8727272727272722
     },
     {
         "name": "PCMatrix",
@@ -1251,7 +1277,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 3.108000000000004
+        "wantedScore": 3.108000000000004,
+        "wantedScorePriceWeighted": 0.1554000000000002
     },
     {
         "name": "FocusWire",
@@ -1298,7 +1325,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 2.666666666666657
+        "wantedScore": 2.666666666666657,
+        "wantedScorePriceWeighted": 0.22222222222222143
     },
     {
         "name": "Neural Accelerator",
@@ -1342,7 +1370,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 2.2499999999999964
+        "wantedScore": 2.2499999999999964,
+        "wantedScorePriceWeighted": 0.25714285714285673
     },
     {
         "name": "DataJack",
@@ -1390,7 +1419,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 2.222222222222222
+        "wantedScore": 2.222222222222222,
+        "wantedScorePriceWeighted": 0.5555555555555556
     },
     {
         "name": "The Black Hand",
@@ -1434,7 +1464,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 2.1999999999999886
+        "wantedScore": 2.1999999999999886,
+        "wantedScorePriceWeighted": 0.39999999999999797
     },
     {
         "name": "Enhanced Myelin Sheathing",
@@ -1480,7 +1511,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 2.1000000000000085
+        "wantedScore": 2.1000000000000085,
+        "wantedScorePriceWeighted": 0.15272727272727335
     },
     {
         "name": "Embedded Netburner Module Core Implant",
@@ -1532,7 +1564,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 1.7142857142857182
+        "wantedScore": 1.7142857142857182,
+        "wantedScorePriceWeighted": 0.12000000000000029
     },
     {
         "name": "PC Direct-Neural Interface Optimization Submodule",
@@ -1580,7 +1613,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 1.6999999999999993
+        "wantedScore": 1.6999999999999993,
+        "wantedScorePriceWeighted": 0.1888888888888888
     },
     {
         "name": "Neuronal Densification",
@@ -1624,7 +1658,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 1.4933333333333394
+        "wantedScore": 1.4933333333333394,
+        "wantedScorePriceWeighted": 0.20363636363636445
     },
     {
         "name": "ECorp HVMind Implant",
@@ -1668,7 +1703,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 1.3333333333333335
+        "wantedScore": 1.3333333333333335,
+        "wantedScorePriceWeighted": 0.36363636363636365
     },
     {
         "name": "Artificial Bio-neural Network Implant",
@@ -1713,7 +1749,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 1.0909090909090935
+        "wantedScore": 1.0909090909090935,
+        "wantedScorePriceWeighted": 0.10000000000000024
     },
     {
         "name": "PC Direct-Neural Interface",
@@ -1760,7 +1797,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 1.0133333333333354
+        "wantedScore": 1.0133333333333354,
+        "wantedScorePriceWeighted": 0.10133333333333354
     },
     {
         "name": "nextSENS Gene Modification",
@@ -1804,7 +1842,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.914285714285715
+        "wantedScore": 0.914285714285715,
+        "wantedScorePriceWeighted": 0.207792207792208
     },
     {
         "name": "HyperSight Corneal Implant",
@@ -1849,7 +1888,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.86666666666666
+        "wantedScore": 0.86666666666666,
+        "wantedScorePriceWeighted": 0.04727272727272691
     },
     {
         "name": "Xanipher",
@@ -1893,7 +1933,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.7999999999999993
+        "wantedScore": 0.7999999999999993,
+        "wantedScorePriceWeighted": 0.164705882352941
     },
     {
         "name": "PC Direct-Neural Interface NeuroNet Injector",
@@ -1939,7 +1980,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.7666666666666657
+        "wantedScore": 0.7666666666666657,
+        "wantedScorePriceWeighted": 0.15333333333333313
     },
     {
         "name": "OmniTek InfoLoad",
@@ -1983,7 +2025,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.7199999999999989
+        "wantedScore": 0.7199999999999989,
+        "wantedScorePriceWeighted": 0.15652173913043455
     },
     {
         "name": "Embedded Netburner Module Core V2 Upgrade",
@@ -2037,7 +2080,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.629999999999999
+        "wantedScore": 0.629999999999999,
+        "wantedScorePriceWeighted": 0.13999999999999976
     },
     {
         "name": "Embedded Netburner Module Direct Memory Access Upgrade",
@@ -2089,7 +2133,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.5999999999999996
+        "wantedScore": 0.5999999999999996,
+        "wantedScorePriceWeighted": 0.08571428571428566
     },
     {
         "name": "BitRunners Neurolink",
@@ -2133,7 +2178,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.5714285714285714
+        "wantedScore": 0.5714285714285714,
+        "wantedScorePriceWeighted": 0.1142857142857143
     },
     {
         "name": "Embedded Netburner Module Core V3 Upgrade",
@@ -2187,7 +2233,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.5142857142857135
+        "wantedScore": 0.5142857142857135,
+        "wantedScorePriceWeighted": 0.11999999999999982
     },
     {
         "name": "Embedded Netburner Module Analyze Engine",
@@ -2239,7 +2286,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.15999999999999942
+        "wantedScore": 0.15999999999999942,
+        "wantedScorePriceWeighted": 0.016666666666666607
     },
     {
         "name": "SPTN-97 Gene Modification",
@@ -2283,7 +2331,8 @@
         },
         "isOwned": false,
         "isWanted": true,
-        "wantedScore": 0.12000000000000029
+        "wantedScore": 0.12000000000000029,
+        "wantedScorePriceWeighted": 0.03076923076923084
     },
     {
         "name": "Augmented Targeting I",

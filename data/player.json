@@ -4,21 +4,21 @@
         "max": 10
     },
     "skills": {
-        "hacking": 282,
+        "hacking": 510,
         "strength": 1,
         "defense": 1,
         "dexterity": 1,
         "agility": 1,
-        "charisma": 35,
+        "charisma": 244,
         "intelligence": 0
     },
     "exp": {
-        "hacking": 204855.78327264948,
+        "hacking": 25437267.140951082,
         "strength": 0,
         "defense": 0,
         "dexterity": 0,
         "agility": 0,
-        "charisma": 536.1556771999886,
+        "charisma": 75508.39330232654,
         "intelligence": 0
     },
     "mults": {
@@ -53,11 +53,11 @@
         "bladeburner_analysis": 1,
         "bladeburner_success_chance": 1
     },
-    "city": "Chongqing",
+    "city": "Volhaven",
     "numPeopleKilled": 0,
-    "money": 33823365.17099043,
-    "location": "Bachman & Associates",
-    "totalPlaytime": 1282448200,
+    "money": 21355347314.41228,
+    "location": "Travel Agency",
+    "totalPlaytime": 1379662200,
     "jobs": {
         "Rho Construction": "Software Engineering Intern",
         "Omega Software": "Software Engineering Intern",
@@ -83,7 +83,7 @@
         "Solaris Space Systems": "Software Engineering Intern",
         "DeltaOne": "Software Engineering Intern",
         "Nova Medical": "Software Engineering Intern",
-        "Bachman & Associates": "Software Engineering Intern",
+        "Bachman & Associates": "Junior Software Engineer",
         "Blade Industries": "Software Engineering Intern",
         "Clarke Incorporated": "Software Engineering Intern",
         "OmniTek Incorporated": "Software Engineering Intern",
@@ -94,6 +94,7 @@
         "NWO": "Software Engineering Intern"
     },
     "factions": [
+        "The Black Hand",
         "NiteSec",
         "Chongqing",
         "Tian Di Hui",
@@ -101,13 +102,35 @@
     ],
     "entropy": 0,
     "karma": 0,
-    "playtimeSinceLastAug": 4506800,
-    "playtimeSinceLastBitnode": 344867000,
+    "playtimeSinceLastAug": 101720800,
+    "playtimeSinceLastBitnode": 442081000,
     "bitNodeN": 4,
     "currentWork": {
-        "type": "FACTION",
-        "cyclesWorked": 17,
-        "factionWorkType": "hacking",
-        "factionName": "Chongqing"
-    }
+        "type": "CLASS",
+        "cyclesWorked": 15000,
+        "classType": "Leadership",
+        "location": "ZB Institute of Technology"
+    },
+    "factionsWithRep": [
+        {
+            "factionName": "The Black Hand",
+            "rep": 175851.32023206205
+        },
+        {
+            "factionName": "NiteSec",
+            "rep": 85162.48009029248
+        },
+        {
+            "factionName": "Chongqing",
+            "rep": 78683.07600678198
+        },
+        {
+            "factionName": "Tian Di Hui",
+            "rep": 40983.43641266698
+        },
+        {
+            "factionName": "CyberSec",
+            "rep": 59458.76321607132
+        }
+    ]
 }

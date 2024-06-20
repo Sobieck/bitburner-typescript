@@ -12,6 +12,7 @@ export async function main(ns: NS): Promise<void> {
         isOwned: boolean;
         isWanted: boolean;
         wantedScore: number;
+        wantedScorePriceWeighted: number;
     }
 
     const augmentsPath = "data/augments.txt"
@@ -50,11 +51,12 @@ export async function main(ns: NS): Promise<void> {
             augment.wantedScore = 0
         } else {
             augment.wantedScore = (score / augment.repReq) * 1_000_000
+            augment.wantedScorePriceWeighted = (score / augment.price) * 100_000_000_000
         }
     }
 
     const sortedAugments = allAugments.sort((a, b) => b.wantedScore - a.wantedScore) //allAugments.sort(function (a, b) { return Number(b.isWanted) - Number(a.isWanted) || a.repReq - b.repReq })
-
+    
     ns.rm(augmentsPath)
     ns.write(augmentsPath, JSON.stringify(sortedAugments))
 
@@ -65,7 +67,7 @@ export async function main(ns: NS): Promise<void> {
         nextFactionHas: boolean;
     }
 
-    type FactionPriorities = {
+    type FactionPriority = {
         totalWantedScore: number;
         maxRepNeeded: number;
         factionName: string;
@@ -77,7 +79,7 @@ export async function main(ns: NS): Promise<void> {
         repNeededForAugsThatNextDoesntHave: number;
     }
 
-    const factionAugmentScore: Map<string, FactionPriorities> = new Map()
+    const factionAugmentScore: Map<string, FactionPriority> = new Map()
 
     const companies: CompanyName[] = []
 
@@ -100,7 +102,7 @@ export async function main(ns: NS): Promise<void> {
 
                 if (current.maxPrice < augment.price) {
                     current.maxPrice = augment.price
-                } 
+                }
 
                 current.totalWantedScore += augment.wantedScore
 
@@ -151,7 +153,8 @@ export async function main(ns: NS): Promise<void> {
             }
         }
     }
-//todo
+
+    //todo
     // add all unwanted augments at the end before we get to the endgame factions that require other stats. Do the same ranking process but based on a secondary score
 
     let bestFactionAugmentScores = Array.from(factionAugmentScore.values()).sort((a, b) => a.maxPrice - b.maxPrice || b.totalWantedScore - a.totalWantedScore)
@@ -163,12 +166,12 @@ export async function main(ns: NS): Promise<void> {
         const lowerRankedFactionAugmentNames = lowerRankedFaction.augments.map(x => x.name)
 
         for (const augment of higherRankedFaction.augments) {
-            if(lowerRankedFactionAugmentNames.includes(augment.name)){
+            if (lowerRankedFactionAugmentNames.includes(augment.name)) {
                 augment.nextFactionHas = true
             }
         }
-     
-        higherRankedFaction.repNeededForAugsThatNextDoesntHave = Math.max(...higherRankedFaction.augments.filter(x => !x.nextFactionHas).map(x => x.repReq))   
+
+        higherRankedFaction.repNeededForAugsThatNextDoesntHave = Math.max(...higherRankedFaction.augments.filter(x => !x.nextFactionHas).map(x => x.repReq))
     }
 
     bestFactionAugmentScores = bestFactionAugmentScores.filter(x => !x.augments.every(y => y.nextFactionHas))

@@ -497,7 +497,7 @@ describe("PlayerController", () => {
                 const result = controller.actionRequired as UniversityAction
 
                 expect(result.type).toBe("university")
-                expect(result.universityName).toBe("ZB Institute")
+                expect(result.universityName).toBe("ZB Institute of Technology")
                 expect(result.courseName).toBe("Algorithms")
             })
 
@@ -522,7 +522,7 @@ describe("PlayerController", () => {
                 player.currentWork = {
                     type: "CLASS",
                     classType: "Algorithms",
-                    location: "ZB Institute",
+                    location: "ZB Institute of Technology",
                     cyclesWorked: 1
                 }
 
@@ -544,7 +544,7 @@ describe("PlayerController", () => {
                 const result = controller.actionRequired as UniversityAction
 
                 expect(result.type).toBe("university")
-                expect(result.universityName).toBe("ZB Institute")
+                expect(result.universityName).toBe("ZB Institute of Technology")
                 expect(result.courseName).toBe("Leadership")
             })
 
@@ -569,7 +569,7 @@ describe("PlayerController", () => {
                 player.currentWork = {
                     type: "CLASS",
                     classType: "Leadership",
-                    location: "ZB Institute",
+                    location: "ZB Institute of Technology",
                     cyclesWorked: 1
                 }
 
@@ -595,7 +595,7 @@ describe("PlayerController", () => {
                 player.currentWork = {
                     type: "CLASS",
                     classType: "Leadership",
-                    location: "ZB Institute",
+                    location: "ZB Institute of Technology",
                     cyclesWorked: 1
                 }
                 player.factions.push("Bachman & Associates")

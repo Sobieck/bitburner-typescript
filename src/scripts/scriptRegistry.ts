@@ -1,4 +1,4 @@
-import { NS } from "@ns";
+import { NS, ToastVariant } from "@ns";
 
 export async function main(ns: NS): Promise<void> {
   const scriptsToRun: string[] = []
@@ -33,16 +33,26 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/character/applyForJob.js")
   // controller and controlled
   scriptsToRun.push("scripts/character/characterController.js")
-  scriptsToRun.push("scripts/character/createProgram.js")
+  scriptsToRun.push("scripts/character/createPrograms.js")
   scriptsToRun.push("scripts/character/travel.js")
   scriptsToRun.push("scripts/character/university.js")
   scriptsToRun.push("scripts/character/workAtFaction.js")
   scriptsToRun.push("scripts/character/workAtCompany.js")
 
-  // add cost
+  //finish round
+  scriptsToRun.push("scripts/finishRound/buyModsController.js")
+
   const scriptWithRamCost: ScriptWithCost[] = []
 
   const allScripts = ns.ls("home", "/scripts").filter(x => !x.endsWith(".txt"))
+
+  for (const script of scriptsToRun) {
+
+    if(!allScripts.includes(script)){
+      ns.toast(`${script} doesn't exist on your home computers hd.`, "error")
+    }
+  }
+
 
   allScripts.forEach(path => {
     scriptWithRamCost.push(

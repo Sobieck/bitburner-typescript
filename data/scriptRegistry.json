@@ -12,14 +12,19 @@
         "scripts/precalculate/augments/isOwned.js",
         "scripts/precalculate/augments/targetAugmentFilter.js",
         "scripts/precalculate/augments/getCompanyJobs.js",
+        "scripts/precalculate/augments/selectTargetCityFaction.js",
         "scripts/precalculate/player/player.js",
         "scripts/hacking/moveHackScriptsToServers.js",
         "scripts/hacking/advancedHackingOrchistrator.js",
         "scripts/hacking/backdoor.js",
-        "scripts/character/default.js",
-        "scripts/character/createPrograms.js",
         "scripts/character/joinFaction.js",
-        "scripts/character/applyForJob.js"
+        "scripts/character/applyForJob.js",
+        "scripts/character/characterController.js",
+        "scripts/character/createPrograms.js",
+        "scripts/character/travel.js",
+        "scripts/character/university.js",
+        "scripts/character/workAtFaction.js",
+        "scripts/character/workAtCompany.js"
     ],
     "scriptsWithCost": [
         {
@@ -27,12 +32,12 @@
             "ramCost": 4.6
         },
         {
-            "path": "scripts/character/createPrograms.js",
-            "ramCost": 1.6
+            "path": "scripts/character/characterController.js",
+            "ramCost": 2.6
         },
         {
-            "path": "scripts/character/default.js",
-            "ramCost": 4.1
+            "path": "scripts/character/createPrograms.js",
+            "ramCost": 6.6
         },
         {
             "path": "scripts/character/joinFaction.js",
@@ -43,16 +48,32 @@
             "ramCost": 1.6
         },
         {
-            "path": "scripts/character/playerController.js",
-            "ramCost": 1.6
+            "path": "scripts/character/travel.js",
+            "ramCost": 3.6
+        },
+        {
+            "path": "scripts/character/university.js",
+            "ramCost": 3.6
         },
         {
             "path": "scripts/character/whatToDo.js",
             "ramCost": 4.1
         },
         {
+            "path": "scripts/character/workAtCompany.js",
+            "ramCost": 4.6
+        },
+        {
+            "path": "scripts/character/workAtFaction.js",
+            "ramCost": 4.6
+        },
+        {
             "path": "scripts/coordinator.js",
             "ramCost": 2.6
+        },
+        {
+            "path": "scripts/finishRound/buyModsController.js",
+            "ramCost": 1.6
         },
         {
             "path": "scripts/getRoot.js",
@@ -64,7 +85,7 @@
         },
         {
             "path": "scripts/hacking/backdoor.js",
-            "ramCost": 5.7
+            "ramCost": 6.7
         },
         {
             "path": "scripts/hacking/basicHackingOrchistrator.js",
@@ -115,6 +136,10 @@
             "ramCost": 7.6
         },
         {
+            "path": "scripts/precalculate/augments/selectTargetCityFaction.js",
+            "ramCost": 2.6
+        },
+        {
             "path": "scripts/precalculate/augments/targetAugmentFilter.js",
             "ramCost": 7.6
         },
@@ -128,7 +153,7 @@
         },
         {
             "path": "scripts/precalculate/player/player.js",
-            "ramCost": 3.6
+            "ramCost": 4.6
         },
         {
             "path": "scripts/precalculate/precalculate.js",
