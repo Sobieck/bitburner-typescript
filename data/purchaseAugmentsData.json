@@ -1,6 +1,59 @@
 {
-    "totalPrice": 1.7976931348623157e+308,
-    "orders": [],
+    "totalPrice": 7414151725,
+    "orders": [
+        {
+            "factionName": "Bachman & Associates",
+            "augName": "Neuralstimulator",
+            "price": 3000000000,
+            "wantedScorePriceWeighted": 8.000000000000007,
+            "expectedPrice": 3000000000,
+            "priceMultiplier": 1,
+            "nextFactionHas": true
+        },
+        {
+            "factionName": "Bachman & Associates",
+            "augName": "FocusWire",
+            "price": 900000000,
+            "wantedScorePriceWeighted": 22.222222222222143,
+            "expectedPrice": 1710000000,
+            "priceMultiplier": 1.9,
+            "nextFactionHas": true
+        },
+        {
+            "factionName": "Bachman & Associates",
+            "augName": "ADR-V2 Pheromone Gene",
+            "price": 550000000,
+            "wantedScorePriceWeighted": 72.72727272727246,
+            "expectedPrice": 1985500000,
+            "priceMultiplier": 3.61,
+            "nextFactionHas": true
+        },
+        {
+            "factionName": "Sector-12",
+            "augName": "Augmented Targeting I",
+            "price": 15000000,
+            "neededFor": "Augmented Targeting II",
+            "expectedPrice": 102884999.99999999,
+            "priceMultiplier": 6.858999999999999,
+            "nextFactionHas": false
+        },
+        {
+            "factionName": "Sector-12",
+            "augName": "Augmented Targeting II",
+            "price": 42500000,
+            "expectedPrice": 553864249.9999999,
+            "priceMultiplier": 13.032099999999998,
+            "nextFactionHas": false
+        },
+        {
+            "factionName": "Sector-12",
+            "augName": "Wired Reflexes",
+            "price": 2500000,
+            "expectedPrice": 61902474.99999998,
+            "priceMultiplier": 24.760989999999993,
+            "nextFactionHas": false
+        }
+    ],
     "hasRequiredRepForAllManditoryAugs": false,
     "shouldBuyAllAugments": false
 }

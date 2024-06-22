@@ -1,0 +1,107 @@
+[
+    {
+        "victimHostname": "lexo-corp",
+        "maxMoney": 2163378375,
+        "primaryAttack": true,
+        "timeStartedInMs": 1719067435774,
+        "expectedTimeInMs": 578358,
+        "expectedEndTimeInMs": 1719068014132,
+        "attackRecords": [
+            {
+                "attackingHostname": "home",
+                "treadCount": 1780,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 25020
+            },
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 18787,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 25021
+            }
+        ],
+        "action": "scripts/hacking/grow.js"
+    },
+    {
+        "victimHostname": "alpha-ent",
+        "maxMoney": 1929504726.5625,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719066578060,
+        "expectedTimeInMs": 461845,
+        "expectedEndTimeInMs": 1719067039905,
+        "attackRecords": [],
+        "action": "idle"
+    },
+    {
+        "victimHostname": "syscore",
+        "maxMoney": 1444179639.375,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719066737713,
+        "expectedTimeInMs": 488168,
+        "expectedEndTimeInMs": 1719067225881,
+        "attackRecords": [],
+        "action": "idle"
+    },
+    {
+        "victimHostname": "catalyst",
+        "maxMoney": 1078938185.625,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719065767996,
+        "expectedTimeInMs": 368347,
+        "expectedEndTimeInMs": 1719066136343,
+        "attackRecords": [],
+        "action": "idle"
+    },
+    {
+        "victimHostname": "millenium-fitness",
+        "maxMoney": 703125000,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719066650714,
+        "expectedTimeInMs": 326946,
+        "expectedEndTimeInMs": 1719066977660,
+        "attackRecords": [],
+        "action": "idle"
+    },
+    {
+        "victimHostname": "rothman-uni",
+        "maxMoney": 642443087.8125,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719066088354,
+        "expectedTimeInMs": 308042,
+        "expectedEndTimeInMs": 1719066396396,
+        "attackRecords": [],
+        "action": "idle"
+    },
+    {
+        "victimHostname": "the-hub",
+        "maxMoney": 466982426.25,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719065985249,
+        "expectedTimeInMs": 205464,
+        "expectedEndTimeInMs": 1719066190713,
+        "attackRecords": [],
+        "action": "idle"
+    },
+    {
+        "victimHostname": "summit-uni",
+        "maxMoney": 683199511.875,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719066497610,
+        "expectedTimeInMs": 333074,
+        "expectedEndTimeInMs": 1719066830684,
+        "attackRecords": [],
+        "action": "idle"
+    },
+    {
+        "victimHostname": "aevum-police",
+        "maxMoney": 784653046.875,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719066604925,
+        "expectedTimeInMs": 396425,
+        "expectedEndTimeInMs": 1719067001350,
+        "attackRecords": [],
+        "action": "idle"
+    }
+]

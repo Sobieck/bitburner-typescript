@@ -1,57 +1,691 @@
 [
     {
-        "victimHostname": "foodnstuff",
-        "maxMoney": 5625000,
+        "victimHostname": "lexo-corp",
+        "maxMoney": 2163378375,
         "primaryAttack": true,
-        "timeStartedInMs": 1718709268181,
-        "expectedTimeInMs": 82059,
-        "expectedEndTimeInMs": 1718709350240,
+        "timeStartedInMs": 1719069070210,
+        "expectedTimeInMs": 2701886,
+        "expectedEndTimeInMs": 1719071772096,
         "attackRecords": [
             {
                 "attackingHostname": "home",
-                "treadCount": 136,
+                "treadCount": 1206,
                 "isRunning": true,
                 "commandSent": true,
-                "pid": 2562
+                "pid": 23
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "alpha-ent",
+        "maxMoney": 1929504726.5625,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069071814,
+        "expectedTimeInMs": 1746432,
+        "expectedEndTimeInMs": 1719070818246,
+        "attackRecords": [
+            {
+                "attackingHostname": "home",
+                "treadCount": 574,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 50
+            },
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 312,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 51
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "rho-construction",
+        "maxMoney": 1552942794.375,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069073437,
+        "expectedTimeInMs": 2084962,
+        "expectedEndTimeInMs": 1719071158399,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 1375,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 78
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "syscore",
+        "maxMoney": 1444179639.375,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069075051,
+        "expectedTimeInMs": 1847065,
+        "expectedEndTimeInMs": 1719070922116,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 919,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 105
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "catalyst",
+        "maxMoney": 1078938185.625,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069076662,
+        "expectedTimeInMs": 1342623,
+        "expectedEndTimeInMs": 1719070419285,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 859,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 132
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "aevum-police",
+        "maxMoney": 784653046.875,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069078247,
+        "expectedTimeInMs": 993206,
+        "expectedEndTimeInMs": 1719070071453,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 523,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 159
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "netlink",
+        "maxMoney": 773437500,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069079836,
+        "expectedTimeInMs": 576057,
+        "expectedEndTimeInMs": 1719069655893,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 118,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 186
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "millenium-fitness",
+        "maxMoney": 703125000,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069081427,
+        "expectedTimeInMs": 1735130,
+        "expectedEndTimeInMs": 1719070816557,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 1079,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 213
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "computek",
+        "maxMoney": 687453505.3125,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069390563,
+        "expectedTimeInMs": 993859,
+        "expectedEndTimeInMs": 1719070384422,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 833,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5403
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "summit-uni",
+        "maxMoney": 683199511.875,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069084585,
+        "expectedTimeInMs": 1148203,
+        "expectedEndTimeInMs": 1719070232788,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-020",
+                "treadCount": 659,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 268
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "rothman-uni",
+        "maxMoney": 642443087.8125,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069086189,
+        "expectedTimeInMs": 1259404,
+        "expectedEndTimeInMs": 1719070345593,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-011",
+                "treadCount": 945,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 295
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "the-hub",
+        "maxMoney": 466982426.25,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069087809,
+        "expectedTimeInMs": 1314199,
+        "expectedEndTimeInMs": 1719070402008,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-020",
+                "treadCount": 1574,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 322
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "johnson-ortho",
+        "maxMoney": 213927921.5625,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069265181,
+        "expectedTimeInMs": 1227498,
+        "expectedEndTimeInMs": 1719070492679,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-011",
+                "treadCount": 1516,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 3272
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "omega-net",
+        "maxMoney": 192782157.1875,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069376191,
+        "expectedTimeInMs": 800002,
+        "expectedEndTimeInMs": 1719070176193,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-021",
+                "treadCount": 1387,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5130
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "silver-helix",
+        "maxMoney": 126562500,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069449467,
+        "expectedTimeInMs": 119905,
+        "expectedEndTimeInMs": 1719069569372,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-020",
+                "treadCount": 113,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6380
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "crush-fitness",
+        "maxMoney": 123329595.9375,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069379366,
+        "expectedTimeInMs": 125143,
+        "expectedEndTimeInMs": 1719069504509,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-021",
+                "treadCount": 2344,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5184
+            },
+            {
+                "attackingHostname": "REMOTE-012",
+                "treadCount": 2340,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5185
+            },
+            {
+                "attackingHostname": "REMOTE-010",
+                "treadCount": 2340,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5186
+            },
+            {
+                "attackingHostname": "REMOTE-002",
+                "treadCount": 2340,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5187
+            },
+            {
+                "attackingHostname": "REMOTE-011",
+                "treadCount": 2220,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5188
+            },
+            {
+                "attackingHostname": "REMOTE-020",
+                "treadCount": 1327,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5189
+            },
+            {
+                "attackingHostname": "REMOTE-001",
+                "treadCount": 585,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5190
+            },
+            {
+                "attackingHostname": "millenium-fitness",
+                "treadCount": 146,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5191
+            },
+            {
+                "attackingHostname": "I.I.I.I",
+                "treadCount": 146,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5192
+            },
+            {
+                "attackingHostname": "run4theh111z",
+                "treadCount": 146,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5193
+            },
+            {
+                "attackingHostname": "REMOTE-000",
+                "treadCount": 73,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5194
+            },
+            {
+                "attackingHostname": "netlink",
+                "treadCount": 36,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5195
+            },
+            {
+                "attackingHostname": "silver-helix",
+                "treadCount": 36,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5196
+            },
+            {
+                "attackingHostname": "lexo-corp",
+                "treadCount": 36,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5197
+            },
+            {
+                "attackingHostname": "iron-gym",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5198
+            },
+            {
+                "attackingHostname": "max-hardware",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5199
+            },
+            {
+                "attackingHostname": "neo-net",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5200
+            },
+            {
+                "attackingHostname": "zer0",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5201
+            },
+            {
+                "attackingHostname": "omega-net",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5202
+            },
+            {
+                "attackingHostname": "catalyst",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5203
+            },
+            {
+                "attackingHostname": "phantasy",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5204
+            },
+            {
+                "attackingHostname": "alpha-ent",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5205
+            },
+            {
+                "attackingHostname": "aevum-police",
+                "treadCount": 18,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5206
+            },
+            {
+                "attackingHostname": "harakiri-sushi",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5207
+            },
+            {
+                "attackingHostname": "hong-fang-tea",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5208
             },
             {
                 "attackingHostname": "joesguns",
                 "treadCount": 9,
                 "isRunning": true,
                 "commandSent": true,
-                "pid": 2563
+                "pid": 5209
+            },
+            {
+                "attackingHostname": "nectar-net",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5210
             },
             {
                 "attackingHostname": "sigma-cosmetics",
                 "treadCount": 9,
                 "isRunning": true,
                 "commandSent": true,
-                "pid": 2564
+                "pid": 5211
             },
             {
                 "attackingHostname": "foodnstuff",
                 "treadCount": 9,
                 "isRunning": true,
                 "commandSent": true,
-                "pid": 2565
+                "pid": 5212
+            },
+            {
+                "attackingHostname": "summit-uni",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5213
+            },
+            {
+                "attackingHostname": ".",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5214
+            },
+            {
+                "attackingHostname": "avmnite-02h",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5215
+            },
+            {
+                "attackingHostname": "the-hub",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5216
+            },
+            {
+                "attackingHostname": "rothman-uni",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5217
+            },
+            {
+                "attackingHostname": "rho-construction",
+                "treadCount": 9,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5218
+            },
+            {
+                "attackingHostname": "CSEC",
+                "treadCount": 4,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 5219
             },
             {
                 "attackingHostname": "n00dles",
                 "treadCount": 2,
                 "isRunning": true,
                 "commandSent": true,
-                "pid": 2566
+                "pid": 5220
             }
         ],
         "action": "scripts/hacking/grow.js"
     },
     {
-        "victimHostname": "n00dles",
-        "maxMoney": 196875,
+        "victimHostname": "phantasy",
+        "maxMoney": 67500000,
         "primaryAttack": false,
-        "timeStartedInMs": 1718709097771,
-        "expectedTimeInMs": 130638,
-        "expectedEndTimeInMs": 1718709228409,
+        "timeStartedInMs": 1719069444579,
+        "expectedTimeInMs": 193945,
+        "expectedEndTimeInMs": 1719069638524,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 642,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6298
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "zer0",
+        "maxMoney": 21093750,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069435118,
+        "expectedTimeInMs": 75985,
+        "expectedEndTimeInMs": 1719069511103,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-021",
+                "treadCount": 216,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6140
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "max-hardware",
+        "maxMoney": 28125000,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069466912,
+        "expectedTimeInMs": 41647,
+        "expectedEndTimeInMs": 1719069508559,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 7595,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6672
+            }
+        ],
+        "action": "scripts/hacking/grow.js"
+    },
+    {
+        "victimHostname": "iron-gym",
+        "maxMoney": 56250000,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069462119,
+        "expectedTimeInMs": 60931,
+        "expectedEndTimeInMs": 1719069523050,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-021",
+                "treadCount": 683,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6590
+            }
+        ],
+        "action": "scripts/hacking/grow.js"
+    },
+    {
+        "victimHostname": "neo-net",
+        "maxMoney": 14062500,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069468486,
+        "expectedTimeInMs": 55270,
+        "expectedEndTimeInMs": 1719069523756,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-021",
+                "treadCount": 230,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6699
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "harakiri-sushi",
+        "maxMoney": 11250000,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069463738,
+        "expectedTimeInMs": 16939,
+        "expectedEndTimeInMs": 1719069480677,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 4115,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6617
+            },
+            {
+                "attackingHostname": "REMOTE-021",
+                "treadCount": 798,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6618
+            }
+        ],
+        "action": "scripts/hacking/grow.js"
+    },
+    {
+        "victimHostname": "hong-fang-tea",
+        "maxMoney": 8437500,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069465331,
+        "expectedTimeInMs": 45980,
+        "expectedEndTimeInMs": 1719069511311,
+        "attackRecords": [
+            {
+                "attackingHostname": "REMOTE-022",
+                "treadCount": 417,
+                "isRunning": true,
+                "commandSent": true,
+                "pid": 6645
+            }
+        ],
+        "action": "scripts/hacking/weaken.js"
+    },
+    {
+        "victimHostname": "nectar-net",
+        "maxMoney": 7734375,
+        "primaryAttack": false,
+        "timeStartedInMs": 1719069451018,
+        "expectedTimeInMs": 15529,
+        "expectedEndTimeInMs": 1719069466547,
         "attackRecords": [],
         "action": "idle"
     }

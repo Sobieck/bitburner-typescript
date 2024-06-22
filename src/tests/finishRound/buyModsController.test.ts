@@ -35,7 +35,7 @@ class MockFactionPriority implements FactionPriority {
 }
 
 class MockAugment implements Augment {
-    constructor(public name: string, public price: number){}
+    constructor(public name: string, public price: number, public wantedScorePriceWeighted: number = 0){}
 
     sources: string[] = ["random"];
     repReq: number = 10;
@@ -43,9 +43,9 @@ class MockAugment implements Augment {
     isOwned: boolean = false;
     isWanted: boolean = false;
     wantedScore: number = 0;
-    wantedScorePriceWeighted: number = 0;
 
     factionToBuyFrom: string = "";
+    neededFor: string | undefined;
 }
 
 class MockPlayer implements PlayerWithWork {
@@ -123,9 +123,9 @@ describe("BuyModsController", () => {
     let factionPriorities: FactionPriority[];
     let allAugments: Augment[];
 
+    const factionName000 = "faction000"
     const factionName001 = "faction001"
-    const factionName002 = "faction002"
-    const factionName003NotInPriorities = "faction003"
+    const factionName002NotInPriorities = "faction003"
 
     const augmentName000 = "aug00"
     const augmentName001 = "aug01"
@@ -135,59 +135,59 @@ describe("BuyModsController", () => {
     beforeEach(() => {
         player = new MockPlayer()
 
+        player.factionsWithRep.push(new FactionsWithRep(factionName000, 11))
         player.factionsWithRep.push(new FactionsWithRep(factionName001, 11))
-        player.factionsWithRep.push(new FactionsWithRep(factionName002, 11))
-        player.factionsWithRep.push(new FactionsWithRep(factionName003NotInPriorities, 11))
+        player.factionsWithRep.push(new FactionsWithRep(factionName002NotInPriorities, 11))
         
         factionPriorities = []
+        const factionPriority000 = new MockFactionPriority()
+        factionPriority000.factionName = factionName000
+        
+        factionPriority000.augments.push({
+            name: augmentName000,
+            nextFactionHas: false
+        })
+        
+        factionPriority000.augments.push({
+            name: augmentName001,
+            nextFactionHas: true
+        })
+        
+        factionPriority000.augments.push({
+            name: augmentName002,
+            nextFactionHas: true
+        })
+        
+        factionPriorities.push(factionPriority000)
+        
+        
         const factionPriority001 = new MockFactionPriority()
         factionPriority001.factionName = factionName001
-        
         factionPriority001.augments.push({
             name: augmentName000,
             nextFactionHas: false
         })
         
         factionPriority001.augments.push({
-            name: augmentName001,
-            nextFactionHas: false
-        })
-        
-        factionPriority001.augments.push({
-            name: augmentName002,
+            name: augmentName003,
             nextFactionHas: false
         })
         
         factionPriorities.push(factionPriority001)
         
-        
-        const factionPriority002 = new MockFactionPriority()
-        factionPriority002.factionName = factionName002
-        factionPriority002.augments.push({
-            name: augmentName000,
-            nextFactionHas: false
-        })
-        
-        factionPriority002.augments.push({
-            name: augmentName003,
-            nextFactionHas: false
-        })
-        
-        factionPriorities.push(factionPriority002)
-        
         const aug00 = new MockAugment(augmentName000, 1)
-        aug00.sources.push(factionName003NotInPriorities)
-        aug00.sources.push(factionName001)
+        aug00.sources.push(factionName002NotInPriorities)
+        aug00.sources.push(factionName000)
 
         const aug01 = new MockAugment(augmentName001, 2)
-        aug01.sources.push(factionName002)
+        aug01.sources.push(factionName001)
 
         const aug02 = new MockAugment(augmentName002, 4)
-        aug02.sources.push(factionName002)
         aug02.sources.push(factionName001)
+        aug02.sources.push(factionName000)
 
         const aug03 = new MockAugment(augmentName003, 3)
-        aug03.sources.push(factionName001)
+        aug03.sources.push(factionName000)
         
         allAugments = [
             aug00,
@@ -218,10 +218,83 @@ describe("BuyModsController", () => {
         expect(result.orders[2].augName).toBe(augmentName001)
         expect(result.orders[3].augName).toBe(augmentName000)
 
-        expect(result.orders[0].factionName).toBe(factionName002)
-        expect(result.orders[1].factionName).toBe(factionName001)
-        expect(result.orders[2].factionName).toBe(factionName002)
-        expect(result.orders[3].factionName).toBe(factionName003NotInPriorities)
+        expect(result.orders[0].factionName).toBe(factionName001)
+        expect(result.orders[1].factionName).toBe(factionName000)
+        expect(result.orders[2].factionName).toBe(factionName001)
+        expect(result.orders[3].factionName).toBe(factionName002NotInPriorities)
+    })
+
+    it("should do proper for wantedScorePriceWeighted", () => {
+        allAugments[2].wantedScorePriceWeighted = 12
+        allAugments[3].wantedScorePriceWeighted = 1
+        allAugments[1].wantedScorePriceWeighted = 3
+        allAugments[0].wantedScorePriceWeighted = 0
+
+        const controller = new BuyModsController(player, factionPriorities, allAugments)
+        const result = controller.completePurchaseData
+
+        expect(result.orders[0].wantedScorePriceWeighted).toBe(12)
+        expect(result.orders[1].wantedScorePriceWeighted).toBe(1)
+        expect(result.orders[2].wantedScorePriceWeighted).toBe(3)
+        expect(result.orders[3].wantedScorePriceWeighted).toBe(0)
+    })
+
+    it("should do proper for nextFactionHas", () => {
+        // aug1 and aug2 true
+        const controller = new BuyModsController(player, factionPriorities, allAugments)
+        const result = controller.completePurchaseData
+
+        expect(result.orders[0].nextFactionHas).toBeTruthy()
+        expect(result.orders[1].nextFactionHas).toBeFalsy()
+        expect(result.orders[2].nextFactionHas).toBeTruthy()
+        expect(result.orders[3].nextFactionHas).toBeFalsy()
+    })
+
+    it("should do proper for targetFactionHas", () => {
+        // aug1 and aug2 true
+        const controller = new BuyModsController(player, factionPriorities, allAugments)
+        const result = controller.completePurchaseData
+
+        expect(result.orders[0].targetFactionHas).toBeTruthy()
+        expect(result.orders[1].targetFactionHas).toBeFalsy()
+        expect(result.orders[2].targetFactionHas).toBeTruthy()
+        expect(result.orders[3].targetFactionHas).toBeTruthy()
+    })
+
+    it("should return the expected price", () => {
+        const controller = new BuyModsController(player, factionPriorities, allAugments)
+        const result = controller.completePurchaseData
+
+        expect(result.orders[0].expectedPrice).toBe(4)
+        expect(result.orders[1].expectedPrice).toBeCloseTo(5.7)
+        expect(result.orders[2].expectedPrice).toBe(7.22)
+        expect(result.orders[3].expectedPrice).toBeCloseTo(6.859)        
+    })
+
+    it("should have the correct total price", () => {
+        const controller = new BuyModsController(player, factionPriorities, allAugments)
+        const result = controller.completePurchaseData
+
+        expect(result.totalPrice).toBe(4 + 5.7 + 7.22 + 6.859)
+    })
+
+    it("should return the augments in order of price, but filter out already owned ones", () => {
+        allAugments[1].isOwned = true
+
+        const controller = new BuyModsController(player, factionPriorities, allAugments)
+        const result = controller.completePurchaseData
+
+        expect(result.orders[0].price).toBe(4)
+        expect(result.orders[1].price).toBe(3)
+        expect(result.orders[2].price).toBe(1)
+
+        expect(result.orders[0].augName).toBe(augmentName002)
+        expect(result.orders[1].augName).toBe(augmentName003)
+        expect(result.orders[2].augName).toBe(augmentName000)
+
+        expect(result.orders[0].factionName).toBe(factionName001)
+        expect(result.orders[1].factionName).toBe(factionName000)
+        expect(result.orders[2].factionName).toBe(factionName002NotInPriorities)
     })
 
     it("should return the augments in order of price, but get from different place if other source is low rep", () => {
@@ -240,16 +313,16 @@ describe("BuyModsController", () => {
         expect(result.orders[2].augName).toBe(augmentName001)
         expect(result.orders[3].augName).toBe(augmentName000)
 
-        expect(result.orders[0].factionName).toBe(factionName002)
-        expect(result.orders[1].factionName).toBe(factionName001)
-        expect(result.orders[2].factionName).toBe(factionName002)
-        expect(result.orders[3].factionName).toBe(factionName001)
+        expect(result.orders[0].factionName).toBe(factionName001)
+        expect(result.orders[1].factionName).toBe(factionName000)
+        expect(result.orders[2].factionName).toBe(factionName001)
+        expect(result.orders[3].factionName).toBe(factionName000)
     })
 
     it("shouldn't add a augment with too high of requirements", () => {
         const augOutOfReach = new MockAugment("soething", 19)
         augOutOfReach.repReq = 100
-        augOutOfReach.sources.push(factionName001)
+        augOutOfReach.sources.push(factionName000)
 
         allAugments.push(augOutOfReach)
 
@@ -266,10 +339,10 @@ describe("BuyModsController", () => {
         expect(result.orders[2].augName).toBe(augmentName001)
         expect(result.orders[3].augName).toBe(augmentName000)
 
-        expect(result.orders[0].factionName).toBe(factionName002)
-        expect(result.orders[1].factionName).toBe(factionName001)
-        expect(result.orders[2].factionName).toBe(factionName002)
-        expect(result.orders[3].factionName).toBe(factionName003NotInPriorities)
+        expect(result.orders[0].factionName).toBe(factionName001)
+        expect(result.orders[1].factionName).toBe(factionName000)
+        expect(result.orders[2].factionName).toBe(factionName001)
+        expect(result.orders[3].factionName).toBe(factionName002NotInPriorities)
     })
 
     it("should add a thing with a more expensive dependency first", () => {
@@ -283,11 +356,14 @@ describe("BuyModsController", () => {
         expect(result.orders[1].augName).toBe(augmentName003)
         expect(result.orders[2].augName).toBe(augmentName002)
         expect(result.orders[3].augName).toBe(augmentName001)
+
+        expect(result.orders[1].neededFor).toBe(augmentName002)
+        expect(result.orders[0].neededFor).toBe(augmentName003)
     })
 
     it("should work with arrays of augment depedencies", () =>{
-        allAugments[2].prereqs.push(augmentName003) // aug 2 is dependent on 3
-        allAugments[2].prereqs.push(augmentName000) // aug 2 is dependent on 3
+        allAugments[2].prereqs.push(augmentName003)
+        allAugments[2].prereqs.push(augmentName000)
 
         allAugments[2].price = 4
         allAugments[3].price = 1
@@ -301,13 +377,16 @@ describe("BuyModsController", () => {
         expect(result.orders[1].augName).toBe(augmentName000)
         expect(result.orders[2].augName).toBe(augmentName003)
         expect(result.orders[3].augName).toBe(augmentName002)
+
+        expect(result.orders[1].neededFor).toBe(augmentName002)
+        expect(result.orders[2].neededFor).toBe(augmentName002)
     })
     
 
     it("should remove items with dependencies with too high of requirements and not purchasable", () => {
         const augOutOfReach = new MockAugment("soething", 19)
         augOutOfReach.repReq = 100
-        augOutOfReach.sources.push(factionName001)
+        augOutOfReach.sources.push(factionName000)
 
         allAugments.push(augOutOfReach)
 
@@ -324,7 +403,7 @@ describe("BuyModsController", () => {
     it("should work because the dependency aug is already owned", () => {
         const augOutOfReach = new MockAugment("soething", 19)
         augOutOfReach.repReq = 100
-        augOutOfReach.sources.push(factionName001)
+        augOutOfReach.sources.push(factionName000)
         augOutOfReach.isOwned = true
 
         allAugments.push(augOutOfReach)
@@ -344,7 +423,7 @@ describe("BuyModsController", () => {
     it("should shoudlnt't work because one isn't owned and not available", () => {
         const augOutOfReach = new MockAugment("soething", 19)
         augOutOfReach.repReq = 100
-        augOutOfReach.sources.push(factionName001)
+        augOutOfReach.sources.push(factionName000)
 
         allAugments.push(augOutOfReach)
 
@@ -352,7 +431,7 @@ describe("BuyModsController", () => {
 
         const augOutOfReachOwned = new MockAugment("soething1", 19)
         augOutOfReachOwned.repReq = 100
-        augOutOfReachOwned.sources.push(factionName001)
+        augOutOfReachOwned.sources.push(factionName000)
         augOutOfReachOwned.isOwned = true
 
         allAugments.push(augOutOfReachOwned)
@@ -366,20 +445,8 @@ describe("BuyModsController", () => {
         expect(result.orders[1].augName).toBe(augmentName001)
         expect(result.orders[2].augName).toBe(augmentName000)
     })
-    
 
     // cash constrained: 
     // filter out options that aren't wanted
     // filter out wanted items that the next faction has
-    // add things based on the wanted score / money first 
-
 })
-
-//https://github.com/bitburner-official/bitburner-src/blob/99b22a221c56528ae0f923261c5f2fe4000e8edf/src/Constants.ts#L90
-
-//https://github.com/bitburner-official/bitburner-src/issues/863
-
-
-// getBaseAugmentationPriceMultiplier = CONSTANTS.MultipleAugMultiplier * [1, 0.96, 0.94, 0.93][Player.sourceFileLvl(11)];
-// getGenericAugmentationPriceMultiplier = Math.pow(getBaseAugmentationPriceMultiplier, Player.queuedAugmentations.length);
-// getAugmentationBasePrice = aug.baseCost * currentNodeMults.AugmentationMoneyCost

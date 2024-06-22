@@ -68,6 +68,8 @@ interface ServerWithActionAndEndtime extends ServerWithAnalysis {
     expectedTimeInMs: number;
 }
 
+/// grow phase doesn't seem to allow for aux attacks
+
 
 
 export class AdvancedHackingOrchistratorController {
