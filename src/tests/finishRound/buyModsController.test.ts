@@ -276,6 +276,8 @@ describe("BuyModsController", () => {
         const result = controller.completePurchaseData
 
         expect(result.totalPrice).toBe(4 + 5.7 + 7.22 + 6.859)
+
+        expect(result.totalPriceFormatted).toBe("$23.78")
     })
 
     it("should return the augments in order of price, but filter out already owned ones", () => {

@@ -1,4 +1,4 @@
-import { PlayerRequirement, CompanyPositionInfo, Task, Player, NS, LocationName, CompanyName } from "@ns";
+import { PlayerRequirement, CompanyPositionInfo, Task, Player, NS, CompanyName } from "@ns";
 
 export interface PlayerWithWork extends Player {
     currentWork: Task | null

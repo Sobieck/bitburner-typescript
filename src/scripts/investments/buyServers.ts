@@ -1,4 +1,4 @@
-import { NS, Player } from "@ns";
+import { NS, Player, Server } from "@ns";
 
 type ServerMemoryWithCost = {
     ram: number;
@@ -12,29 +12,39 @@ type PrecalculatedValues = {
 }
 
 export async function main(ns: NS): Promise<void> {
-    // ns.tprint(ns.getPurchasedServerCost(32)) 
+    if (ns.fileExists("data/stopInvesting.txt")) {
+        return
+    }
 
-    const purchasedServers = ns.getPurchasedServers()
+    const purchasedServerNames = ns.getPurchasedServers()
 
-    const name = `REMOTE-${purchasedServers.length.toString(3).padStart(3, "0")}`
+    const purchasedServers = (JSON.parse(ns.read("data/environment.txt")) as Server[]).filter(x => purchasedServerNames.includes(x.hostname))
+
+    const name = `REMOTE-${purchasedServerNames.length.toString().padStart(3, "0")}`
 
     const precalculations: PrecalculatedValues = JSON.parse(ns.read("data/precalculatedValues.txt"))
-    const player : Player = JSON.parse(ns.read("data/player.txt"))
+    const player: Player = JSON.parse(ns.read("data/player.txt"))
 
-    let memoryToBuy = 0
-    const memoryCosts = precalculations.remoteServerCosts.reverse()
+    let ramToBuy = 0
+    const ramCosts = precalculations.remoteServerCosts.reverse()
     const playerMoney = player.money
 
-    for (const memoryCost of memoryCosts) {
+    for (const memoryCost of ramCosts) {
         if (memoryCost.cost < playerMoney) {
-            memoryToBuy = memoryCost.ram
+            ramToBuy = memoryCost.ram
             break;
         }
     }
 
-    // ns.upgradePurchasedServer(remoteName, 2048)
-    if (memoryToBuy > 0) {
-        ns.purchaseServer(name, memoryToBuy)
-    }
+    if (ramToBuy > 0) {
+        const serverWithLessRamThanPurchase = purchasedServers.find(x => x.maxRam < ramToBuy)
 
+        if (serverWithLessRamThanPurchase) {
+            ns.upgradePurchasedServer(serverWithLessRamThanPurchase.hostname, ramToBuy)
+        } else {
+            if (purchasedServerNames.length < 26) {
+                ns.purchaseServer(name, ramToBuy)
+            }
+        }
+    }
 } 

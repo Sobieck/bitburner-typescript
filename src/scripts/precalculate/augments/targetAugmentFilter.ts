@@ -1,4 +1,4 @@
-import { CompanyName, Multipliers, NS, PlayerRequirement } from "@ns";
+import { CompanyName, Multipliers, NS, Player, PlayerRequirement } from "@ns";
 
 export async function main(ns: NS): Promise<void> {
 
@@ -157,7 +157,16 @@ export async function main(ns: NS): Promise<void> {
     //todo
     // add all unwanted augments at the end before we get to the endgame factions that require other stats. Do the same ranking process but based on a secondary score
 
-    let bestFactionAugmentScores = Array.from(factionAugmentScore.values()).sort((a, b) => a.maxPrice - b.maxPrice || b.totalWantedScore - a.totalWantedScore)
+    const playerPath = "data/player.txt"
+    const player = JSON.parse(ns.read(playerPath)) as Player
+
+    const dontWorryAboutMoney = player.mults.hacking_exp > 4 ? true : false
+
+    let bestFactionAugmentScores = Array.from(factionAugmentScore.values()).sort((a, b) => a.maxPrice - b.maxPrice || b.totalWantedScore - a.totalWantedScore) 
+    
+    if(dontWorryAboutMoney){
+        bestFactionAugmentScores = Array.from(factionAugmentScore.values()).sort((a, b) => b.totalWantedScore - a.totalWantedScore) 
+    }
 
     for (let i = 0; i < bestFactionAugmentScores.length - 1; i++) {
         const higherRankedFaction = bestFactionAugmentScores[i];

@@ -3,17 +3,17 @@ import { ScriptRegistry } from "/scripts/scriptRegistry"
 
 export async function main(ns: NS): Promise<void> {
 
-  const totalTimeInMs = 2_000
-
+  let totalTimeInMs = 60_000
+  
   if (ns.args[0] === "clean") {
     ns.run("scripts/utilities/dataClean.js")
-    await ns.sleep(totalTimeInMs * 3)
+    await ns.sleep(totalTimeInMs * 0.10)
   }
-
+  
   ns.run("scripts/scriptRegistry.js")
-
-  await ns.sleep(totalTimeInMs * 3)
-
+  
+  await ns.sleep(totalTimeInMs * 0.1)
+  
   while (true) {
 
     const scriptRegistry: ScriptRegistry = JSON.parse(ns.read("data/scriptRegistry.txt"))
@@ -25,5 +25,7 @@ export async function main(ns: NS): Promise<void> {
       await ns.sleep(numberOfMsPerAction)
 
     } 
+
+    totalTimeInMs = 2_000
   } 
 }

@@ -24,7 +24,8 @@
         "scripts/character/travel.js",
         "scripts/character/university.js",
         "scripts/character/workAtFaction.js",
-        "scripts/character/workAtCompany.js"
+        "scripts/character/workAtCompany.js",
+        "scripts/finishRound/buyModsController.js"
     ],
     "scriptsWithCost": [
         {
@@ -73,7 +74,7 @@
         },
         {
             "path": "scripts/finishRound/buyModsController.js",
-            "ramCost": 1.6
+            "ramCost": 2.6
         },
         {
             "path": "scripts/getRoot.js",
@@ -109,7 +110,7 @@
         },
         {
             "path": "scripts/investments/buyServers.js",
-            "ramCost": 6.1
+            "ramCost": 6.45
         },
         {
             "path": "scripts/precalculate/attackAnalysis.js",
@@ -170,6 +171,10 @@
         {
             "path": "scripts/utilities/dataClean.js",
             "ramCost": 2.8
+        },
+        {
+            "path": "scripts/utilities/startup.js",
+            "ramCost": 3.6
         }
     ],
     "ramReservedOnHome": 10.2,

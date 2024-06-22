@@ -39,6 +39,9 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/character/workAtFaction.js")
   scriptsToRun.push("scripts/character/workAtCompany.js")
 
+  //investments
+  scriptsToRun.push("scripts/investments/buyServers.js")
+
   //finish round
   scriptsToRun.push("scripts/finishRound/buyModsController.js")
 

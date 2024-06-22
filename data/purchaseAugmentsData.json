@@ -1,5 +1,5 @@
 {
-    "totalPrice": 7414151725,
+    "totalPrice": 34553860931.775,
     "orders": [
         {
             "factionName": "Bachman & Associates",
@@ -8,52 +8,88 @@
             "wantedScorePriceWeighted": 8.000000000000007,
             "expectedPrice": 3000000000,
             "priceMultiplier": 1,
-            "nextFactionHas": true
+            "nextFactionHas": true,
+            "targetFactionHas": true
+        },
+        {
+            "factionName": "Bachman & Associates",
+            "augName": "SmartJaw",
+            "price": 2750000000,
+            "wantedScorePriceWeighted": 54.54545454545455,
+            "expectedPrice": 5225000000,
+            "priceMultiplier": 1.9,
+            "nextFactionHas": false,
+            "targetFactionHas": true
+        },
+        {
+            "factionName": "Bachman & Associates",
+            "augName": "Enhanced Social Interaction Implant",
+            "price": 1375000000,
+            "wantedScorePriceWeighted": 87.27272727272722,
+            "expectedPrice": 4963750000,
+            "priceMultiplier": 3.61,
+            "nextFactionHas": true,
+            "targetFactionHas": true
         },
         {
             "factionName": "Bachman & Associates",
             "augName": "FocusWire",
             "price": 900000000,
             "wantedScorePriceWeighted": 22.222222222222143,
-            "expectedPrice": 1710000000,
-            "priceMultiplier": 1.9,
-            "nextFactionHas": true
+            "expectedPrice": 6173099999.999999,
+            "priceMultiplier": 6.858999999999999,
+            "nextFactionHas": true,
+            "targetFactionHas": true
         },
         {
             "factionName": "Bachman & Associates",
             "augName": "ADR-V2 Pheromone Gene",
             "price": 550000000,
             "wantedScorePriceWeighted": 72.72727272727246,
-            "expectedPrice": 1985500000,
-            "priceMultiplier": 3.61,
-            "nextFactionHas": true
+            "expectedPrice": 7167654999.999999,
+            "priceMultiplier": 13.032099999999998,
+            "nextFactionHas": true,
+            "targetFactionHas": true
+        },
+        {
+            "factionName": "Sector-12",
+            "augName": "CashRoot Starter Kit",
+            "price": 125000000,
+            "expectedPrice": 3095123749.999999,
+            "priceMultiplier": 24.760989999999993,
+            "nextFactionHas": false,
+            "targetFactionHas": false
         },
         {
             "factionName": "Sector-12",
             "augName": "Augmented Targeting I",
             "price": 15000000,
             "neededFor": "Augmented Targeting II",
-            "expectedPrice": 102884999.99999999,
-            "priceMultiplier": 6.858999999999999,
-            "nextFactionHas": false
+            "expectedPrice": 705688214.9999998,
+            "priceMultiplier": 47.04588099999999,
+            "nextFactionHas": false,
+            "targetFactionHas": false
         },
         {
             "factionName": "Sector-12",
             "augName": "Augmented Targeting II",
             "price": 42500000,
-            "expectedPrice": 553864249.9999999,
-            "priceMultiplier": 13.032099999999998,
-            "nextFactionHas": false
+            "expectedPrice": 3798954890.7499986,
+            "priceMultiplier": 89.38717389999996,
+            "nextFactionHas": false,
+            "targetFactionHas": false
         },
         {
             "factionName": "Sector-12",
             "augName": "Wired Reflexes",
             "price": 2500000,
-            "expectedPrice": 61902474.99999998,
-            "priceMultiplier": 24.760989999999993,
-            "nextFactionHas": false
+            "expectedPrice": 424589076.02499986,
+            "priceMultiplier": 169.83563040999994,
+            "nextFactionHas": false,
+            "targetFactionHas": false
         }
     ],
     "hasRequiredRepForAllManditoryAugs": false,
-    "shouldBuyAllAugments": false
+    "shouldBuyAllAugments": false,
+    "totalPriceFormatted": "$34,553,860,931.78"
 }

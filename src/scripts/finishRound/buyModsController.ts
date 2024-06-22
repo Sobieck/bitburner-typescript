@@ -52,6 +52,7 @@ export class PurchaseAugmentationData {
 
     public hasRequiredRepForAllManditoryAugs = false
     public shouldBuyAllAugments = false
+    public totalPriceFormatted = ""
 
 }
 
@@ -117,6 +118,7 @@ export class BuyModsController {
         }
 
         this.completePurchaseData.totalPrice = this.completePurchaseData.orders.reduce((acc, current) => acc + current.expectedPrice, 0)
+        this.completePurchaseData.totalPriceFormatted = this.completePurchaseData.totalPrice.toLocaleString(undefined, {style: "currency", currency: "USD" })
     } 
 
 
