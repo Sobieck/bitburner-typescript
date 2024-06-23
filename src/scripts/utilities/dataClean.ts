@@ -1,10 +1,10 @@
 import { NS } from "@ns";
 
 export async function main(ns: NS): Promise<void> {
-  const allScripts = ns.ls("home", "/data")
+  const allData = ns.ls("home", "/data")
 
-  allScripts.forEach(path => {
+  allData.forEach(path => {
     ns.rm(path)
-  }); 
+  });  
 }
  

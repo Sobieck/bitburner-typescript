@@ -7,7 +7,7 @@ interface ServerWithPathAndConnections extends Server {
 
 type FactionPriority = {
     factionName: string;
-    augments: AugmentData[];
+    augments: AugmentData[]; 
 }
 
 type AugmentData = {

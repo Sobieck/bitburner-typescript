@@ -12,7 +12,13 @@ type PrecalculatedValues = {
 }
 
 export async function main(ns: NS): Promise<void> {
-    if (ns.fileExists("data/stopInvesting.txt")) {
+    if (!ns.fileExists("data/investAtWill.txt")) {
+        return
+    }
+
+    const ramConstrainedFilePath = "data/ramConstrained.txt"
+
+    if (!ns.fileExists(ramConstrainedFilePath)) {
         return
     }
 
@@ -39,12 +45,20 @@ export async function main(ns: NS): Promise<void> {
     if (ramToBuy > 0) {
         const serverWithLessRamThanPurchase = purchasedServers.find(x => x.maxRam < ramToBuy)
 
+        let purchased = false
+
         if (serverWithLessRamThanPurchase) {
             ns.upgradePurchasedServer(serverWithLessRamThanPurchase.hostname, ramToBuy)
+            purchased = true
         } else {
             if (purchasedServerNames.length < 26) {
                 ns.purchaseServer(name, ramToBuy)
+                purchased = true
             }
+        }
+
+        if (purchased) {
+            ns.rm(ramConstrainedFilePath)
         }
     }
 } 

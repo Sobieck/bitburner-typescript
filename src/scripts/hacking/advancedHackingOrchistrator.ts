@@ -77,6 +77,8 @@ export class AdvancedHackingOrchistratorController {
     private newVictim = false
     private serversWithEndtimesAndActions: ServerWithActionAndEndtime[] = []
 
+    public ramConstrained = false
+
     constructor(servers: ServerWithAnalysis[], precalculatedValues: Precalculations, now: Date, public allAttacks: AttackOnOneServer[] = []) {
         this.cleanAttackRecords()
         this.addActionsAndTimingsToServers(servers, now)
@@ -171,17 +173,17 @@ export class AdvancedHackingOrchistratorController {
                     return potentialAttack
                 }
             }
-        } else {
-            const newVictim = this.selectNewVictim()
-
-            if (newVictim) {
-                const attackToWorkOn = new AttackOnOneServer(newVictim.hostname, newVictim.moneyMax!)
-                this.allAttacks.push(attackToWorkOn)
-                this.newVictim = true
-
-                return attackToWorkOn
-            }
         }
+        
+        const newVictim = this.selectNewVictim()
+
+        if (newVictim) {
+            const attackToWorkOn = new AttackOnOneServer(newVictim.hostname, newVictim.moneyMax!)
+            this.allAttacks.push(attackToWorkOn)
+            this.newVictim = true
+
+            return attackToWorkOn
+        } 
 
         return null
     }
@@ -246,6 +248,10 @@ export class AdvancedHackingOrchistratorController {
                         remainingNonHomeThreadsNeeded -= threadsToAllocate
                     }
                 }
+
+                if (remainingNonHomeThreadsNeeded > 0) {
+                    this.ramConstrained = true
+                }
             }
         } else {
             let threadsNeededForHack = serverBeingAttacked.hackThreadsForAllMoney
@@ -272,6 +278,10 @@ export class AdvancedHackingOrchistratorController {
                 }
 
                 attackToWorkOn.attackRecords.push(new AttackRecord("home", threadsNeededForHack))
+            }
+
+            if (threadsNeededForHack > 0) {
+                this.ramConstrained = true
             }
         }
     }
@@ -356,4 +366,8 @@ export async function main(ns: NS): Promise<void> {
     ns.rm(pathToRecords)
     ns.write(pathToRecords, JSON.stringify(controller.allAttacks))
 
+    if (controller.ramConstrained) {
+        const ramConstrainedFilePath = "data/ramConstrained.txt"
+        ns.write(ramConstrainedFilePath)
+    }
 }

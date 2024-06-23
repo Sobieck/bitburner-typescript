@@ -2,12 +2,12 @@ import { NS, Server } from "@ns";
 
 export async function main(ns: NS): Promise<void> {
 
-    const stopInvestingFile = "data/stopInvesting.txt"
+    const investAtWill = "data/investAtWill.txt"
 
-    if (ns.fileExists(stopInvestingFile)) {
-        ns.rm(stopInvestingFile)
+    if (ns.fileExists(investAtWill)) {
+        ns.rm(investAtWill)
     } else {
-        ns.write(stopInvestingFile)
+        ns.write(investAtWill)
     }
 
 }

@@ -97,6 +97,10 @@ describe("AdvancedHackingOrchistratorController", () => {
                 expect(attackRecords[0].pid).toBeUndefined()
                 expect(attackRecords[0].treadCount).toBe(6)
             })
+
+            it("should be not memory Constrained", () =>{ 
+                expect(noPreviousAllAttacksFileResult.ramConstrained).toBeFalsy()
+            })
         })
 
         pass001.allAttacks[0].attackRecords[0].addPid(102)
@@ -381,6 +385,11 @@ describe("AdvancedHackingOrchistratorController", () => {
             })
 
 
+            it("should be memory constrained", () => {
+                expect(noMemoryResult.ramConstrained).toBeTruthy()
+            })
+
+
             it("should target 'earliestLessMoney'", () => {
                 expect(noMemoryResult.allAttacks[0].victimHostname).toBe("earliestLessMoney")
             })
@@ -547,6 +556,10 @@ describe("AdvancedHackingOrchistratorController", () => {
 
                 expect(shouldStartHackingPrimary.allAttacks[1].attackRecords[4].attackingHostname).toBe("home")
                 expect(shouldStartHackingPrimary.allAttacks[1].attackRecords[4].treadCount).toBe(2)
+            })
+
+            it("should be memory constrained", () => {
+                expect(shouldStartHackingPrimary.ramConstrained).toBeTruthy()
             })
         })
 
