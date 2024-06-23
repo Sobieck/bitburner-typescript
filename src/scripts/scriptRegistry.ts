@@ -21,6 +21,9 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/precalculate/augments/selectTargetCityFaction.js")
   // player 
   scriptsToRun.push("scripts/precalculate/player/player.js")
+  // investments 
+  scriptsToRun.push("scripts/precalculate/investments/homeUpgrade.js")
+  scriptsToRun.push("scripts/precalculate/investments/torStuff.js") 
 
   // hacking
   scriptsToRun.push("scripts/hacking/moveHackScriptsToServers.js")

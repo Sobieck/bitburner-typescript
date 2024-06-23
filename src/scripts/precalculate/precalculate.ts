@@ -25,7 +25,7 @@ export async function main(ns: NS): Promise<void> {
     }
 
     let ramAmount = 32
-    let maxAmountOfRam = 1_048_576;
+    let maxAmountOfRam = ns.getPurchasedServerMaxRam();
 
     while (ramAmount <= maxAmountOfRam) {
         const serverMemoryWithCost = {

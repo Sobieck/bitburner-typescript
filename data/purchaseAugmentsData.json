@@ -1,95 +1,38 @@
 {
-    "totalPrice": 34553860931.775,
+    "totalPrice": 3311300000,
     "orders": [
         {
-            "factionName": "Bachman & Associates",
-            "augName": "Neuralstimulator",
-            "price": 3000000000,
-            "wantedScorePriceWeighted": 8.000000000000007,
-            "expectedPrice": 3000000000,
+            "factionName": "NWO",
+            "augName": "Embedded Netburner Module Core Implant",
+            "price": 2500000000,
+            "wantedScorePriceWeighted": 12.000000000000028,
+            "expectedPrice": 2500000000,
             "priceMultiplier": 1,
-            "nextFactionHas": true,
+            "nextFactionHas": false,
             "targetFactionHas": true
         },
         {
-            "factionName": "Bachman & Associates",
-            "augName": "SmartJaw",
-            "price": 2750000000,
-            "wantedScorePriceWeighted": 54.54545454545455,
-            "expectedPrice": 5225000000,
+            "factionName": "NWO",
+            "augName": "Power Recirculation Core",
+            "price": 180000000,
+            "wantedScorePriceWeighted": 166.66666666666706,
+            "expectedPrice": 342000000,
             "priceMultiplier": 1.9,
             "nextFactionHas": false,
             "targetFactionHas": true
         },
         {
-            "factionName": "Bachman & Associates",
-            "augName": "Enhanced Social Interaction Implant",
-            "price": 1375000000,
-            "wantedScorePriceWeighted": 87.27272727272722,
-            "expectedPrice": 4963750000,
+            "factionName": "NWO",
+            "augName": "Neurotrainer III",
+            "price": 130000000,
+            "wantedScorePriceWeighted": 307.69230769230796,
+            "expectedPrice": 469300000,
             "priceMultiplier": 3.61,
             "nextFactionHas": true,
             "targetFactionHas": true
-        },
-        {
-            "factionName": "Bachman & Associates",
-            "augName": "FocusWire",
-            "price": 900000000,
-            "wantedScorePriceWeighted": 22.222222222222143,
-            "expectedPrice": 6173099999.999999,
-            "priceMultiplier": 6.858999999999999,
-            "nextFactionHas": true,
-            "targetFactionHas": true
-        },
-        {
-            "factionName": "Bachman & Associates",
-            "augName": "ADR-V2 Pheromone Gene",
-            "price": 550000000,
-            "wantedScorePriceWeighted": 72.72727272727246,
-            "expectedPrice": 7167654999.999999,
-            "priceMultiplier": 13.032099999999998,
-            "nextFactionHas": true,
-            "targetFactionHas": true
-        },
-        {
-            "factionName": "Sector-12",
-            "augName": "CashRoot Starter Kit",
-            "price": 125000000,
-            "expectedPrice": 3095123749.999999,
-            "priceMultiplier": 24.760989999999993,
-            "nextFactionHas": false,
-            "targetFactionHas": false
-        },
-        {
-            "factionName": "Sector-12",
-            "augName": "Augmented Targeting I",
-            "price": 15000000,
-            "neededFor": "Augmented Targeting II",
-            "expectedPrice": 705688214.9999998,
-            "priceMultiplier": 47.04588099999999,
-            "nextFactionHas": false,
-            "targetFactionHas": false
-        },
-        {
-            "factionName": "Sector-12",
-            "augName": "Augmented Targeting II",
-            "price": 42500000,
-            "expectedPrice": 3798954890.7499986,
-            "priceMultiplier": 89.38717389999996,
-            "nextFactionHas": false,
-            "targetFactionHas": false
-        },
-        {
-            "factionName": "Sector-12",
-            "augName": "Wired Reflexes",
-            "price": 2500000,
-            "expectedPrice": 424589076.02499986,
-            "priceMultiplier": 169.83563040999994,
-            "nextFactionHas": false,
-            "targetFactionHas": false
         }
     ],
     "hasRequiredRepForAllManditoryAugs": false,
     "shouldBuyAllAugments": false,
-    "totalPriceFormatted": "$34,553,860,931.78"
+    "totalPriceFormatted": "$3,311,300,000.00"
 }

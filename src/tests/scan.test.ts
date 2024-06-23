@@ -3,12 +3,6 @@ import { Server } from "@ns"
 
 
 describe("ScannerControl", () => {
-
-///         home
-///     A           B       C        H
-///   D   C       E   F       G    A   I  home
-///  E      G           H
-///
     const scannerControl = new ScannerControl() 
 
     test("should set serverToGet to H", () => {

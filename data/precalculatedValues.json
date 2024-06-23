@@ -66,19 +66,25 @@
         }
     ],
     "weakenAmountPerThread01Core": 0.05,
-    "weakenAmountPerThreadHomeComputer": 0.05,
+    "weakenAmountPerThreadHomeComputer": 0.053125000000000006,
     "fileSystem": [
+        "19dfj3l1nd.msg",
         "BruteSSH.exe",
         "FTPCrack.exe",
+        "HTTPWorm.exe",
         "NUKE.exe",
+        "SQLInject.exe",
         "csec-test.msg",
         "data/action.txt",
         "data/advancedHackingOrchistratorRecord.txt",
         "data/augments.txt",
+        "data/backdooring.txt",
         "data/environment.txt",
         "data/factionAugmentRank.txt",
+        "data/investAtWill.txt",
         "data/player.txt",
         "data/precalculatedValues.txt",
+        "data/purchaseAugmentsData.txt",
         "data/scriptRegistry.txt",
         "fl1ght.exe",
         "hackers-starting-handbook.lit",
@@ -86,6 +92,7 @@
         "j1.msg",
         "j2.msg",
         "j3.msg",
+        "j4.msg",
         "nitesec-test.msg",
         "relaySMTP.exe",
         "scripts/character/applyForJob.js",
@@ -99,16 +106,18 @@
         "scripts/character/workAtCompany.js",
         "scripts/character/workAtFaction.js",
         "scripts/coordinator.js",
+        "scripts/finishRound/buyModsController.js",
         "scripts/finishRound/specialMods.txt",
         "scripts/getRoot.js",
         "scripts/hacking/advancedHackingOrchistrator.js",
         "scripts/hacking/backdoor.js",
-        "scripts/hacking/basicHackingOrchistrator.js",
         "scripts/hacking/grow.js",
         "scripts/hacking/hack.js",
         "scripts/hacking/moveHackScriptsToServers.js",
         "scripts/hacking/weaken.js",
         "scripts/investments/buyServers.js",
+        "scripts/investments/investmentsController.js",
+        "scripts/investments/toggleInvestments.js",
         "scripts/precalculate/attackAnalysis.js",
         "scripts/precalculate/augments/getCompanyJobs.js",
         "scripts/precalculate/augments/getPrereqs.js",
@@ -119,16 +128,66 @@
         "scripts/precalculate/augments/targetAugmentFilter.js",
         "scripts/precalculate/augments/whereToGet.js",
         "scripts/precalculate/formulasAnalysis.js",
+        "scripts/precalculate/investments/homeUpgrade.js",
+        "scripts/precalculate/investments/torStuff.js",
         "scripts/precalculate/player/player.js",
         "scripts/precalculate/precalculate.js",
         "scripts/scan.js",
         "scripts/scriptRegistry.js",
         "scripts/utilities/dataClean.js",
+        "scripts/utilities/startup.js",
         "tests/character/characterController.test.js",
         "tests/characterController.test.js",
+        "tests/finishRound/buyModsController.test.js",
         "tests/hacking/advancedHackingOrchistrator.test.js",
-        "tests/hacking/basicHackingOrchistrator.test.js",
+        "tests/investments/investmentsController.test.js",
         "tests/scan.test.js"
     ],
-    "targetCityFaction": "Chongqing"
+    "targetCityFaction": "Aevum",
+    "upgradeHomeCoresCost": 56250000000,
+    "upgradeHomeRamCost": 31724513419.032978,
+    "purchasedServerLimit": 25,
+    "hasTor": true,
+    "programCosts": [
+        [
+            "BruteSSH.exe",
+            0
+        ],
+        [
+            "FTPCrack.exe",
+            0
+        ],
+        [
+            "relaySMTP.exe",
+            0
+        ],
+        [
+            "HTTPWorm.exe",
+            0
+        ],
+        [
+            "SQLInject.exe",
+            0
+        ],
+        [
+            "ServerProfiler.exe",
+            500000
+        ],
+        [
+            "DeepscanV1.exe",
+            500000
+        ],
+        [
+            "DeepscanV2.exe",
+            25000000
+        ],
+        [
+            "AutoLink.exe",
+            1000000
+        ],
+        [
+            "Formulas.exe",
+            5000000000
+        ]
+    ]
 }

@@ -14,6 +14,7 @@
         "scripts/precalculate/augments/getCompanyJobs.js",
         "scripts/precalculate/augments/selectTargetCityFaction.js",
         "scripts/precalculate/player/player.js",
+        "scripts/precalculate/investments/homeUpgrade.js",
         "scripts/hacking/moveHackScriptsToServers.js",
         "scripts/hacking/advancedHackingOrchistrator.js",
         "scripts/hacking/backdoor.js",
@@ -25,6 +26,7 @@
         "scripts/character/university.js",
         "scripts/character/workAtFaction.js",
         "scripts/character/workAtCompany.js",
+        "scripts/investments/buyServers.js",
         "scripts/finishRound/buyModsController.js"
     ],
     "scriptsWithCost": [
@@ -89,10 +91,6 @@
             "ramCost": 6.7
         },
         {
-            "path": "scripts/hacking/basicHackingOrchistrator.js",
-            "ramCost": 4.1
-        },
-        {
             "path": "scripts/hacking/grow.js",
             "ramCost": 1.75
         },
@@ -110,7 +108,15 @@
         },
         {
             "path": "scripts/investments/buyServers.js",
-            "ramCost": 6.45
+            "ramCost": 7.45
+        },
+        {
+            "path": "scripts/investments/investmentsController.js",
+            "ramCost": 1.6
+        },
+        {
+            "path": "scripts/investments/toggleInvestments.js",
+            "ramCost": 2.7
         },
         {
             "path": "scripts/precalculate/attackAnalysis.js",
@@ -151,6 +157,10 @@
         {
             "path": "scripts/precalculate/formulasAnalysis.js",
             "ramCost": 3.7
+        },
+        {
+            "path": "scripts/precalculate/investments/homeUpgrade.js",
+            "ramCost": 5.6
         },
         {
             "path": "scripts/precalculate/player/player.js",
