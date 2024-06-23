@@ -1,4 +1,5 @@
 import { NS, Player, Server } from "@ns";
+import { PlayerWithWork } from "../character/characterController";
 
 type ServerMemoryWithCost = {
     ram: number;
@@ -15,7 +16,7 @@ export type PrecalculatedValues = {
 }
 
 interface IActionFormula {
-    act(player: Player, precalculatedValues: PrecalculatedValues, environment: Server[]): IAction;
+    act(): IAction;
 }
 
 export interface IAction {
@@ -26,26 +27,131 @@ export class NoInvestmentAction implements IAction {
     type = "noInvestment"
 }
 
-export class BuyTorAction implements IAction {
-    type = "buyTor"
+
+class RemoteServerBase {
+    protected calculateRamToBuy(player: Player, precalculatedValues: PrecalculatedValues) {
+        let ramToBuy = 0;
+        const ramCosts = precalculatedValues.remoteServerCosts.reverse();
+        const playerMoney = player.money;
+
+        for (const ramCost of ramCosts) {
+            if (ramCost.cost <= playerMoney) {
+                ramToBuy = ramCost.ram;
+                break;
+            }
+        }
+        return ramToBuy;
+    }
+
+    protected getPurchasedServers(environment: Server[]) {
+        return environment
+            .filter(x => x.purchasedByPlayer && x.hostname !== "home")
+
+    }
 }
 
-export class BuyProgramAction implements IAction {
-    type = "buyProgram"
 
-    constructor(public programName: string) { }
-}
+class PurchaseServerFormula extends RemoteServerBase implements IActionFormula {
+    constructor(private player: Player, private precalculatedValues: PrecalculatedValues, private environment: Server[]) {
+        super()
+    }
 
-class BuyProgramFormula implements IActionFormula {
-    constructor(private programName: string, private hackingLevelToBuy: number) { }
+    act(): IAction {
+        const purchasedServers = this.getPurchasedServers(this.environment)
 
-    act(player: Player, precalculatedValues: PrecalculatedValues, environment: Server[]): IAction {
-        if (precalculatedValues.fileSystem.includes(this.programName)) {
+        const numberOfPurchasedServers = purchasedServers.length
+
+        if (!this.precalculatedValues.fileSystem.includes("data/ramConstrained.txt") ||
+            this.precalculatedValues.purchasedServerLimit <= numberOfPurchasedServers) {
             return new NoInvestmentAction()
         }
 
-        if (player.skills.hacking >= this.hackingLevelToBuy) {
-            if (!precalculatedValues.hasTor) {
+        let ramToBuy = this.calculateRamToBuy(this.player, this.precalculatedValues);
+
+        if (ramToBuy > 0) {
+            const name = `REMOTE-${numberOfPurchasedServers.toString().padStart(3, "0")}`
+            return new PurchaseServerAction(name, ramToBuy)
+        }
+        return new NoInvestmentAction()
+    }
+}
+export class PurchaseServerAction implements IAction {
+    type = "purchaseServer"
+
+    constructor(public serverName: string, public ram: number) { }
+}
+
+
+class UpgradePurchasedServerFormula extends RemoteServerBase implements IActionFormula {
+    constructor(private player: Player, private precalculatedValues: PrecalculatedValues, private environment: Server[]) {
+        super()
+    }
+
+    act(): IAction {
+        if (!this.precalculatedValues.fileSystem.includes("data/ramConstrained.txt")) {
+            return new NoInvestmentAction()
+        }
+
+        let ramToBuy = this.calculateRamToBuy(this.player, this.precalculatedValues)
+
+        if (ramToBuy > 0) {
+            const serverWithLessRamThanPurchase = this.getPurchasedServers(this.environment)
+                .find(x => x.maxRam < ramToBuy)
+
+            if (serverWithLessRamThanPurchase) {
+                return new UpgradePurchasedServerAction(serverWithLessRamThanPurchase.hostname, ramToBuy)
+            }
+        }
+
+        return new NoInvestmentAction()
+    }
+}
+export class UpgradePurchasedServerAction implements IAction {
+    type = "upgradePurchasedServer"
+
+    constructor(public serverName: string, public ram: number) { }
+}
+
+
+
+
+
+
+class UpgradeHomeFormula implements IActionFormula {
+    constructor(private player: Player, private upgradeCost: number, private precalculatedValues: PrecalculatedValues, private successAction: IAction) { }
+
+    act(): IAction {
+        if (this.player.money > this.upgradeCost &&
+            this.precalculatedValues.fileSystem.includes("data/ramConstrained.txt")) {
+
+            return this.successAction
+
+        }
+
+        return new NoInvestmentAction()
+    }
+}
+export class BuyHomeRamAction implements IAction {
+    type = "buyHomeRam"
+}
+export class BuyHomeCoreAction implements IAction {
+    type = "buyHomeCore"
+}
+
+
+
+
+
+class BuyProgramFormula implements IActionFormula {
+    constructor(private programName: string, private hackingLevelToBuy: number, private player: Player, private precalculatedValues: PrecalculatedValues) { }
+
+    act(): IAction {
+        if (this.precalculatedValues.fileSystem.includes(this.programName)) {
+            return new NoInvestmentAction()
+        }
+
+        if (this.player.skills.hacking >= this.hackingLevelToBuy) {
+            if (!this.precalculatedValues.hasTor) {
                 return new BuyTorAction()
             }
 
@@ -55,29 +161,43 @@ class BuyProgramFormula implements IActionFormula {
         return new NoInvestmentAction()
     }
 }
+export class BuyTorAction implements IAction {
+    type = "buyTor"
+}
+export class BuyProgramAction implements IAction {
+    type = "buyProgram"
+
+    constructor(public programName: string) { }
+}
+
+
+
 
 export class InvestmentsController {
     public action = new NoInvestmentAction()
 
-    private actionFormulas = [
-        new BuyProgramFormula("BruteSSH.exe", 45),
-        new BuyProgramFormula("FTPCrack.exe", 90),
-        new BuyProgramFormula("relaySMTP.exe", 225),
-        new BuyProgramFormula("HTTPWorm.exe", 450),
-        new BuyProgramFormula("SQLInject.exe", 675),
-        // upgrade local cpu
-        // upgrade local ram
-        // upgrade server
-        // create new server
-    ]
+    private actionFormulas: IActionFormula[] = []
 
     constructor(player: Player, precalculatedValues: PrecalculatedValues, environment: Server[]) {
         if (!precalculatedValues.fileSystem.includes("data/investAtWill.txt")) {
             return
         }
 
+        this.actionFormulas.push(new BuyProgramFormula("BruteSSH.exe", 45, player, precalculatedValues))
+        this.actionFormulas.push(new BuyProgramFormula("FTPCrack.exe", 90, player, precalculatedValues))
+        this.actionFormulas.push(new BuyProgramFormula("relaySMTP.exe", 225, player, precalculatedValues))
+        this.actionFormulas.push(new BuyProgramFormula("HTTPWorm.exe", 450, player, precalculatedValues))
+        this.actionFormulas.push(new BuyProgramFormula("SQLInject.exe", 675, player, precalculatedValues))
+
+        this.actionFormulas.push(new UpgradeHomeFormula(player, precalculatedValues.upgradeHomeCoresCost, precalculatedValues, new BuyHomeCoreAction()))
+        this.actionFormulas.push(new UpgradeHomeFormula(player, precalculatedValues.upgradeHomeRamCost, precalculatedValues, new BuyHomeRamAction()))
+        this.actionFormulas.push(new UpgradePurchasedServerFormula(player, precalculatedValues, environment))
+        this.actionFormulas.push(new PurchaseServerFormula(player, precalculatedValues, environment))
+        // upgrade server
+        // create new server
+
         for (const formula of this.actionFormulas) {
-            const result = formula.act(player, precalculatedValues, environment)
+            const result = formula.act()
 
             if (result.type !== new NoInvestmentAction().type) {
                 this.action = result
