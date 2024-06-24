@@ -1,4 +1,4 @@
-import { CompanyName, CompanyPositionInfo, Multipliers, NS, PlayerRequirement } from "@ns";
+import { CompanyPositionInfo, NS, PlayerRequirement } from "@ns";
 
 export async function main(ns: NS): Promise<void> {
 

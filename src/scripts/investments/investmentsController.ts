@@ -191,10 +191,9 @@ export class InvestmentsController {
 
         this.actionFormulas.push(new UpgradeHomeFormula(player, precalculatedValues.upgradeHomeCoresCost, precalculatedValues, new BuyHomeCoreAction()))
         this.actionFormulas.push(new UpgradeHomeFormula(player, precalculatedValues.upgradeHomeRamCost, precalculatedValues, new BuyHomeRamAction()))
+        
         this.actionFormulas.push(new UpgradePurchasedServerFormula(player, precalculatedValues, environment))
         this.actionFormulas.push(new PurchaseServerFormula(player, precalculatedValues, environment))
-        // upgrade server
-        // create new server
 
         for (const formula of this.actionFormulas) {
             const result = formula.act()
@@ -217,6 +216,10 @@ export async function main(ns: NS): Promise<void> {
 
     if (player && precalculations && environment){
         const controller = new InvestmentsController(player, precalculations, environment)
+
+        const investmentActionFile = "data/investmentAction.txt"
+        ns.rm(investmentActionFile)
+        ns.write(investmentActionFile, JSON.stringify(controller.action))
     }
 
 }

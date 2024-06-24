@@ -23,7 +23,7 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/precalculate/player/player.js")
   // investments 
   scriptsToRun.push("scripts/precalculate/investments/homeUpgrade.js")
-  scriptsToRun.push("scripts/precalculate/investments/torStuff.js") 
+  scriptsToRun.push("scripts/precalculate/investments/torStuff.js")
 
   // hacking
   scriptsToRun.push("scripts/hacking/moveHackScriptsToServers.js")
@@ -42,7 +42,10 @@ export async function main(ns: NS): Promise<void> {
   scriptsToRun.push("scripts/character/workAtCompany.js")
 
   //investments
-
+  scriptsToRun.push("scripts/investments/investmentsController.js")
+  scriptsToRun.push("scripts/investments/buyPrograms.js")
+  scriptsToRun.push("scripts/investments/buyRemoteServers.js")
+  scriptsToRun.push("scripts/investments/upgradeHome.js")
 
   //finish round
   scriptsToRun.push("scripts/finishRound/buyModsController.js")
@@ -53,7 +56,7 @@ export async function main(ns: NS): Promise<void> {
 
   for (const script of scriptsToRun) {
 
-    if(!allScripts.includes(script)){
+    if (!allScripts.includes(script)) {
       ns.toast(`${script} doesn't exist on your home computers hd.`, "error")
     }
   }

@@ -26,7 +26,6 @@
         "scripts/character/travelAndUniversity.js",
         "scripts/character/workAtFaction.js",
         "scripts/character/workAtCompany.js",
-        "scripts/investments/buyServers.js",
         "scripts/finishRound/buyModsController.js"
     ],
     "scriptsWithCost": [
@@ -36,7 +35,7 @@
         },
         {
             "path": "scripts/character/characterController.js",
-            "ramCost": 2.6
+            "ramCost": 2.7
         },
         {
             "path": "scripts/character/createPrograms.js",
@@ -68,11 +67,11 @@
         },
         {
             "path": "scripts/finishRound/buyModsController.js",
-            "ramCost": 2.6
+            "ramCost": 2.7
         },
         {
             "path": "scripts/getRoot.js",
-            "ramCost": 2.5
+            "ramCost": 2
         },
         {
             "path": "scripts/hacking/advancedHackingOrchistrator.js",
@@ -99,20 +98,28 @@
             "ramCost": 1.75
         },
         {
-            "path": "scripts/investments/buyServers.js",
-            "ramCost": 7.45
+            "path": "scripts/investments/buyPrograms.js",
+            "ramCost": 5.7
+        },
+        {
+            "path": "scripts/investments/buyRemoteServers.js",
+            "ramCost": 4.2
         },
         {
             "path": "scripts/investments/investmentsController.js",
-            "ramCost": 3.85
+            "ramCost": 4.95
         },
         {
             "path": "scripts/investments/toggleInvestments.js",
             "ramCost": 2.7
         },
         {
+            "path": "scripts/investments/upgradeHome.js",
+            "ramCost": 7.7
+        },
+        {
             "path": "scripts/precalculate/attackAnalysis.js",
-            "ramCost": 5.75
+            "ramCost": 5.85
         },
         {
             "path": "scripts/precalculate/augments/getCompanyJobs.js",
@@ -140,7 +147,7 @@
         },
         {
             "path": "scripts/precalculate/augments/targetAugmentFilter.js",
-            "ramCost": 7.6
+            "ramCost": 7.7
         },
         {
             "path": "scripts/precalculate/augments/whereToGet.js",
@@ -164,7 +171,7 @@
         },
         {
             "path": "scripts/precalculate/precalculate.js",
-            "ramCost": 4.05
+            "ramCost": 4.2
         },
         {
             "path": "scripts/scan.js",
@@ -180,12 +187,12 @@
         },
         {
             "path": "scripts/utilities/startup.js",
-            "ramCost": 3.6
+            "ramCost": 3.7
         }
     ],
-    "ramReservedOnHome": 10.2,
+    "ramReservedOnHome": 10.3,
     "mostRam": {
-        "path": "scripts/character/joinFaction.js",
-        "ramCost": 7.6
+        "path": "scripts/investments/upgradeHome.js",
+        "ramCost": 7.7
     }
 }
