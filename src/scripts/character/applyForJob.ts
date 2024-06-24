@@ -1,18 +1,31 @@
 import { NS } from "@ns";
 
 export async function main(ns: NS): Promise<void> {
-    const factionAugmentScoreFile = "data/factionAugmentRank.txt"
 
     type FactionPriority = {
         factionName: string;
     }
 
-    const factionsWeWantToJoin = (JSON.parse(ns.read(factionAugmentScoreFile)) as FactionPriority[]).map(x => x.factionName)
+    const factionPriorities = getObjectFromFileSystem<FactionPriority[]>(ns, "data/factionAugmentRank.txt")
 
-    for (const [_, company] of Object.entries(ns.enums.CompanyName)) {
-        if(factionsWeWantToJoin.includes(company)){
-            ns.singularity.applyToCompany(company, ns.enums.JobField.software)
+    if (factionPriorities) {
+
+        const factionsWeWantToJoin = factionPriorities.map(x => x.factionName)
+
+        for (const [_, company] of Object.entries(ns.enums.CompanyName)) {
+            if (factionsWeWantToJoin.includes(company)) {
+                ns.singularity.applyToCompany(company, ns.enums.JobField.software)
+            }
         }
     }
 }
 
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
+
+    if (ns.fileExists(path)) {
+        objectWeWant = JSON.parse(ns.read(path))
+    }
+
+    return objectWeWant
+}

@@ -11,31 +11,35 @@ export async function main(ns: NS): Promise<void> {
     const serversWithAnalysis = getObjectFromFileSystem<ServerWithAnalysis[]>(ns, environmentPath)
 
     const precalculations = getObjectFromFileSystem<PrecalculatedValues>(ns, "data/precalculatedValues.txt")
+    const player = getObjectFromFileSystem<Player>(ns, "data/player.txt")
 
-    if (serversWithAnalysis && precalculations) {
-
-
-
-        const player = precalculations.player
-
+    if (serversWithAnalysis && precalculations && player) {
         const homeServer = serversWithAnalysis.find(x => x.hostname === "home")!
 
         for (const server of serversWithAnalysis) {
             if (server.moneyMax && server.hasAdminRights) {
-
+                server.formulasAnalysis = {} as FormulasServerAnalysis
 
                 const growthPhaseServer = JSON.parse(JSON.stringify(server)) as Server
                 growthPhaseServer.moneyAvailable = 0;
                 growthPhaseServer.hackDifficulty = growthPhaseServer.minDifficulty
 
-                const growThreadsHome = ns.formulas.hacking.growThreads(growthPhaseServer, player, server.moneyMax, homeServer.cpuCores)
-                const growSecurityIncreaseHome = ns.growthAnalyzeSecurity(growThreadsHome, server.hostname, homeServer.cpuCores)
+                server.formulasAnalysis.numberOfGrowthThreadsNeededHome = Math.ceil(ns.formulas.hacking.growThreads(growthPhaseServer, player, server.moneyMax, homeServer.cpuCores))
+                server.formulasAnalysis.growThreadsSecurityIncreaseHome = ns.growthAnalyzeSecurity(server.formulasAnalysis.numberOfGrowthThreadsNeededHome, server.hostname, homeServer.cpuCores)
 
-
-                const growThreads = ns.formulas.hacking.growThreads(growthPhaseServer, player, server.moneyMax, 1)
-                const growSecurityIncrease = ns.growthAnalyzeSecurity(growThreads, server.hostname, 1)
+                server.formulasAnalysis.numberOfGrowthThreadsNeeded = Math.ceil(ns.formulas.hacking.growThreads(growthPhaseServer, player, server.moneyMax, 1))
+                server.formulasAnalysis.growThreadsSecurityIncrease = ns.growthAnalyzeSecurity(server.formulasAnalysis.numberOfGrowthThreadsNeeded, server.hostname, 1)
 
                 const hackPhaseServer = JSON.parse(JSON.stringify(server)) as Server
+                hackPhaseServer.moneyAvailable = hackPhaseServer.moneyMax
+                hackPhaseServer.hackDifficulty = hackPhaseServer.minDifficulty
+
+                server.formulasAnalysis.oneThreadHackPercent = ns.formulas.hacking.hackPercent(hackPhaseServer, player)
+
+                server.formulasAnalysis.hackThreadsForMaxMoney = Math.ceil(1 / server.formulasAnalysis.oneThreadHackPercent)
+                server.formulasAnalysis.hackThreadsForMaxMoneySecurityIncrease = ns.hackAnalyzeSecurity(server.formulasAnalysis.hackThreadsForMaxMoney, server.hostname)
+
+                /// get MS for all these things
             }
         }
 
@@ -43,22 +47,25 @@ export async function main(ns: NS): Promise<void> {
         ns.write(environmentPath, JSON.stringify(serversWithAnalysis))
     }
 }
-
+// givemore stucture FORMULAS numbers
 interface ServerWithAnalysis extends Server {
+    formulasAnalysis: FormulasServerAnalysis
+}
+
+interface FormulasServerAnalysis {
+    numberOfGrowthThreadsNeededHome: number;
+    growThreadsSecurityIncreaseHome: number;
+
+    numberOfGrowthThreadsNeeded: number;
+    growThreadsSecurityIncrease: number;
+
+    oneThreadHackPercent: number;
+    hackThreadsForMaxMoney: number;
+    hackThreadsForMaxMoneySecurityIncrease: number;
+
     hackMs: number;
-    hackThreadsForAllMoney: number;
-    hackChance: number;
-
-    growthMs: number;
-    numberOfGrowthThreadsNeededToMax: number;
-
-    numberOfGrowthThreadsNeededToMaxHomeComputer: number;
-
-
     weakenMs: number;
-    maxMoneyPerMs: number;
-
-    freeRam: number;
+    growMs: number;
 }
 
 

@@ -7,7 +7,7 @@ interface ServerWithPathAndConnections extends Server {
 
 type FactionPriority = {
     factionName: string;
-    augments: AugmentData[]; 
+    augments: AugmentData[];
 }
 
 type AugmentData = {
@@ -18,63 +18,61 @@ type AugmentData = {
 export async function main(ns: NS): Promise<void> {
     const backdoorFlagFile = "data/backdooring.txt"
 
-    if(ns.fileExists(backdoorFlagFile, "home")){
+    if (ns.fileExists(backdoorFlagFile, "home")) {
         return;
     }
 
     ns.write(backdoorFlagFile)
-    
+
     const servers = getObjectFromFileSystem<ServerWithPathAndConnections[]>(ns, "data/environment.txt")
+    const factionPriorities = getObjectFromFileSystem<FactionPriority[]>(ns, "data/factionAugmentRank.txt")
 
-    if(!servers){
-        return
-    }
+    if (servers && factionPriorities) {
 
-    const serversNeedingBackdooring = [
-        "run4theh111z", 
-        "CSEC", 
-        "I.I.I.I", 
-        "avmnite-02h", 
-        "zb-institute", 
-        "powerhouse-fitness", 
-    ]
+        const serversNeedingBackdooring = [
+            "run4theh111z",
+            "CSEC",
+            "I.I.I.I",
+            "avmnite-02h",
+            "zb-institute",
+            "powerhouse-fitness",
+        ]
 
-    const factionAugmentScoreFile = "data/factionAugmentRank.txt"
-    const factionPriorities: FactionPriority[] = JSON.parse(ns.read(factionAugmentScoreFile))
 
-    for (const factionPriority of factionPriorities) {
-        const factionsServer = servers.find(x => x.organizationName === factionPriority.factionName)
 
-        if (factionsServer && !serversNeedingBackdooring.includes(factionsServer.hostname)){
-            serversNeedingBackdooring.push(factionsServer.hostname)
-        }
-    }
+        for (const factionPriority of factionPriorities) {
+            const factionsServer = servers.find(x => x.organizationName === factionPriority.factionName)
 
-    const serversToBackdoor = servers.filter(x => 
-        !x.backdoorInstalled && 
-        x.hasAdminRights && 
-        serversNeedingBackdooring.includes(x.hostname))
-
-    // ns.write("stuff.txt", JSON.stringify(serversToBackdoor))
-
-    for (const serverToBackdoor of serversToBackdoor) {
-        for (const nextServer of serverToBackdoor.path) {
-            ns.singularity.connect(nextServer)
+            if (factionsServer && !serversNeedingBackdooring.includes(factionsServer.hostname)) {
+                serversNeedingBackdooring.push(factionsServer.hostname)
+            }
         }
 
-        await ns.singularity.installBackdoor()
-        ns.singularity.connect("home")
+        const serversToBackdoor = servers.filter(x =>
+            !x.backdoorInstalled &&
+            x.hasAdminRights &&
+            serversNeedingBackdooring.includes(x.hostname))
+
+        // ns.write("stuff.txt", JSON.stringify(serversToBackdoor))
+
+        for (const serverToBackdoor of serversToBackdoor) {
+            for (const nextServer of serverToBackdoor.path) {
+                ns.singularity.connect(nextServer)
+            }
+
+            await ns.singularity.installBackdoor()
+            ns.singularity.connect("home")
+        }
+
+        ns.rm(backdoorFlagFile)
     }
-
-    ns.rm(backdoorFlagFile)
-
 }
 
 
 function getObjectFromFileSystem<T>(ns: NS, path: string) {
     let objectWeWant: T | undefined;
 
-    if (ns.fileExists(path)){
+    if (ns.fileExists(path)) {
         objectWeWant = JSON.parse(ns.read(path))
     }
 

@@ -1,13 +1,23 @@
 {
-    "totalPrice": 17740043000,
+    "totalPrice": 275959710630.3,
     "orders": [
+        {
+            "factionName": "NWO",
+            "augName": "Embedded Netburner Module Direct Memory Access Upgrade",
+            "price": 7000000000,
+            "wantedScorePriceWeighted": 8.571428571428566,
+            "expectedPrice": 7000000000,
+            "priceMultiplier": 1,
+            "nextFactionHas": false,
+            "targetFactionHas": true
+        },
         {
             "factionName": "NWO",
             "augName": "Embedded Netburner Module Analyze Engine",
             "price": 6000000000,
             "wantedScorePriceWeighted": 1.6666666666666605,
-            "expectedPrice": 6000000000,
-            "priceMultiplier": 1,
+            "expectedPrice": 11400000000,
+            "priceMultiplier": 1.9,
             "nextFactionHas": false,
             "targetFactionHas": true
         },
@@ -16,17 +26,47 @@
             "augName": "Embedded Netburner Module Core Implant",
             "price": 2500000000,
             "wantedScorePriceWeighted": 12.000000000000028,
-            "expectedPrice": 4750000000,
-            "priceMultiplier": 1.9,
+            "neededFor": "Embedded Netburner Module Core V2 Upgrade",
+            "expectedPrice": 9025000000,
+            "priceMultiplier": 3.61,
             "nextFactionHas": false,
             "targetFactionHas": true
         },
         {
             "factionName": "NWO",
+            "augName": "Embedded Netburner Module Core V2 Upgrade",
+            "price": 4500000000,
+            "wantedScorePriceWeighted": 13.999999999999977,
+            "expectedPrice": 30865499999.999996,
+            "priceMultiplier": 6.858999999999999,
+            "nextFactionHas": false,
+            "targetFactionHas": true
+        },
+        {
+            "factionName": "NWO",
+            "augName": "Xanipher",
+            "price": 4250000000,
+            "wantedScorePriceWeighted": 16.4705882352941,
+            "expectedPrice": 55386424999.99999,
+            "priceMultiplier": 13.032099999999998,
+            "nextFactionHas": false,
+            "targetFactionHas": true
+        },
+        {
+            "factionName": "NWO",
+            "augName": "Synthetic Heart",
+            "price": 2875000000,
+            "expectedPrice": 71187846249.99998,
+            "priceMultiplier": 24.760989999999993,
+            "nextFactionHas": false,
+            "targetFactionHas": false
+        },
+        {
+            "factionName": "NWO",
             "augName": "Synfibril Muscle",
             "price": 1125000000,
-            "expectedPrice": 4061250000,
-            "priceMultiplier": 3.61,
+            "expectedPrice": 52926616124.999985,
+            "priceMultiplier": 47.04588099999999,
             "nextFactionHas": false,
             "targetFactionHas": false
         },
@@ -35,8 +75,8 @@
             "augName": "Power Recirculation Core",
             "price": 180000000,
             "wantedScorePriceWeighted": 166.66666666666706,
-            "expectedPrice": 1234619999.9999998,
-            "priceMultiplier": 6.858999999999999,
+            "expectedPrice": 16089691301.999994,
+            "priceMultiplier": 89.38717389999996,
             "nextFactionHas": false,
             "targetFactionHas": true
         },
@@ -45,13 +85,13 @@
             "augName": "Neurotrainer III",
             "price": 130000000,
             "wantedScorePriceWeighted": 307.69230769230796,
-            "expectedPrice": 1694172999.9999998,
-            "priceMultiplier": 13.032099999999998,
+            "expectedPrice": 22078631953.29999,
+            "priceMultiplier": 169.83563040999994,
             "nextFactionHas": true,
             "targetFactionHas": true
         }
     ],
     "hasRequiredRepForAllManditoryAugs": false,
     "shouldBuyAllAugments": false,
-    "totalPriceFormatted": "$17,740,043,000.00"
+    "totalPriceFormatted": "$275,959,710,630.30"
 }

@@ -220,6 +220,17 @@ export async function main(ns: NS): Promise<void> {
         const investmentActionFile = "data/investmentAction.txt"
         ns.rm(investmentActionFile)
         ns.write(investmentActionFile, JSON.stringify(controller.action))
+
+        const actionsThatClearConstrainedRam = [
+            new BuyHomeCoreAction().type,
+            new BuyHomeRamAction().type,
+            new UpgradePurchasedServerAction("",0).type,
+            new PurchaseServerAction("",0).type
+        ]
+
+        if (actionsThatClearConstrainedRam.includes(controller.action.type)){
+            ns.rm("data/ramConstrained.txt")
+        }
     }
 
 }

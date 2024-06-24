@@ -26,6 +26,10 @@
         "scripts/character/travelAndUniversity.js",
         "scripts/character/workAtFaction.js",
         "scripts/character/workAtCompany.js",
+        "scripts/investments/investmentsController.js",
+        "scripts/investments/buyPrograms.js",
+        "scripts/investments/buyRemoteServers.js",
+        "scripts/investments/upgradeHome.js",
         "scripts/finishRound/buyModsController.js"
     ],
     "scriptsWithCost": [
@@ -155,7 +159,7 @@
         },
         {
             "path": "scripts/precalculate/formulasAnalysis.js",
-            "ramCost": 3.7
+            "ramCost": 5.7
         },
         {
             "path": "scripts/precalculate/investments/homeUpgrade.js",

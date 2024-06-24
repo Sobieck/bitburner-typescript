@@ -10,6 +10,7 @@ export async function main(ns: NS): Promise<void> {
   //precalculate
   scriptsToRun.push("scripts/precalculate/precalculate.js")
   scriptsToRun.push("scripts/precalculate/attackAnalysis.js")
+  scriptsToRun.push("scripts/precalculate/formulasAnalysis.js")
   //augments 
   scriptsToRun.push("scripts/precalculate/augments/whereToGet.js")
   scriptsToRun.push("scripts/precalculate/augments/getPrereqs.js")

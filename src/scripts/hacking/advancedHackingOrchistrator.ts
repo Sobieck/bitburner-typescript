@@ -329,11 +329,9 @@ export async function main(ns: NS): Promise<void> {
 
     const pathToRecords = "data/advancedHackingOrchistratorRecord.txt"
 
-    let serversUnderAttack: AttackOnOneServer[] = []
+    let serversUnderAttack = getObjectFromFileSystem<AttackOnOneServer[]>(ns, pathToRecords)
 
-    if (ns.fileExists(pathToRecords)) {
-        serversUnderAttack = JSON.parse(ns.read(pathToRecords)) as AttackOnOneServer[]
-
+    if (serversUnderAttack) {
         serversUnderAttack.forEach(attackOnOneServer => {
             attackOnOneServer.attackRecords.forEach(attack => {
                 if (attack.pid !== undefined) {
@@ -341,6 +339,8 @@ export async function main(ns: NS): Promise<void> {
                 }
             })
         });
+    } else {
+        serversUnderAttack = []
     }
 
     const servers = getObjectFromFileSystem<ServerWithAnalysis[]>(ns, "data/environment.txt")
