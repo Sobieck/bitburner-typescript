@@ -3,17 +3,22 @@ import { ScriptRegistry } from "/scripts/scriptRegistry"
 
 export async function main(ns: NS): Promise<void> {
 
-  let totalTimeInMs = 60_000
-  
-  if (ns.args[0] === "clean") {
+  const totalTimeInMs = 2000
+
+  if (ns.args.includes("clean")) {
     ns.run("scripts/utilities/dataClean.js")
-    await ns.sleep(totalTimeInMs * 0.10)
+    await ns.sleep(totalTimeInMs * 10)
   }
-  
+
+  if (ns.args.includes("invest")) {
+    ns.run("scripts/investments/toggleInvestments.js")
+    await ns.sleep(totalTimeInMs * 10)
+  }
+
   ns.run("scripts/scriptRegistry.js")
-  
-  await ns.sleep(totalTimeInMs * 0.1)
-  
+
+  await ns.sleep(totalTimeInMs * 10)
+
   while (true) {
 
     const scriptRegistry: ScriptRegistry = JSON.parse(ns.read("data/scriptRegistry.txt"))
@@ -24,8 +29,6 @@ export async function main(ns: NS): Promise<void> {
       ns.run(script)
       await ns.sleep(numberOfMsPerAction)
 
-    } 
-
-    totalTimeInMs = 2_000
-  } 
+    }
+  }
 }

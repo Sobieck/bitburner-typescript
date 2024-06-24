@@ -6,8 +6,10 @@ export async function main(ns: NS): Promise<void> {
 
     if (ns.fileExists(investAtWill)) {
         ns.rm(investAtWill)
+        ns.tprint("Investment stopped")
     } else {
         ns.write(investAtWill)
+        ns.tprint("Investment started") 
     }
 
 }
