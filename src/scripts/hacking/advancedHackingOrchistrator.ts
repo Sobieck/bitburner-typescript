@@ -343,31 +343,45 @@ export async function main(ns: NS): Promise<void> {
         });
     }
 
-    const servers: ServerWithAnalysis[] = JSON.parse(ns.read("data/environment.txt"))
-    const precalculations = JSON.parse(ns.read("data/precalculatedValues.txt")) as Precalculations
-    precalculations.scriptRegistry = JSON.parse(ns.read("data/scriptRegistry.txt")) as ScriptRegistry
+    const servers = getObjectFromFileSystem<ServerWithAnalysis[]>(ns, "data/environment.txt")
+    const precalculations = getObjectFromFileSystem<Precalculations>(ns, "data/precalculatedValues.txt")
+    const scriptRegistry = getObjectFromFileSystem<ScriptRegistry>(ns, "data/scriptRegistry.txt")
 
-    const controller = new AdvancedHackingOrchistratorController(servers, precalculations, new Date(Date.now()), serversUnderAttack)
+    if(servers && precalculations && scriptRegistry){
+        precalculations.scriptRegistry = scriptRegistry
 
-    for (const attackOnOneServer of controller.allAttacks) {
-        for (const actionRecord of attackOnOneServer.attackRecords) {
-            if (!actionRecord.commandSent && actionRecord.treadCount > 0) {
-                const pid = ns.exec(
-                    attackOnOneServer.action,
-                    actionRecord.attackingHostname,
-                    actionRecord.treadCount,
-                    attackOnOneServer.victimHostname)
-
-                actionRecord.addPid(pid)
+        const controller = new AdvancedHackingOrchistratorController(servers, precalculations, new Date(Date.now()), serversUnderAttack)
+    
+        for (const attackOnOneServer of controller.allAttacks) {
+            for (const actionRecord of attackOnOneServer.attackRecords) {
+                if (!actionRecord.commandSent && actionRecord.treadCount > 0) {
+                    const pid = ns.exec(
+                        attackOnOneServer.action,
+                        actionRecord.attackingHostname,
+                        actionRecord.treadCount,
+                        attackOnOneServer.victimHostname)
+    
+                    actionRecord.addPid(pid)
+                }
             }
         }
+    
+        ns.rm(pathToRecords)
+        ns.write(pathToRecords, JSON.stringify(controller.allAttacks))
+    
+        if (controller.ramConstrained) {
+            const ramConstrainedFilePath = "data/ramConstrained.txt"
+            ns.write(ramConstrainedFilePath)
+        }
+    }       
+}
+
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
+
+    if (ns.fileExists(path)){
+        objectWeWant = JSON.parse(ns.read(path))
     }
 
-    ns.rm(pathToRecords)
-    ns.write(pathToRecords, JSON.stringify(controller.allAttacks))
-
-    if (controller.ramConstrained) {
-        const ramConstrainedFilePath = "data/ramConstrained.txt"
-        ns.write(ramConstrainedFilePath)
-    }
+    return objectWeWant
 }

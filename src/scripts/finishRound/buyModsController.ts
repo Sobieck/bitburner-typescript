@@ -118,8 +118,8 @@ export class BuyModsController {
         }
 
         this.completePurchaseData.totalPrice = this.completePurchaseData.orders.reduce((acc, current) => acc + current.expectedPrice, 0)
-        this.completePurchaseData.totalPriceFormatted = this.completePurchaseData.totalPrice.toLocaleString(undefined, {style: "currency", currency: "USD" })
-    } 
+        this.completePurchaseData.totalPriceFormatted = this.completePurchaseData.totalPrice.toLocaleString(undefined, { style: "currency", currency: "USD" })
+    }
 
 
     private getPurchasableAugmentsInOrderOfPriceLeastToMost(allAugments: Augment[], player: PlayerWithWork) {
@@ -144,18 +144,25 @@ export class BuyModsController {
 
 export async function main(ns: NS): Promise<void> {
 
-    const factionAugmentScoreFile = "data/factionAugmentRank.txt"
-    const factionPriorities: FactionPriority[] = JSON.parse(ns.read(factionAugmentScoreFile))
+    const factionPriorities = getObjectFromFileSystem<FactionPriority[]>(ns, "data/factionAugmentRank.txt")
+    const player = getObjectFromFileSystem<PlayerWithWork>(ns, "data/player.txt")
+    const allAugments = getObjectFromFileSystem<Augment[]>(ns, "data/augments.txt") 
 
-    const playerPath = "data/player.txt"
-    const player = JSON.parse(ns.read(playerPath)) as PlayerWithWork
+    if (player && factionPriorities && allAugments) {
+        const controller = new BuyModsController(player, factionPriorities, allAugments)
 
-    const augmentsPath = "data/augments.txt"
-    const allAugments: Augment[] = JSON.parse(ns.read(augmentsPath))
+        const purchaseAugmentsDataFile = "data/purchaseAugmentsData.txt"
+        ns.rm(purchaseAugmentsDataFile)
+        ns.write(purchaseAugmentsDataFile, JSON.stringify(controller.completePurchaseData))
+    }
+}
 
-    const controller = new BuyModsController(player, factionPriorities, allAugments)
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
 
-    const purchaseAugmentsDataFile = "data/purchaseAugmentsData.txt"
-    ns.rm(purchaseAugmentsDataFile)
-    ns.write(purchaseAugmentsDataFile, JSON.stringify(controller.completePurchaseData))
+    if (ns.fileExists(path)) {
+        objectWeWant = JSON.parse(ns.read(path))
+    }
+
+    return objectWeWant
 }

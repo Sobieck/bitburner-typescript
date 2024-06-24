@@ -15,6 +15,7 @@
         "scripts/precalculate/augments/selectTargetCityFaction.js",
         "scripts/precalculate/player/player.js",
         "scripts/precalculate/investments/homeUpgrade.js",
+        "scripts/precalculate/investments/torStuff.js",
         "scripts/hacking/moveHackScriptsToServers.js",
         "scripts/hacking/advancedHackingOrchistrator.js",
         "scripts/hacking/backdoor.js",
@@ -22,8 +23,7 @@
         "scripts/character/applyForJob.js",
         "scripts/character/characterController.js",
         "scripts/character/createPrograms.js",
-        "scripts/character/travel.js",
-        "scripts/character/university.js",
+        "scripts/character/travelAndUniversity.js",
         "scripts/character/workAtFaction.js",
         "scripts/character/workAtCompany.js",
         "scripts/investments/buyServers.js",
@@ -47,16 +47,8 @@
             "ramCost": 7.6
         },
         {
-            "path": "scripts/character/player.js",
-            "ramCost": 1.6
-        },
-        {
-            "path": "scripts/character/travel.js",
-            "ramCost": 3.6
-        },
-        {
-            "path": "scripts/character/university.js",
-            "ramCost": 3.6
+            "path": "scripts/character/travelAndUniversity.js",
+            "ramCost": 5.6
         },
         {
             "path": "scripts/character/whatToDo.js",
@@ -112,7 +104,7 @@
         },
         {
             "path": "scripts/investments/investmentsController.js",
-            "ramCost": 1.6
+            "ramCost": 3.85
         },
         {
             "path": "scripts/investments/toggleInvestments.js",
@@ -160,7 +152,11 @@
         },
         {
             "path": "scripts/precalculate/investments/homeUpgrade.js",
-            "ramCost": 5.6
+            "ramCost": 5.65
+        },
+        {
+            "path": "scripts/precalculate/investments/torStuff.js",
+            "ramCost": 3.65
         },
         {
             "path": "scripts/precalculate/player/player.js",

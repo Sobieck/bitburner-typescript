@@ -1,23 +1,42 @@
 {
-    "totalPrice": 3311300000,
+    "totalPrice": 17740043000,
     "orders": [
         {
             "factionName": "NWO",
-            "augName": "Embedded Netburner Module Core Implant",
-            "price": 2500000000,
-            "wantedScorePriceWeighted": 12.000000000000028,
-            "expectedPrice": 2500000000,
+            "augName": "Embedded Netburner Module Analyze Engine",
+            "price": 6000000000,
+            "wantedScorePriceWeighted": 1.6666666666666605,
+            "expectedPrice": 6000000000,
             "priceMultiplier": 1,
             "nextFactionHas": false,
             "targetFactionHas": true
         },
         {
             "factionName": "NWO",
+            "augName": "Embedded Netburner Module Core Implant",
+            "price": 2500000000,
+            "wantedScorePriceWeighted": 12.000000000000028,
+            "expectedPrice": 4750000000,
+            "priceMultiplier": 1.9,
+            "nextFactionHas": false,
+            "targetFactionHas": true
+        },
+        {
+            "factionName": "NWO",
+            "augName": "Synfibril Muscle",
+            "price": 1125000000,
+            "expectedPrice": 4061250000,
+            "priceMultiplier": 3.61,
+            "nextFactionHas": false,
+            "targetFactionHas": false
+        },
+        {
+            "factionName": "NWO",
             "augName": "Power Recirculation Core",
             "price": 180000000,
             "wantedScorePriceWeighted": 166.66666666666706,
-            "expectedPrice": 342000000,
-            "priceMultiplier": 1.9,
+            "expectedPrice": 1234619999.9999998,
+            "priceMultiplier": 6.858999999999999,
             "nextFactionHas": false,
             "targetFactionHas": true
         },
@@ -26,13 +45,13 @@
             "augName": "Neurotrainer III",
             "price": 130000000,
             "wantedScorePriceWeighted": 307.69230769230796,
-            "expectedPrice": 469300000,
-            "priceMultiplier": 3.61,
+            "expectedPrice": 1694172999.9999998,
+            "priceMultiplier": 13.032099999999998,
             "nextFactionHas": true,
             "targetFactionHas": true
         }
     ],
     "hasRequiredRepForAllManditoryAugs": false,
     "shouldBuyAllAugments": false,
-    "totalPriceFormatted": "$3,311,300,000.00"
+    "totalPriceFormatted": "$17,740,043,000.00"
 }

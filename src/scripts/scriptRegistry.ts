@@ -37,13 +37,12 @@ export async function main(ns: NS): Promise<void> {
   // controller and controlled
   scriptsToRun.push("scripts/character/characterController.js")
   scriptsToRun.push("scripts/character/createPrograms.js")
-  scriptsToRun.push("scripts/character/travel.js")
-  scriptsToRun.push("scripts/character/university.js")
+  scriptsToRun.push("scripts/character/travelAndUniversity.js")
   scriptsToRun.push("scripts/character/workAtFaction.js")
   scriptsToRun.push("scripts/character/workAtCompany.js")
 
   //investments
-  scriptsToRun.push("scripts/investments/buyServers.js")
+
 
   //finish round
   scriptsToRun.push("scripts/finishRound/buyModsController.js")

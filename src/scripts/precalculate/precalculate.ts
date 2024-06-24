@@ -13,7 +13,11 @@ type PrecalculatedValues = {
 }
 
 export async function main(ns: NS): Promise<void> {
-    const environment: Server[] = JSON.parse(ns.read("data/environment.txt"))
+    const environment = getObjectFromFileSystem<Server[]>(ns, "data/environment.txt")
+
+    if(!environment){
+        return
+    }
 
     const homeComputer = environment.find(x => x.hostname === "home")!
 
@@ -42,4 +46,15 @@ export async function main(ns: NS): Promise<void> {
 
     ns.rm(path)
     ns.write(path, JSON.stringify(precalculatedValues))
+}
+
+
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
+
+    if (ns.fileExists(path)){
+        objectWeWant = JSON.parse(ns.read(path))
+    }
+
+    return objectWeWant
 }

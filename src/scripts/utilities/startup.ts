@@ -1,7 +1,11 @@
 import { NS, Server } from "@ns";
 
 export async function main(ns: NS): Promise<void> {
-    const environment = JSON.parse(ns.read("data/environment.txt")) as Server[]
+    const environment = getObjectFromFileSystem<Server[]>(ns, "data/environment.txt")
+
+    if(!environment){
+        return
+    }
 
     const scriptsToKill = [
         "scripts/hacking/hack.js",
@@ -16,4 +20,14 @@ export async function main(ns: NS): Promise<void> {
             }
         }
     }
+}
+
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
+
+    if (ns.fileExists(path)){
+        objectWeWant = JSON.parse(ns.read(path))
+    }
+
+    return objectWeWant
 }

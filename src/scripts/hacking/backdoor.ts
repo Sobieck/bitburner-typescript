@@ -24,8 +24,11 @@ export async function main(ns: NS): Promise<void> {
 
     ns.write(backdoorFlagFile)
     
-    const environmentPath = "data/environment.txt"
-    const servers = JSON.parse(ns.read(environmentPath)) as ServerWithPathAndConnections[]
+    const servers = getObjectFromFileSystem<ServerWithPathAndConnections[]>(ns, "data/environment.txt")
+
+    if(!servers){
+        return
+    }
 
     const serversNeedingBackdooring = [
         "run4theh111z", 
@@ -65,4 +68,15 @@ export async function main(ns: NS): Promise<void> {
 
     ns.rm(backdoorFlagFile)
 
+}
+
+
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
+
+    if (ns.fileExists(path)){
+        objectWeWant = JSON.parse(ns.read(path))
+    }
+
+    return objectWeWant
 }

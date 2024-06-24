@@ -157,9 +157,12 @@ export async function main(ns: NS): Promise<void> {
     //todo
     // add all unwanted augments at the end before we get to the endgame factions that require other stats. Do the same ranking process but based on a secondary score
 
-    const playerPath = "data/player.txt"
-    const player = JSON.parse(ns.read(playerPath)) as Player
+    const player = getObjectFromFileSystem<Player>(ns, "data/player.txt")
 
+    if (!player) {
+        return
+    }
+    
     const dontWorryAboutMoney = player.mults.hacking_exp > 4 ? true : false
 
     let bestFactionAugmentScores = Array.from(factionAugmentScore.values()).sort((a, b) => a.maxPrice - b.maxPrice || b.totalWantedScore - a.totalWantedScore) 
@@ -189,4 +192,14 @@ export async function main(ns: NS): Promise<void> {
 
     ns.rm(factionAugmentScoreFile)
     ns.write(factionAugmentScoreFile, JSON.stringify(bestFactionAugmentScores))
+}
+
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
+
+    if (ns.fileExists(path)){
+        objectWeWant = JSON.parse(ns.read(path))
+    }
+
+    return objectWeWant
 }

@@ -3,39 +3,45 @@ import { NS, Player, Server } from "@ns";
 /// TODO 
 
 export async function main(ns: NS): Promise<void> {
-    if(!ns.fileExists("Formulas.exe")){
+    if (!ns.fileExists("Formulas.exe")) {
         return
     }
 
     const environmentPath = "data/environment.txt"
-    const serversWithAnalysis = JSON.parse(ns.read(environmentPath)) as ServerWithAnalysis[]
+    const serversWithAnalysis = getObjectFromFileSystem<ServerWithAnalysis[]>(ns, environmentPath)
 
-    const precalculations = (JSON.parse(ns.read("data/precalculatedValues.txt")) as PrecalculatedValues)
-    const player = precalculations.player
+    const precalculations = getObjectFromFileSystem<PrecalculatedValues>(ns, "data/precalculatedValues.txt")
 
-    const homeServer = serversWithAnalysis.find(x => x.hostname === "home")!
+    if (serversWithAnalysis && precalculations) {
 
-    for (const server of serversWithAnalysis) {
-        if (server.moneyMax && server.hasAdminRights) {
 
-            
-            const growthPhaseServer = JSON.parse(JSON.stringify(server)) as Server
-            growthPhaseServer.moneyAvailable = 0;
-            growthPhaseServer.hackDifficulty = growthPhaseServer.minDifficulty
 
-            const growThreadsHome = ns.formulas.hacking.growThreads(growthPhaseServer, player, server.moneyMax, homeServer.cpuCores)
-            const growSecurityIncreaseHome = ns.growthAnalyzeSecurity(growThreadsHome, server.hostname, homeServer.cpuCores)
-            
+        const player = precalculations.player
 
-            const growThreads = ns.formulas.hacking.growThreads(growthPhaseServer, player, server.moneyMax, 1)
-            const growSecurityIncrease =  ns.growthAnalyzeSecurity(growThreads, server.hostname, 1)
+        const homeServer = serversWithAnalysis.find(x => x.hostname === "home")!
 
-            const hackPhaseServer = JSON.parse(JSON.stringify(server)) as Server
+        for (const server of serversWithAnalysis) {
+            if (server.moneyMax && server.hasAdminRights) {
+
+
+                const growthPhaseServer = JSON.parse(JSON.stringify(server)) as Server
+                growthPhaseServer.moneyAvailable = 0;
+                growthPhaseServer.hackDifficulty = growthPhaseServer.minDifficulty
+
+                const growThreadsHome = ns.formulas.hacking.growThreads(growthPhaseServer, player, server.moneyMax, homeServer.cpuCores)
+                const growSecurityIncreaseHome = ns.growthAnalyzeSecurity(growThreadsHome, server.hostname, homeServer.cpuCores)
+
+
+                const growThreads = ns.formulas.hacking.growThreads(growthPhaseServer, player, server.moneyMax, 1)
+                const growSecurityIncrease = ns.growthAnalyzeSecurity(growThreads, server.hostname, 1)
+
+                const hackPhaseServer = JSON.parse(JSON.stringify(server)) as Server
+            }
         }
-    }
 
-    ns.rm(environmentPath)
-    ns.write(environmentPath, JSON.stringify(serversWithAnalysis))
+        ns.rm(environmentPath)
+        ns.write(environmentPath, JSON.stringify(serversWithAnalysis))
+    }
 }
 
 interface ServerWithAnalysis extends Server {
@@ -53,11 +59,21 @@ interface ServerWithAnalysis extends Server {
     maxMoneyPerMs: number;
 
     freeRam: number;
-} 
+}
 
 
 type PrecalculatedValues = {
     player: Player;
     weakenAmountPerThread01Core: number;
     weakenAmountPerThreadHomeComputer: number;
+}
+
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
+
+    if (ns.fileExists(path)) {
+        objectWeWant = JSON.parse(ns.read(path))
+    }
+
+    return objectWeWant
 }

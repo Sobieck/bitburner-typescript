@@ -210,6 +210,23 @@ export class InvestmentsController {
 
 export async function main(ns: NS): Promise<void> {
 
+    
+    const player = getObjectFromFileSystem<Player>(ns, "data/player.txt")
+    const precalculations = getObjectFromFileSystem<PrecalculatedValues>(ns, "data/precalculatedValues.txt")
+    const environment = getObjectFromFileSystem<Server[]>(ns, "data/environment.txt")
 
+    if (player && precalculations && environment){
+        const controller = new InvestmentsController(player, precalculations, environment)
+    }
 
+}
+
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
+
+    if (ns.fileExists(path)){
+        objectWeWant = JSON.parse(ns.read(path))
+    }
+
+    return objectWeWant
 }

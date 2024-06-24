@@ -261,7 +261,7 @@ export class CharacterController {
             !(this.actionRequired as ChangeNothingAction).noTravel &&
             precalculatedValues.targetCityFaction
         ) {
-            if (!player.factions.includes(precalculatedValues.targetCityFaction) && 
+            if (!player.factions.includes(precalculatedValues.targetCityFaction) &&
                 player.money >= 20_000_000) {
                 this.actionRequired = new TravelAction(precalculatedValues.targetCityFaction as CityName)
             }
@@ -271,18 +271,25 @@ export class CharacterController {
 
 export async function main(ns: NS): Promise<void> {
 
-    const factionAugmentScoreFile = "data/factionAugmentRank.txt"
-    const factionPriorities: FactionPriority[] = JSON.parse(ns.read(factionAugmentScoreFile))
+    const factionPriorities = getObjectFromFileSystem<FactionPriority[]>(ns, "data/factionAugmentRank.txt")
+    const player = getObjectFromFileSystem<PlayerWithWork>(ns, "data/player.txt")
+    const precalculations = getObjectFromFileSystem<PrecalculatedValues>(ns, "data/precalculatedValues.txt")
 
-    const playerPath = "data/player.txt"
-    const player = JSON.parse(ns.read(playerPath)) as PlayerWithWork
+    if (player && precalculations && factionPriorities) {
+        const controller = new CharacterController(player, factionPriorities, precalculations)
 
-    const precalculations: PrecalculatedValues = JSON.parse(ns.read("data/precalculatedValues.txt"))
+        const actionFile = "data/action.txt"
+        ns.rm(actionFile)
+        ns.write(actionFile, JSON.stringify(controller.actionRequired))
+    }
+}
 
-    const controller = new CharacterController(player, factionPriorities, precalculations)
+function getObjectFromFileSystem<T>(ns: NS, path: string) {
+    let objectWeWant: T | undefined;
 
-    const actionFile = "data/action.txt"
-    ns.rm(actionFile)
-    ns.write(actionFile, JSON.stringify(controller.actionRequired))
+    if (ns.fileExists(path)) {
+        objectWeWant = JSON.parse(ns.read(path))
+    }
 
+    return objectWeWant
 }
